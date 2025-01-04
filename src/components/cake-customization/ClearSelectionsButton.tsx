@@ -1,9 +1,11 @@
 import { Button } from "@/components/ui/button";
-import { useForm } from "react-hook-form";
+import { UseFormReturn } from "react-hook-form";
 
-export const ClearSelectionsButton = () => {
-  const form = useForm();
+interface ClearSelectionsButtonProps {
+  form: UseFormReturn<any>;
+}
 
+export const ClearSelectionsButton = ({ form }: ClearSelectionsButtonProps) => {
   const handleClear = () => {
     form.reset({
       flourType: "",

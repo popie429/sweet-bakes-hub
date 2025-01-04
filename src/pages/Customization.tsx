@@ -84,7 +84,7 @@ const Customization = () => {
       </h1>
 
       <div className="mb-6">
-        <ClearSelectionsButton />
+        <ClearSelectionsButton form={form} />
       </div>
 
       <Form {...form}>
@@ -132,7 +132,7 @@ const Customization = () => {
           </div>
 
           <div className="space-y-4">
-            <ClearSelectionsButton />
+            <ClearSelectionsButton form={form} />
             <Button
               type="submit"
               className="w-full bg-cake-burgundy hover:bg-cake-rose text-white"
