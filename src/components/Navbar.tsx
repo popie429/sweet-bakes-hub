@@ -5,8 +5,12 @@ export const Navbar = () => {
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
         <div className="flex justify-between items-center">
-          <Link to="/" className="text-2xl font-playfair font-bold text-cake-burgundy">
-            Sydney's Cakes
+          <Link to="/" className="flex items-center">
+            <img 
+              src="https://i.imgur.com/9ICEHj0.jpeg" 
+              alt="Sydney's Cakes Logo" 
+              className="h-16 object-contain"
+            />
           </Link>
           <div className="space-x-6">
             <Link to="/" className="font-inter text-gray-600 hover:text-cake-burgundy transition-colors">
