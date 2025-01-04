@@ -5,7 +5,7 @@ import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Separator } from "@/components/ui/separator";
 
-const PresetSelections = () => {
+export const PresetSelections = () => {
   const location = useLocation();
   const navigate = useNavigate();
   const selectedCake = location.state?.selectedCake;
@@ -112,5 +112,3 @@ const PresetSelections = () => {
     </div>
   );
 };
-
-export default PresetSelections;
