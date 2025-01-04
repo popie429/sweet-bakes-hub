@@ -38,6 +38,6 @@
     @apply bg-background text-cake-rose font-inter;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair text-cake-burgundy;
+    @apply font-playfair text-cake-rose;
   }
 }
