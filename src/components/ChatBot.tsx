@@ -62,29 +62,27 @@ export const ChatBot = () => {
           Please provide accurate information based on these details.`
       };
 
-      // Get chat history excluding system messages
-      const chatHistory = messages.filter(msg => msg.role !== 'system');
-      
-      // Prepare API messages array starting with system message
+      // Create a properly alternating message history
       const apiMessages: (SystemMessage | ChatMessage)[] = [systemMessage];
       
-      // Process chat history to ensure alternation
-      const processedHistory: ChatMessage[] = [];
-      for (let i = 0; i < chatHistory.length; i++) {
-        const currentMsg = chatHistory[i];
-        if (i === 0 || currentMsg.role !== chatHistory[i - 1].role) {
-          processedHistory.push({
-            role: currentMsg.role as 'user' | 'assistant',
-            content: currentMsg.content
-          });
-        }
-      }
+      // Filter out system messages and ensure alternation
+      const chatMessages = messages
+        .filter(msg => msg.role !== 'system')
+        .reduce((acc: ChatMessage[], curr, index, array) => {
+          if (index === 0 || curr.role !== array[index - 1].role) {
+            acc.push({
+              role: curr.role as 'user' | 'assistant',
+              content: curr.content
+            });
+          }
+          return acc;
+        }, []);
 
-      // Add processed history to API messages
-      apiMessages.push(...processedHistory);
+      // Add the filtered messages to the API messages array
+      apiMessages.push(...chatMessages);
 
-      // Add new user message only if it maintains alternation
-      const lastMessage = processedHistory[processedHistory.length - 1];
+      // Add the new user message only if the last message was from the assistant
+      const lastMessage = chatMessages[chatMessages.length - 1];
       if (!lastMessage || lastMessage.role === 'assistant') {
         apiMessages.push({ role: 'user', content: userMessage });
       }
