@@ -8,17 +8,15 @@ const Payment = () => {
   const [selectedMethod, setSelectedMethod] = useState<string | null>(null);
 
   const handleZellePayment = () => {
-    // Show Zelle information
     setSelectedMethod("zelle");
   };
 
   const handleCashAppPayment = () => {
-    window.location.href = "https://cash.app/$sydneysespinal29";
+    window.open("https://cash.app/$sydneysespinal29", "_blank");
   };
 
   const handlePayPalPayment = () => {
-    // Replace with your PayPal payment URL when available
-    window.location.href = "https://www.paypal.com/signin";
+    window.open("https://www.paypal.com/signin", "_blank");
   };
 
   return (
