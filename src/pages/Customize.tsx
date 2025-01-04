@@ -1,14 +1,7 @@
-import { Form } from "@/components/ui/form";
 import { useForm } from "react-hook-form";
-import { Button } from "@/components/ui/button";
-import { CakeFlavorSection } from "@/components/cake-customization/CakeFlavorSection";
-import { FillingSection } from "@/components/cake-customization/FillingSection";
-import { FrostingSection } from "@/components/cake-customization/FrostingSection";
-import { DecorationsSection } from "@/components/cake-customization/DecorationsSection";
-import { CakeTopperSection } from "@/components/cake-customization/CakeTopperSection";
-import { CakeWeightSection } from "@/components/cake-customization/CakeWeightSection";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
+import { CustomizationForm } from "@/components/cake-customization/CustomizationForm";
 
 interface CustomizationForm {
   cakeWeight: string;
@@ -34,7 +27,6 @@ const Customize = () => {
     },
   });
 
-  // Watch for form changes to update total
   const watchAll = form.watch();
   
   useEffect(() => {
@@ -56,71 +48,61 @@ const Customize = () => {
     newTotal += weightPrices[watchAll.cakeWeight] || 0;
     
     // Add base cake price based on flavor
-    switch (watchAll.flourType) {
-      case "vanilla":
-        newTotal += 30;
-        break;
-      case "chocolate":
-        newTotal += 35;
-        break;
-      case "redVelvet":
-        newTotal += 40;
-        break;
-      case "marble":
-        newTotal += 45;
-        break;
-    }
+    const flavorPrices: Record<string, number> = {
+      vanilla: 30,
+      chocolate: 35,
+      redVelvet: 40,
+      marble: 45,
+    };
+    newTotal += flavorPrices[watchAll.flourType] || 0;
     
     // Add filling price
-    switch (watchAll.filling) {
-      case "vanilla":
-        newTotal += 8;
-        break;
-      case "chocolate":
-        newTotal += 10;
-        break;
-      case "strawberry":
-        newTotal += 12;
-        break;
-      case "lemon":
-        newTotal += 10;
-        break;
+    const fillingPrices: Record<string, number> = {
+      vanilla: 8,
+      chocolate: 10,
+      strawberry: 12,
+      lemon: 10,
+    };
+    if (watchAll.filling) {
+      newTotal += fillingPrices[watchAll.filling] || 0;
     }
     
     // Add frosting price
-    switch (watchAll.frosting) {
-      case "buttercream":
-        newTotal += 15;
-        break;
-      case "cream-cheese":
-        newTotal += 18;
-        break;
-      case "fondant":
-        newTotal += 25;
-        break;
-      case "whipped":
-        newTotal += 12;
-        break;
-    }
+    const frostingPrices: Record<string, number> = {
+      buttercream: 15,
+      "cream-cheese": 18,
+      fondant: 25,
+      whipped: 12,
+      chocolateGanache: 15,
+      vanillaFondant: 25,
+      marbleFondant: 25,
+    };
+    newTotal += frostingPrices[watchAll.frosting] || 0;
     
     // Add decoration prices
-    if (watchAll.decorations) {
+    const decorationPrices: Record<string, number> = {
+      stars: 3,
+      hearts: 3,
+      sprinkles: 2,
+      fondantPiglet: 10,
+      fondantFlowers: 5,
+      donJulioBottle: 5,
+      goldDetails: 8,
+      macaroons: 9,
+      freshFlowers: 12,
+      roses: 4,
+      pearls: 3,
+      sunMoon: 15,
+      chocolateStrawberries: 3,
+    };
+    
+    if (Array.isArray(watchAll.decorations)) {
       watchAll.decorations.forEach((decoration) => {
-        switch (decoration) {
-          case "stars":
-            newTotal += 3;
-            break;
-          case "hearts":
-            newTotal += 3;
-            break;
-          case "sprinkles":
-            newTotal += 2;
-            break;
-        }
+        newTotal += decorationPrices[decoration] || 0;
       });
     }
     
-    // Add cake topper price ($5 for all toppers)
+    // Add cake topper price (all toppers cost $5)
     if (watchAll.cakeTopper) {
       newTotal += 5;
     }
@@ -138,55 +120,7 @@ const Customize = () => {
       <h1 className="text-4xl font-playfair font-bold text-cake-burgundy mb-8 text-center">
         Design Your Custom Cake
       </h1>
-
-      <Form {...form}>
-        <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-2xl mx-auto">
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Cake Weight</h2>
-            <CakeWeightSection />
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Base Cake</h2>
-            <CakeFlavorSection />
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Filling</h2>
-            <FillingSection />
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Frosting</h2>
-            <FrostingSection />
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Decorations</h2>
-            <DecorationsSection />
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Cake Topper</h2>
-            <CakeTopperSection />
-          </div>
-
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-            <div className="flex justify-between items-center">
-              <h2 className="text-2xl font-playfair text-cake-burgundy">Total</h2>
-              <span className="text-2xl font-bold">${total}</span>
-            </div>
-          </div>
-
-          <Button
-            type="submit"
-            className="w-full bg-cake-burgundy hover:bg-cake-rose text-white"
-            size="lg"
-          >
-            Continue to Scheduling
-          </Button>
-        </form>
-      </Form>
+      <CustomizationForm form={form} onSubmit={onSubmit} total={total} />
     </div>
   );
 };
