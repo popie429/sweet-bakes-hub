@@ -37,11 +37,14 @@ export const PresetSelections = ({
     <div className="bg-white rounded-lg shadow-md p-6 mb-12">
       <div className="flex flex-col md:flex-row items-start gap-6">
         <div className="w-full md:w-1/3">
-          <img
-            src={selectedCake.image}
-            alt={selectedCake.name}
-            className="w-full rounded-md object-cover"
-          />
+          <div className="bg-white p-4 rounded-lg">
+            <img
+              src={selectedCake.image}
+              alt={selectedCake.name}
+              className="w-full rounded-lg object-contain bg-white"
+              style={{ maxHeight: '400px', width: 'auto', margin: '0 auto' }}
+            />
+          </div>
         </div>
         <div className="flex-1">
           <div className="flex items-center gap-2 mb-6">

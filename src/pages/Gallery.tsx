@@ -103,7 +103,7 @@ const Gallery = () => {
                 <img
                   src={cake.image}
                   alt={cake.name}
-                  className="w-full h-full rounded-lg object-contain bg-white"
+                  className="w-full h-full rounded-lg object-cover"
                 />
               </div>
               <p className="text-gray-600 mb-2">{cake.description}</p>
