@@ -9,6 +9,11 @@ const Home = () => {
       <section className="relative h-[70vh] bg-cake-pink">
         <div className="container mx-auto px-4 h-full flex items-center">
           <div className="max-w-2xl">
+            <img 
+              src="https://i.imgur.com/9ICEHj0.jpeg" 
+              alt="Sydney's Cakes Logo" 
+              className="w-32 h-32 object-contain mb-6"
+            />
             <h1 className="text-5xl md:text-6xl font-playfair font-bold text-cake-burgundy mb-6">
               Delicious Custom Cakes for Your Special Moments
             </h1>
