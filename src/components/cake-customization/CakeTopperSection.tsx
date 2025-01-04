@@ -1,13 +1,13 @@
 import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
-import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from "@/components/ui/select";
+import { Checkbox } from "@/components/ui/checkbox";
 
 const topperOptions = [
-  "Happy Birthday",
-  "Mr & Mrs",
-  "Oh, Baby!",
-  "Happy Father's Day",
-  "Happy Mother's Day",
-  "Happy Valentine's Day",
+  { id: "happybirthday", label: "Happy Birthday" },
+  { id: "mrandmrs", label: "Mr & Mrs" },
+  { id: "ohbaby", label: "Oh, Baby!" },
+  { id: "happyfathersday", label: "Happy Father's Day" },
+  { id: "happymothersday", label: "Happy Mother's Day" },
+  { id: "happyvalentinesday", label: "Happy Valentine's Day" },
 ];
 
 export const CakeTopperSection = () => {
@@ -17,23 +17,32 @@ export const CakeTopperSection = () => {
       render={({ field }) => (
         <FormItem>
           <FormLabel className="text-lg font-semibold">Cake Topper</FormLabel>
-          <Select onValueChange={field.onChange} defaultValue={field.value}>
-            <FormControl>
-              <SelectTrigger>
-                <SelectValue placeholder="Select a cake topper" />
-              </SelectTrigger>
-            </FormControl>
-            <SelectContent>
-              {topperOptions.map((topper) => (
-                <SelectItem
-                  key={topper}
-                  value={topper.toLowerCase().replace(/[^a-z]/g, "")}
-                >
-                  {topper}
-                </SelectItem>
-              ))}
-            </SelectContent>
-          </Select>
+          <div className="grid grid-cols-2 gap-4">
+            {topperOptions.map((topper) => (
+              <FormField
+                key={topper.id}
+                name="cakeTopper"
+                render={({ field }) => {
+                  return (
+                    <FormItem
+                      key={topper.id}
+                      className="flex items-center space-x-3 space-y-0"
+                    >
+                      <FormControl>
+                        <Checkbox
+                          checked={field.value === topper.id}
+                          onCheckedChange={(checked) => {
+                            field.onChange(checked ? topper.id : null);
+                          }}
+                        />
+                      </FormControl>
+                      <FormLabel className="font-normal">{topper.label}</FormLabel>
+                    </FormItem>
+                  );
+                }}
+              />
+            ))}
+          </div>
         </FormItem>
       )}
     />
