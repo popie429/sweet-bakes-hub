@@ -99,11 +99,11 @@ const Gallery = () => {
               <CardTitle className="font-playfair text-xl">{cake.name}</CardTitle>
             </CardHeader>
             <CardContent>
-              <div className="relative h-64 mb-4"> {/* Increased height from h-48 to h-64 */}
+              <div className="relative aspect-square mb-4">
                 <img
                   src={cake.image}
                   alt={cake.name}
-                  className="w-full h-full rounded-md object-contain" /* Changed from object-cover to object-contain */
+                  className="w-full h-full rounded-lg object-contain bg-white"
                 />
               </div>
               <p className="text-gray-600 mb-2">{cake.description}</p>
