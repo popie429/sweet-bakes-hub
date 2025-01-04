@@ -62,28 +62,25 @@ export const ChatBot = () => {
           Please provide accurate information based on these details.`
       };
 
-      // Create a properly alternating message history
-      const apiMessages: (SystemMessage | ChatMessage)[] = [systemMessage];
+      // Create the messages array starting with the system message
+      const apiMessages = [systemMessage];
       
-      // Filter out system messages and ensure alternation
-      const chatMessages = messages
-        .filter(msg => msg.role !== 'system')
-        .reduce((acc: ChatMessage[], curr, index, array) => {
-          if (index === 0 || curr.role !== array[index - 1].role) {
-            acc.push({
-              role: curr.role as 'user' | 'assistant',
-              content: curr.content
+      // Add chat messages ensuring proper alternation
+      let lastRole: 'user' | 'assistant' | null = null;
+      messages.forEach((msg) => {
+        if (msg.role !== 'system') {
+          if (lastRole !== msg.role) {
+            apiMessages.push({
+              role: msg.role as 'user' | 'assistant',
+              content: msg.content
             });
+            lastRole = msg.role as 'user' | 'assistant';
           }
-          return acc;
-        }, []);
-
-      // Add the filtered messages to the API messages array
-      apiMessages.push(...chatMessages);
+        }
+      });
 
       // Add the new user message only if the last message was from the assistant
-      const lastMessage = chatMessages[chatMessages.length - 1];
-      if (!lastMessage || lastMessage.role === 'assistant') {
+      if (lastRole !== 'user') {
         apiMessages.push({ role: 'user', content: userMessage });
       }
 
