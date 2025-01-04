@@ -39,7 +39,7 @@ export const ChatBot = () => {
       const response = await fetch('https://api.perplexity.ai/chat/completions', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${process.env.PERPLEXITY_API_KEY || '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'}`,
+          'Authorization': 'Bearer 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',
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -60,7 +60,10 @@ export const ChatBot = () => {
               - We require a 50% deposit to secure orders
               Please provide accurate information based on these details.`
             },
-            ...messages,
+            ...messages.map(msg => ({
+              role: msg.role,
+              content: msg.content
+            })),
             { role: 'user', content: userMessage }
           ],
           temperature: 0.2,
@@ -68,11 +71,22 @@ export const ChatBot = () => {
         }),
       });
 
+      if (!response.ok) {
+        throw new Error('Failed to get response from AI');
+      }
+
       const data = await response.json();
+      
       if (data.choices && data.choices[0]?.message?.content) {
-        setMessages(prev => [...prev, { role: 'assistant', content: data.choices[0].message.content }]);
+        setMessages(prev => [...prev, { 
+          role: 'assistant', 
+          content: data.choices[0].message.content 
+        }]);
+      } else {
+        throw new Error('Invalid response format from AI');
       }
     } catch (error) {
+      console.error('Chat error:', error);
       toast({
         title: "Error",
         description: "Failed to get a response. Please try again.",
