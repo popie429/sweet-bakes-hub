@@ -14,7 +14,6 @@ export const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState('');
-  const [apiKey, setApiKey] = useState('');
   const [isLoading, setIsLoading] = useState(false);
   const { toast } = useToast();
 
@@ -30,14 +29,6 @@ export const ChatBot = () => {
 
   const handleSend = async () => {
     if (!input.trim()) return;
-    if (!apiKey) {
-      toast({
-        title: "API Key Required",
-        description: "Please enter your Perplexity API key to use the chat feature.",
-        variant: "destructive"
-      });
-      return;
-    }
 
     const userMessage = input.trim();
     setInput('');
@@ -48,7 +39,7 @@ export const ChatBot = () => {
       const response = await fetch('https://api.perplexity.ai/chat/completions', {
         method: 'POST',
         headers: {
-          'Authorization': `Bearer ${apiKey}`,
+          'Authorization': `Bearer ${process.env.PERPLEXITY_API_KEY || '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'}`,
           'Content-Type': 'application/json',
         },
         body: JSON.stringify({
@@ -114,18 +105,6 @@ export const ChatBot = () => {
               <X className="h-4 w-4" />
             </Button>
           </div>
-          
-          {!apiKey && (
-            <div className="p-4 border-b">
-              <Input
-                type="password"
-                placeholder="Enter Perplexity API Key"
-                value={apiKey}
-                onChange={(e) => setApiKey(e.target.value)}
-                className="w-full"
-              />
-            </div>
-          )}
 
           <ScrollArea className="h-96 p-4">
             <div className="space-y-4">
