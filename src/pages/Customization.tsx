@@ -20,7 +20,7 @@ import {
 
 interface CakeCustomizationForm {
   flourType: string;
-  filling: string;
+  filling: string[];
   frosting: string;
   decorations: string[];
   cakeTopper: string;
@@ -58,7 +58,7 @@ const Customization = () => {
   const form = useForm<CakeCustomizationForm>({
     defaultValues: selectedCake?.presets || {
       flourType: "",
-      filling: "",
+      filling: [],
       frosting: "",
       decorations: [],
       cakeTopper: "",

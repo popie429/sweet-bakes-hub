@@ -16,16 +16,18 @@ export const calculateTotal = (formData: {
   };
   total += flavorPrices[formData.flourType || ''] || 0;
   
-  // Filling prices (now handling multiple selections)
+  // Filling prices (handling multiple selections)
   const fillingPrices: Record<string, number> = {
     vanilla: 8,
     chocolate: 10,
     strawberry: 12,
     lemon: 10
   };
-  formData.filling?.forEach(filling => {
-    total += fillingPrices[filling] || 0;
-  });
+  if (Array.isArray(formData.filling)) {
+    formData.filling.forEach(filling => {
+      total += fillingPrices[filling] || 0;
+    });
+  }
   
   // Frosting price
   const frostingPrices: Record<string, number> = {
@@ -56,9 +58,11 @@ export const calculateTotal = (formData: {
     chocolateStrawberries: 3
   };
   
-  formData.decorations?.forEach(decoration => {
-    total += decorationPrices[decoration] || 0;
-  });
+  if (Array.isArray(formData.decorations)) {
+    formData.decorations.forEach(decoration => {
+      total += decorationPrices[decoration] || 0;
+    });
+  }
   
   // Cake topper price (all toppers cost $5)
   if (formData.cakeTopper) {
