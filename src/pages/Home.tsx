@@ -63,7 +63,7 @@ const Home = () => {
               <Instagram size={24} />
             </a>
             <a
-              href="https://facebook.com/Sydneyscakes"
+              href="https://m.facebook.com/sydneylovestoparty/"
               target="_blank"
               rel="noopener noreferrer"
               className="text-cake-burgundy hover:text-cake-rose transition-colors"
