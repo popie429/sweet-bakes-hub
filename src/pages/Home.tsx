@@ -1,4 +1,4 @@
-import { Facebook, Instagram, PhoneCall, WhatsApp } from "lucide-react";
+import { Facebook, Instagram, PhoneCall, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 
@@ -70,7 +70,7 @@ const Home = () => {
               rel="noopener noreferrer"
               className="text-cake-burgundy hover:text-cake-rose transition-colors"
             >
-              <WhatsApp size={24} />
+              <MessageCircle size={24} />
             </a>
           </div>
         </div>
