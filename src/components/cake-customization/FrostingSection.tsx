@@ -19,6 +19,9 @@ export const FrostingSection = () => {
               <SelectItem value="cream-cheese">Cream Cheese</SelectItem>
               <SelectItem value="fondant">Fondant</SelectItem>
               <SelectItem value="whipped">Whipped Cream</SelectItem>
+              <SelectItem value="chocolateGanache">Chocolate Ganache</SelectItem>
+              <SelectItem value="vanillaFondant">Vanilla Fondant</SelectItem>
+              <SelectItem value="marbleFondant">Marble Fondant</SelectItem>
             </SelectContent>
           </Select>
         </FormItem>

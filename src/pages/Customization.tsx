@@ -7,7 +7,7 @@ import { FillingSection } from "@/components/cake-customization/FillingSection";
 import { FrostingSection } from "@/components/cake-customization/FrostingSection";
 import { DecorationsSection } from "@/components/cake-customization/DecorationsSection";
 import { CakeTopperSection } from "@/components/cake-customization/CakeTopperSection";
-import { PresetSelections } from "@/components/cake-customization/PresetSelections";
+import { ClearSelectionsButton } from "@/components/cake-customization/ClearSelectionsButton";
 import { HelpCircle } from "lucide-react";
 import { useState, useEffect } from "react";
 import {
@@ -62,9 +62,9 @@ const Customization = () => {
 
   const form = useForm<CakeCustomizationForm>({
     defaultValues: selectedCake?.presets || {
-      flourType: "vanilla",
-      filling: "vanilla",
-      frosting: "buttercream",
+      flourType: "",
+      filling: "",
+      frosting: "",
       decorations: [],
       cakeTopper: "",
     },
@@ -73,88 +73,72 @@ const Customization = () => {
   const watchAll = form.watch();
 
   useEffect(() => {
-    let newTotal = 0;
-    
-    // Add base cake price based on flavor
-    switch (watchAll.flourType) {
-      case "vanilla":
-        newTotal += 30;
-        break;
-      case "chocolate":
-        newTotal += 35;
-        break;
-      case "redVelvet":
-        newTotal += 40;
-        break;
-      case "marble":
-        newTotal += 45;
-        break;
-    }
-    
-    // Add filling price
-    switch (watchAll.filling) {
-      case "vanilla":
-        newTotal += 8;
-        break;
-      case "chocolate":
-        newTotal += 10;
-        break;
-      case "strawberry":
-        newTotal += 12;
-        break;
-      case "lemon":
-        newTotal += 10;
-        break;
-    }
-    
-    // Add frosting price
-    switch (watchAll.frosting) {
-      case "buttercream":
-        newTotal += 15;
-        break;
-      case "cream-cheese":
-        newTotal += 18;
-        break;
-      case "fondant":
-        newTotal += 25;
-        break;
-      case "whipped":
-        newTotal += 12;
-        break;
-    }
-    
-    // Add decoration prices
-    if (watchAll.decorations) {
-      watchAll.decorations.forEach((decoration) => {
-        switch (decoration) {
-          case "stars":
-            newTotal += 3;
-            break;
-          case "hearts":
-            newTotal += 3;
-            break;
-          case "sprinkles":
-            newTotal += 2;
-            break;
-        }
-      });
-    }
-    
-    // Add cake topper price ($5 for all toppers)
-    if (watchAll.cakeTopper) {
-      newTotal += 5;
-    }
-    
+    let newTotal = calculateTotal(watchAll);
     setTotal(newTotal);
   }, [watchAll]);
+
+  const calculateTotal = (formData: CakeCustomizationForm) => {
+    let total = 0;
+    
+    // Base cake price based on flavor
+    const flavorPrices: Record<string, number> = {
+      vanilla: 30,
+      chocolate: 35,
+      redVelvet: 40,
+      marble: 45
+    };
+    total += flavorPrices[formData.flourType] || 0;
+    
+    // Filling price
+    const fillingPrices: Record<string, number> = {
+      vanilla: 8,
+      chocolate: 10,
+      strawberry: 12,
+      lemon: 10
+    };
+    total += fillingPrices[formData.filling] || 0;
+    
+    // Frosting price
+    const frostingPrices: Record<string, number> = {
+      buttercream: 15,
+      "cream-cheese": 18,
+      fondant: 25,
+      whipped: 12
+    };
+    total += frostingPrices[formData.frosting] || 0;
+    
+    // Decorations prices
+    const decorationPrices: Record<string, number> = {
+      stars: 3,
+      hearts: 3,
+      sprinkles: 2,
+      fondantPiglet: 10,
+      fondantFlowers: 5,
+      donJulioBottle: 5,
+      goldDetails: 8,
+      macaroons: 9,
+      freshFlowers: 12,
+      roses: 4,
+      pearls: 3,
+      sunMoon: 15,
+      chocolateStrawberries: 3
+    };
+    
+    formData.decorations?.forEach(decoration => {
+      total += decorationPrices[decoration] || 0;
+    });
+    
+    // Cake topper price
+    if (formData.cakeTopper) {
+      total += 5; // All toppers cost $5
+    }
+    
+    return total;
+  };
 
   const onSubmit = (data: CakeCustomizationForm) => {
     console.log("Cake customization:", data);
     navigate("/calendar", { state: { customization: data, total } });
-  };
-
-  const handlePresetToggle = (preset: string, value: boolean) => {
-    console.log(`Preset ${preset} toggled: ${value}`);
   };
 
   return (
@@ -163,12 +147,9 @@ const Customization = () => {
         Customize Your Cake
       </h1>
 
-      {selectedCake && (
-        <PresetSelections
-          selectedCake={selectedCake}
-          onPresetToggle={handlePresetToggle}
-        />
-      )}
+      <div className="mb-6">
+        <ClearSelectionsButton />
+      </div>
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-2xl mx-auto">
@@ -199,7 +180,7 @@ const Customization = () => {
           <CustomizationSection 
             title="Decorations" 
             tooltip="Choose your cake decorations. Complex designs and additional elements will affect the final price."
-            priceInfo="Mini Stars $3 • Hearts $3 • Sprinkles $2"
+            priceInfo="Prices vary by decoration type"
           >
             <DecorationsSection />
           </CustomizationSection>
@@ -219,13 +200,16 @@ const Customization = () => {
             </div>
           </div>
 
-          <Button
-            type="submit"
-            className="w-full bg-cake-burgundy hover:bg-cake-rose text-white"
-            size="lg"
-          >
-            Continue to Scheduling
-          </Button>
+          <div className="space-y-4">
+            <ClearSelectionsButton />
+            <Button
+              type="submit"
+              className="w-full bg-cake-burgundy hover:bg-cake-rose text-white"
+              size="lg"
+            >
+              Continue to Scheduling
+            </Button>
+          </div>
         </form>
       </Form>
     </div>
