@@ -4,6 +4,7 @@ import Home from "./pages/Home";
 import Gallery from "./pages/Gallery";
 import Calendar from "./pages/Calendar";
 import Customization from "./pages/Customization";
+import FAQ from "./pages/FAQ";
 
 function App() {
   return (
@@ -15,6 +16,7 @@ function App() {
           <Route path="/gallery" element={<Gallery />} />
           <Route path="/calendar" element={<Calendar />} />
           <Route path="/customization" element={<Customization />} />
+          <Route path="/faq" element={<FAQ />} />
         </Routes>
       </div>
     </Router>

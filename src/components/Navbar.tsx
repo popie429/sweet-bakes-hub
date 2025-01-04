@@ -18,6 +18,9 @@ export const Navbar = () => {
             <Link to="/calendar" className="font-inter text-gray-600 hover:text-cake-burgundy transition-colors">
               Calendar
             </Link>
+            <Link to="/faq" className="font-inter text-gray-600 hover:text-cake-burgundy transition-colors">
+              FAQ
+            </Link>
           </div>
         </div>
       </div>
