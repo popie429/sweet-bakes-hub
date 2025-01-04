@@ -72,11 +72,6 @@ const Customization = () => {
 
   const watchAll = form.watch();
 
-  useEffect(() => {
-    let newTotal = calculateTotal(watchAll);
-    setTotal(newTotal);
-  }, [watchAll]);
-
   const calculateTotal = (formData: CakeCustomizationForm) => {
     let total = 0;
     
@@ -103,7 +98,10 @@ const Customization = () => {
       buttercream: 15,
       "cream-cheese": 18,
       fondant: 25,
-      whipped: 12
+      whipped: 12,
+      chocolateGanache: 15,
+      vanillaFondant: 25,
+      marbleFondant: 25
     };
     total += frostingPrices[formData.frosting] || 0;
     
@@ -135,6 +133,11 @@ const Customization = () => {
     
     return total;
   };
+
+  useEffect(() => {
+    let newTotal = calculateTotal(watchAll);
+    setTotal(newTotal);
+  }, [watchAll]);
 
   const onSubmit = (data: CakeCustomizationForm) => {
     console.log("Cake customization:", data);
