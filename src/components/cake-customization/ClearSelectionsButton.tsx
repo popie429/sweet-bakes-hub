@@ -8,6 +8,7 @@ interface ClearSelectionsButtonProps {
 export const ClearSelectionsButton = ({ form }: ClearSelectionsButtonProps) => {
   const handleClear = () => {
     form.reset({
+      cakeWeight: "",
       flourType: "",
       filling: [],
       frosting: "",

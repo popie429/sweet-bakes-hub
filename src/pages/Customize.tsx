@@ -6,10 +6,12 @@ import { FillingSection } from "@/components/cake-customization/FillingSection";
 import { FrostingSection } from "@/components/cake-customization/FrostingSection";
 import { DecorationsSection } from "@/components/cake-customization/DecorationsSection";
 import { CakeTopperSection } from "@/components/cake-customization/CakeTopperSection";
+import { CakeWeightSection } from "@/components/cake-customization/CakeWeightSection";
 import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 
 interface CustomizationForm {
+  cakeWeight: string;
   flourType: string;
   filling: string;
   frosting: string;
@@ -23,6 +25,7 @@ const Customize = () => {
   
   const form = useForm<CustomizationForm>({
     defaultValues: {
+      cakeWeight: "",
       flourType: "",
       filling: "",
       frosting: "",
@@ -36,6 +39,21 @@ const Customize = () => {
   
   useEffect(() => {
     let newTotal = 0;
+    
+    // Add cake weight price
+    const weightPrices: Record<string, number> = {
+      "0.5": 60,
+      "1": 75,
+      "1.5": 90,
+      "2": 105,
+      "2.5": 120,
+      "3": 135,
+      "3.5": 150,
+      "4": 165,
+      "4.5": 180,
+      "5": 195,
+    };
+    newTotal += weightPrices[watchAll.cakeWeight] || 0;
     
     // Add base cake price based on flavor
     switch (watchAll.flourType) {
@@ -124,43 +142,33 @@ const Customize = () => {
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-2xl mx-auto">
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+            <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Cake Weight</h2>
+            <CakeWeightSection />
+          </div>
+
+          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Base Cake</h2>
             <CakeFlavorSection />
-            <div className="text-sm text-gray-500 mt-2">
-              Vanilla $30 • Chocolate $35 • Red Velvet $40 • Marble $45
-            </div>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Filling</h2>
             <FillingSection />
-            <div className="text-sm text-gray-500 mt-2">
-              Vanilla Custard $8 • Chocolate Ganache $10 • Strawberry $12 • Lemon Curd $10
-            </div>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Frosting</h2>
             <FrostingSection />
-            <div className="text-sm text-gray-500 mt-2">
-              Buttercream $15 • Cream Cheese $18 • Fondant $25 • Whipped Cream $12
-            </div>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Decorations</h2>
             <DecorationsSection />
-            <div className="text-sm text-gray-500 mt-2">
-              Mini Stars $3 • Hearts $3 • Sprinkles $2
-            </div>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">
             <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Cake Topper</h2>
             <CakeTopperSection />
-            <div className="text-sm text-gray-500 mt-2">
-              All toppers $5
-            </div>
           </div>
 
           <div className="bg-white rounded-lg shadow-md p-6 mb-6">

@@ -4,6 +4,7 @@ import { Card } from "@/components/ui/card";
 import { Label } from "@/components/ui/label";
 import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Separator } from "@/components/ui/separator";
+import { CakeWeightSection } from "./CakeWeightSection";
 
 export const PresetSelections = () => {
   const location = useLocation();
@@ -43,14 +44,15 @@ export const PresetSelections = () => {
                 <h3 className="text-lg font-semibold mb-3">Cake Details</h3>
                 <div className="grid grid-cols-2 gap-4">
                   <div>
-                    <p className="text-sm text-gray-500">Price</p>
+                    <p className="text-sm text-gray-500">Base Price</p>
                     <p className="font-semibold">${selectedCake.price}</p>
                   </div>
-                  <div>
-                    <p className="text-sm text-gray-500">Servings</p>
-                    <p className="font-semibold">{selectedCake.servings} guests</p>
-                  </div>
                 </div>
+              </div>
+              <Separator />
+              <div>
+                <h3 className="text-lg font-semibold mb-3">Cake Weight</h3>
+                <CakeWeightSection />
               </div>
               <Separator />
               <div>
