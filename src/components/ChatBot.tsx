@@ -36,11 +36,10 @@ export const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      // Prepare messages array with system message first
-      const apiMessages = [
-        {
-          role: 'system',
-          content: `You are a helpful assistant for Sydney's Cakes bakery. Here's what you know:
+      // Create the system message
+      const systemMessage = {
+        role: 'system' as const,
+        content: `You are a helpful assistant for Sydney's Cakes bakery. Here's what you know:
           - We offer custom cakes with various prices:
             * Piglet Cake ($160, serves 20-30 guests)
             * Don Julio Cake ($140, serves 12-25 guests)
@@ -52,17 +51,17 @@ export const ChatBot = () => {
           - We operate by appointment only
           - We require a 50% deposit to secure orders
           Please provide accurate information based on these details.`
-        }
+      };
+
+      // Filter out any system messages from the conversation history
+      const conversationMessages = messages.filter(msg => msg.role !== 'system');
+
+      // Construct the API messages array with system message first
+      const apiMessages = [
+        systemMessage,
+        ...conversationMessages,
+        { role: 'user' as const, content: userMessage }
       ];
-
-      // Add conversation history ensuring alternating user/assistant messages
-      const conversationMessages = messages.map(msg => ({
-        role: msg.role,
-        content: msg.content
-      }));
-
-      // Add the new user message
-      apiMessages.push(...conversationMessages, { role: 'user', content: userMessage });
 
       const response = await fetch('https://api.perplexity.ai/chat/completions', {
         method: 'POST',

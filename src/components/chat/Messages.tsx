@@ -1,7 +1,7 @@
 import { ScrollArea } from "../ui/scroll-area";
 
 interface Message {
-  role: 'user' | 'assistant';
+  role: 'user' | 'assistant' | 'system';
   content: string;
 }
 
