@@ -5,43 +5,71 @@ import { useNavigate } from "react-router-dom";
 const cakes = [
   {
     id: 1,
-    name: "Classic Vanilla Birthday",
-    price: 45,
-    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3",
-    description: "Light and fluffy vanilla cake with buttercream frosting",
+    name: "Piglet Cake",
+    price: 65,
+    image: "https://i.imgur.com/KzqESzH.jpg",
+    description: "Adorable Piglet themed cake with fondant details",
     presets: {
       flourType: "vanilla",
       filling: "vanilla",
-      frosting: "buttercream",
-      decorations: ["stars"],
-      cakeTopper: "happybirthday"
+      frosting: "fondant",
+      decorations: ["fondant-piglet", "fondant-flowers"],
+      cakeTopper: ""
     }
   },
   {
     id: 2,
-    name: "Chocolate Dream",
-    price: 50,
-    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
-    description: "Rich chocolate cake with ganache filling",
+    name: "Don Julio Cake",
+    price: 75,
+    image: "https://i.imgur.com/vhGv5tS.jpg",
+    description: "Elegant Don Julio themed celebration cake",
     presets: {
       flourType: "chocolate",
       filling: "chocolate",
-      frosting: "buttercream",
-      decorations: ["sprinkles"],
+      frosting: "fondant",
+      decorations: ["fondant-bottle", "gold-details"],
       cakeTopper: ""
     }
   },
   {
     id: 3,
-    name: "Red Velvet Celebration",
-    price: 55,
-    image: "https://images.unsplash.com/photo-1586788680434-30d324b2d46f",
-    description: "Classic red velvet with cream cheese frosting",
+    name: "Macaroon Cake",
+    price: 85,
+    image: "https://i.imgur.com/QEp7PFw.jpg",
+    description: "Delicate cake decorated with fresh macaroons",
     presets: {
-      flourType: "redVelvet",
+      flourType: "vanilla",
       filling: "vanilla",
-      frosting: "cream-cheese",
-      decorations: ["hearts"],
+      frosting: "buttercream",
+      decorations: ["macaroons", "flowers"],
+      cakeTopper: ""
+    }
+  },
+  {
+    id: 4,
+    name: "Vintage Two-Tier Cake",
+    price: 95,
+    image: "https://i.imgur.com/QXBtWd3.jpg",
+    description: "Elegant two-tiered vintage style cake",
+    presets: {
+      flourType: "vanilla",
+      filling: "vanilla",
+      frosting: "buttercream",
+      decorations: ["roses", "pearls"],
+      cakeTopper: ""
+    }
+  },
+  {
+    id: 5,
+    name: "Sun & Moon Cake",
+    price: 70,
+    image: "https://i.imgur.com/UBp4tDG.jpg",
+    description: "Celestial themed cake with sun and moon details",
+    presets: {
+      flourType: "chocolate",
+      filling: "chocolate",
+      frosting: "fondant",
+      decorations: ["sun-moon", "stars"],
       cakeTopper: ""
     }
   },
