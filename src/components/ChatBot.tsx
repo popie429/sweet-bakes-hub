@@ -7,7 +7,7 @@ import { ChatInput } from './chat/ChatInput';
 import { ChatHeader } from './chat/ChatHeader';
 
 interface Message {
-  role: 'user' | 'assistant';
+  role: 'user' | 'assistant' | 'system';
   content: string;
 }
 
@@ -36,6 +36,34 @@ export const ChatBot = () => {
     setIsLoading(true);
 
     try {
+      // Prepare messages array with system message first
+      const apiMessages = [
+        {
+          role: 'system',
+          content: `You are a helpful assistant for Sydney's Cakes bakery. Here's what you know:
+          - We offer custom cakes with various prices:
+            * Piglet Cake ($160, serves 20-30 guests)
+            * Don Julio Cake ($140, serves 12-25 guests)
+            * Macaroon Cake ($80, serves 7-12 guests)
+            * Vintage Two-Tier Cake ($210, serves 30-40 guests)
+            * Sun & Moon Cake ($120, serves 7-13 guests)
+          - We require at least 48 hours notice for all orders
+          - We are located in Albany, NY
+          - We operate by appointment only
+          - We require a 50% deposit to secure orders
+          Please provide accurate information based on these details.`
+        }
+      ];
+
+      // Add conversation history ensuring alternating user/assistant messages
+      const conversationMessages = messages.map(msg => ({
+        role: msg.role,
+        content: msg.content
+      }));
+
+      // Add the new user message
+      apiMessages.push(...conversationMessages, { role: 'user', content: userMessage });
+
       const response = await fetch('https://api.perplexity.ai/chat/completions', {
         method: 'POST',
         headers: {
@@ -44,35 +72,16 @@ export const ChatBot = () => {
         },
         body: JSON.stringify({
           model: 'llama-3.1-sonar-small-128k-online',
-          messages: [
-            {
-              role: 'system',
-              content: `You are a helpful assistant for Sydney's Cakes bakery. Here's what you know:
-              - We offer custom cakes with various prices:
-                * Piglet Cake ($160, serves 20-30 guests)
-                * Don Julio Cake ($140, serves 12-25 guests)
-                * Macaroon Cake ($80, serves 7-12 guests)
-                * Vintage Two-Tier Cake ($210, serves 30-40 guests)
-                * Sun & Moon Cake ($120, serves 7-13 guests)
-              - We require at least 48 hours notice for all orders
-              - We are located in Albany, NY
-              - We operate by appointment only
-              - We require a 50% deposit to secure orders
-              Please provide accurate information based on these details.`
-            },
-            ...messages.map(msg => ({
-              role: msg.role,
-              content: msg.content
-            })),
-            { role: 'user', content: userMessage }
-          ],
+          messages: apiMessages,
           temperature: 0.2,
           max_tokens: 1000
         }),
       });
 
       if (!response.ok) {
-        throw new Error('Failed to get response from AI');
+        const errorData = await response.json();
+        console.error('API Error:', errorData);
+        throw new Error(errorData.error?.message || 'Failed to get response from AI');
       }
 
       const data = await response.json();
