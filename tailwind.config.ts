@@ -23,39 +23,39 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        foreground: "#B76E79",
+        foreground: "#FF69B4",
         cake: {
           pink: "#FFE4E6",
-          rose: "#B76E79",
-          burgundy: "#9F2B3C",
+          rose: "#FF69B4",
+          burgundy: "#FF69B4",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          foreground: "#B76E79",
+          foreground: "#FF69B4",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          foreground: "#B76E79",
+          foreground: "#FF69B4",
         },
         destructive: {
-          DEFAULT: "#B76E79",
+          DEFAULT: "#FF69B4",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "#B76E79",
+          foreground: "#FF69B4",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
-          foreground: "#B76E79",
+          foreground: "#FF69B4",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
-          foreground: "#B76E79",
+          foreground: "#FF69B4",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
-          foreground: "#B76E79",
+          foreground: "#FF69B4",
         },
       },
       borderRadius: {

@@ -13,19 +13,19 @@ export const Navbar = () => {
             />
           </Link>
           <div className="flex items-center space-x-6">
-            <Link to="/" className="font-inter text-gray-600 hover:text-cake-burgundy transition-colors">
+            <Link to="/" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
               Home
             </Link>
-            <Link to="/gallery" className="font-inter text-gray-600 hover:text-cake-burgundy transition-colors">
+            <Link to="/gallery" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
               Gallery
             </Link>
-            <Link to="/customize" className="font-inter text-gray-600 hover:text-cake-burgundy transition-colors">
+            <Link to="/customize" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
               Customize
             </Link>
-            <Link to="/calendar" className="font-inter text-gray-600 hover:text-cake-burgundy transition-colors">
+            <Link to="/calendar" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
               Calendar
             </Link>
-            <Link to="/faq" className="font-inter text-gray-600 hover:text-cake-burgundy transition-colors">
+            <Link to="/faq" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
               FAQ
             </Link>
           </div>
