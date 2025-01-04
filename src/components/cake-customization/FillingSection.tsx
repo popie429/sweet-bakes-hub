@@ -28,9 +28,13 @@ export const FillingSection = () => {
                     >
                       <FormControl>
                         <Checkbox
-                          checked={field.value === filling.id}
+                          checked={field.value?.includes(filling.id)}
                           onCheckedChange={(checked) => {
-                            field.onChange(checked ? filling.id : null);
+                            return checked
+                              ? field.onChange([...(field.value || []), filling.id])
+                              : field.onChange(
+                                  field.value?.filter((value) => value !== filling.id)
+                                );
                           }}
                         />
                       </FormControl>

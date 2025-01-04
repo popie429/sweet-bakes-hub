@@ -1,6 +1,6 @@
 export const calculateTotal = (formData: {
   flourType?: string;
-  filling?: string;
+  filling?: string[];
   frosting?: string;
   decorations?: string[];
   cakeTopper?: string;
@@ -16,14 +16,16 @@ export const calculateTotal = (formData: {
   };
   total += flavorPrices[formData.flourType || ''] || 0;
   
-  // Filling price
+  // Filling prices (now handling multiple selections)
   const fillingPrices: Record<string, number> = {
     vanilla: 8,
     chocolate: 10,
     strawberry: 12,
     lemon: 10
   };
-  total += fillingPrices[formData.filling || ''] || 0;
+  formData.filling?.forEach(filling => {
+    total += fillingPrices[filling] || 0;
+  });
   
   // Frosting price
   const frostingPrices: Record<string, number> = {

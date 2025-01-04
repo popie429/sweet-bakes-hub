@@ -7,7 +7,7 @@ export const ClearSelectionsButton = () => {
   const handleClear = () => {
     form.reset({
       flourType: "",
-      filling: "",
+      filling: [],
       frosting: "",
       decorations: [],
       cakeTopper: "",
