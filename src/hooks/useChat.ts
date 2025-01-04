@@ -85,22 +85,26 @@ const sendChatMessage = async (userMessage: string, messages: Message[]): Promis
       Please provide accurate information based on these details.`
   };
 
-  const apiMessages = [systemMessage];
-  let lastRole: 'user' | 'assistant' | null = null;
-
-  messages.forEach((msg) => {
-    if (msg.role !== 'system') {
-      if (lastRole !== msg.role) {
-        apiMessages.push({
-          role: msg.role as 'user' | 'assistant',
-          content: msg.content
-        });
-        lastRole = msg.role as 'user' | 'assistant';
-      }
+  // Prepare messages array ensuring proper alternation
+  const apiMessages: (SystemMessage | ChatMessage)[] = [systemMessage];
+  
+  // Filter out system messages and ensure alternating user/assistant messages
+  const chatMessages = messages.filter(msg => msg.role !== 'system');
+  
+  for (let i = 0; i < chatMessages.length; i++) {
+    const currentMsg = chatMessages[i];
+    if (i === 0 && currentMsg.role === 'assistant') {
+      // Skip the initial assistant message if it exists
+      continue;
     }
-  });
+    apiMessages.push({
+      role: currentMsg.role as 'user' | 'assistant',
+      content: currentMsg.content
+    });
+  }
 
-  if (lastRole !== 'user') {
+  // Add the new user message if the last message wasn't from the user
+  if (apiMessages[apiMessages.length - 1]?.role !== 'user') {
     apiMessages.push({ role: 'user', content: userMessage });
   }
 
