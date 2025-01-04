@@ -2,12 +2,12 @@ import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/for
 import { Checkbox } from "@/components/ui/checkbox";
 
 const topperOptions = [
-  { id: "happybirthday", label: "Happy Birthday" },
-  { id: "mrandmrs", label: "Mr & Mrs" },
-  { id: "ohbaby", label: "Oh, Baby!" },
-  { id: "happyfathersday", label: "Happy Father's Day" },
-  { id: "happymothersday", label: "Happy Mother's Day" },
-  { id: "happyvalentinesday", label: "Happy Valentine's Day" },
+  { id: "happybirthday", label: "Happy Birthday", price: 5 },
+  { id: "mrandmrs", label: "Mr & Mrs", price: 5 },
+  { id: "ohbaby", label: "Oh, Baby!", price: 5 },
+  { id: "happyfathersday", label: "Happy Father's Day", price: 5 },
+  { id: "happymothersday", label: "Happy Mother's Day", price: 5 },
+  { id: "happyvalentinesday", label: "Happy Valentine's Day", price: 5 },
 ];
 
 export const CakeTopperSection = () => {
@@ -36,7 +36,9 @@ export const CakeTopperSection = () => {
                           }}
                         />
                       </FormControl>
-                      <FormLabel className="font-normal">{topper.label}</FormLabel>
+                      <FormLabel className="font-normal">
+                        {topper.label} (${topper.price})
+                      </FormLabel>
                     </FormItem>
                   );
                 }}

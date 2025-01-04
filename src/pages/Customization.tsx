@@ -10,6 +10,7 @@ import { CakeTopperSection } from "@/components/cake-customization/CakeTopperSec
 import { ClearSelectionsButton } from "@/components/cake-customization/ClearSelectionsButton";
 import { HelpCircle } from "lucide-react";
 import { useState, useEffect } from "react";
+import { calculateTotal } from "@/utils/priceCalculations";
 import {
   Tooltip,
   TooltipContent,
@@ -25,11 +26,10 @@ interface CakeCustomizationForm {
   cakeTopper: string;
 }
 
-const CustomizationSection = ({ children, title, tooltip, priceInfo }: { 
+const CustomizationSection = ({ children, title, tooltip }: { 
   children: React.ReactNode; 
   title: string; 
   tooltip: string;
-  priceInfo?: string;
 }) => (
   <div className="bg-white rounded-lg shadow-md p-6 mb-6">
     <div className="flex items-center gap-2 mb-4">
@@ -46,11 +46,6 @@ const CustomizationSection = ({ children, title, tooltip, priceInfo }: {
       </TooltipProvider>
     </div>
     {children}
-    {priceInfo && (
-      <div className="text-sm text-gray-500 mt-2">
-        {priceInfo}
-      </div>
-    )}
   </div>
 );
 
@@ -72,70 +67,8 @@ const Customization = () => {
 
   const watchAll = form.watch();
 
-  const calculateTotal = (formData: CakeCustomizationForm) => {
-    let total = 0;
-    
-    // Base cake price based on flavor
-    const flavorPrices: Record<string, number> = {
-      vanilla: 30,
-      chocolate: 35,
-      redVelvet: 40,
-      marble: 45
-    };
-    total += flavorPrices[formData.flourType] || 0;
-    
-    // Filling price
-    const fillingPrices: Record<string, number> = {
-      vanilla: 8,
-      chocolate: 10,
-      strawberry: 12,
-      lemon: 10
-    };
-    total += fillingPrices[formData.filling] || 0;
-    
-    // Frosting price
-    const frostingPrices: Record<string, number> = {
-      buttercream: 15,
-      "cream-cheese": 18,
-      fondant: 25,
-      whipped: 12,
-      chocolateGanache: 15,
-      vanillaFondant: 25,
-      marbleFondant: 25
-    };
-    total += frostingPrices[formData.frosting] || 0;
-    
-    // Decorations prices
-    const decorationPrices: Record<string, number> = {
-      stars: 3,
-      hearts: 3,
-      sprinkles: 2,
-      fondantPiglet: 10,
-      fondantFlowers: 5,
-      donJulioBottle: 5,
-      goldDetails: 8,
-      macaroons: 9,
-      freshFlowers: 12,
-      roses: 4,
-      pearls: 3,
-      sunMoon: 15,
-      chocolateStrawberries: 3
-    };
-    
-    formData.decorations?.forEach(decoration => {
-      total += decorationPrices[decoration] || 0;
-    });
-    
-    // Cake topper price
-    if (formData.cakeTopper) {
-      total += 5; // All toppers cost $5
-    }
-    
-    return total;
-  };
-
   useEffect(() => {
-    let newTotal = calculateTotal(watchAll);
+    const newTotal = calculateTotal(watchAll);
     setTotal(newTotal);
   }, [watchAll]);
 
@@ -159,7 +92,6 @@ const Customization = () => {
           <CustomizationSection 
             title="Cake Flavor" 
             tooltip="Select your preferred cake flavor. Additional charges may apply for premium flavors."
-            priceInfo="Vanilla $30 • Chocolate $35 • Red Velvet $40 • Marble $45"
           >
             <CakeFlavorSection />
           </CustomizationSection>
@@ -167,7 +99,6 @@ const Customization = () => {
           <CustomizationSection 
             title="Filling" 
             tooltip="Choose your cake filling. Some premium fillings may incur additional charges."
-            priceInfo="Vanilla Custard $8 • Chocolate Ganache $10 • Strawberry $12 • Lemon Curd $10"
           >
             <FillingSection />
           </CustomizationSection>
@@ -175,7 +106,6 @@ const Customization = () => {
           <CustomizationSection 
             title="Frosting" 
             tooltip="Select your frosting type. Special frosting techniques may have additional costs."
-            priceInfo="Buttercream $15 • Cream Cheese $18 • Fondant $25 • Whipped Cream $12"
           >
             <FrostingSection />
           </CustomizationSection>
@@ -183,7 +113,6 @@ const Customization = () => {
           <CustomizationSection 
             title="Decorations" 
             tooltip="Choose your cake decorations. Complex designs and additional elements will affect the final price."
-            priceInfo="Prices vary by decoration type"
           >
             <DecorationsSection />
           </CustomizationSection>
@@ -191,7 +120,6 @@ const Customization = () => {
           <CustomizationSection 
             title="Cake Topper" 
             tooltip="Select a cake topper. Custom messages or designs may require additional fees."
-            priceInfo="All toppers $5"
           >
             <CakeTopperSection />
           </CustomizationSection>

@@ -2,10 +2,10 @@ import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/for
 import { Checkbox } from "@/components/ui/checkbox";
 
 const flavorOptions = [
-  { id: "vanilla", label: "Vanilla" },
-  { id: "chocolate", label: "Chocolate" },
-  { id: "redVelvet", label: "Red Velvet" },
-  { id: "marble", label: "Marble" },
+  { id: "vanilla", label: "Vanilla", price: 30 },
+  { id: "chocolate", label: "Chocolate", price: 35 },
+  { id: "redVelvet", label: "Red Velvet", price: 40 },
+  { id: "marble", label: "Marble", price: 45 },
 ];
 
 export const CakeFlavorSection = () => {
@@ -34,7 +34,9 @@ export const CakeFlavorSection = () => {
                           }}
                         />
                       </FormControl>
-                      <FormLabel className="font-normal">{flavor.label}</FormLabel>
+                      <FormLabel className="font-normal">
+                        {flavor.label} (${flavor.price})
+                      </FormLabel>
                     </FormItem>
                   );
                 }}
