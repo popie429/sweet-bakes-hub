@@ -7,12 +7,12 @@ const Home = () => {
   return (
     <div className="flex-1">
       <section className="relative h-[70vh] bg-cake-pink">
-        <div className="container mx-auto px-4 h-full flex items-center">
-          <div className="max-w-2xl">
+        <div className="container mx-auto px-4 h-full flex items-center justify-center">
+          <div className="max-w-2xl text-center">
             <img 
               src="https://i.imgur.com/9ICEHj0.jpeg" 
               alt="Sydney's Cakes Logo" 
-              className="w-32 h-32 object-contain mb-6"
+              className="w-32 h-32 object-contain mb-6 mx-auto"
             />
             <h1 className="text-5xl md:text-6xl font-playfair font-bold text-cake-burgundy mb-6">
               Delicious Custom Cakes for Your Special Moments
