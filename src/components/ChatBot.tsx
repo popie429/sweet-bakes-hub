@@ -1,9 +1,10 @@
 import { useState, useEffect } from 'react';
-import { MessageCircle, X, Send } from 'lucide-react';
+import { MessageCircle } from 'lucide-react';
 import { Button } from './ui/button';
-import { Input } from './ui/input';
-import { ScrollArea } from './ui/scroll-area';
 import { useToast } from './ui/use-toast';
+import { Messages } from './chat/Messages';
+import { ChatInput } from './chat/ChatInput';
+import { ChatHeader } from './chat/ChatHeader';
 
 interface Message {
   role: 'user' | 'assistant';
@@ -18,7 +19,6 @@ export const ChatBot = () => {
   const { toast } = useToast();
 
   useEffect(() => {
-    // Add initial greeting message
     setMessages([
       {
         role: 'assistant',
@@ -94,65 +94,14 @@ export const ChatBot = () => {
         </Button>
       ) : (
         <div className="bg-white rounded-lg shadow-xl w-80 md:w-96">
-          <div className="p-4 border-b flex justify-between items-center bg-cake-burgundy text-white rounded-t-lg">
-            <h3 className="font-semibold">Chat with Sydney's Cakes</h3>
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={() => setIsOpen(false)}
-              className="hover:bg-cake-rose text-white"
-            >
-              <X className="h-4 w-4" />
-            </Button>
-          </div>
-
-          <ScrollArea className="h-96 p-4">
-            <div className="space-y-4">
-              {messages.map((message, index) => (
-                <div
-                  key={index}
-                  className={`flex ${
-                    message.role === 'user' ? 'justify-end' : 'justify-start'
-                  }`}
-                >
-                  <div
-                    className={`max-w-[80%] rounded-lg p-3 ${
-                      message.role === 'user'
-                        ? 'bg-cake-burgundy text-white'
-                        : 'bg-gray-100 text-gray-800'
-                    }`}
-                  >
-                    {message.content}
-                  </div>
-                </div>
-              ))}
-              {isLoading && (
-                <div className="flex justify-start">
-                  <div className="bg-gray-100 text-gray-800 rounded-lg p-3">
-                    Typing...
-                  </div>
-                </div>
-              )}
-            </div>
-          </ScrollArea>
-
-          <div className="p-4 border-t">
-            <div className="flex gap-2">
-              <Input
-                value={input}
-                onChange={(e) => setInput(e.target.value)}
-                placeholder="Type your message..."
-                onKeyPress={(e) => e.key === 'Enter' && handleSend()}
-              />
-              <Button
-                onClick={handleSend}
-                disabled={isLoading}
-                className="bg-cake-burgundy hover:bg-cake-rose"
-              >
-                <Send className="h-4 w-4" />
-              </Button>
-            </div>
-          </div>
+          <ChatHeader onClose={() => setIsOpen(false)} />
+          <Messages messages={messages} isLoading={isLoading} />
+          <ChatInput
+            input={input}
+            setInput={setInput}
+            handleSend={handleSend}
+            isLoading={isLoading}
+          />
         </div>
       )}
     </div>
