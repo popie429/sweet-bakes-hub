@@ -1,11 +1,42 @@
 import { Link } from "react-router-dom";
 import { Share2 } from "lucide-react";
 import { Button } from "./ui/button";
+import { useToast } from "./ui/use-toast";
 
 export const Navbar = () => {
-  const handleShare = () => {
-    // This opens Lovable's built-in share dialog
-    window.parent.postMessage({ type: 'OPEN_SHARE_DIALOG' }, '*');
+  const { toast } = useToast();
+
+  const handleShare = async () => {
+    try {
+      // Create a POST request to trigger the build
+      const response = await fetch('/api/build', {
+        method: 'POST',
+      });
+      
+      if (!response.ok) {
+        throw new Error('Build failed');
+      }
+
+      // Trigger the download
+      const downloadUrl = '/api/download';
+      const link = document.createElement('a');
+      link.href = downloadUrl;
+      link.download = 'sydney-cakes-website.zip';
+      document.body.appendChild(link);
+      link.click();
+      document.body.removeChild(link);
+
+      toast({
+        title: "Download started",
+        description: "Your website files are being downloaded.",
+      });
+    } catch (error) {
+      toast({
+        title: "Download failed",
+        description: "Please try again or contact support.",
+        variant: "destructive",
+      });
+    }
   };
 
   return (
@@ -41,7 +72,7 @@ export const Navbar = () => {
               onClick={handleShare}
               className="flex items-center gap-2"
             >
-              <Share2 className="h-4 w-4" /> Share
+              <Share2 className="h-4 w-4" /> Download Files
             </Button>
           </div>
         </div>
