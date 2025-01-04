@@ -12,7 +12,7 @@ const Payment = () => {
   };
 
   const handleCashAppPayment = () => {
-    window.open("https://cash.app/$sydneysespinal29", "_blank");
+    window.open("https://cash.app/$sydneyespinal29", "_blank");
   };
 
   const handlePayPalPayment = () => {
