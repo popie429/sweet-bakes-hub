@@ -62,25 +62,31 @@ export const ChatBot = () => {
           Please provide accurate information based on these details.`
       };
 
-      // Get conversation history without system messages
-      const conversationHistory = messages.filter(msg => msg.role !== 'system');
+      // Get chat history excluding system messages
+      const chatHistory = messages.filter(msg => msg.role !== 'system');
       
-      // Initialize API messages array with system message
+      // Prepare API messages array starting with system message
       const apiMessages: (SystemMessage | ChatMessage)[] = [systemMessage];
       
-      // Add conversation history maintaining alternation
-      let lastRole: 'user' | 'assistant' | null = null;
-      
-      for (const msg of conversationHistory) {
-        if (msg.role !== 'system' && (!lastRole || msg.role !== lastRole)) {
-          apiMessages.push({ role: msg.role, content: msg.content });
-          lastRole = msg.role;
+      // Process chat history to ensure alternation
+      const processedHistory: ChatMessage[] = [];
+      for (let i = 0; i < chatHistory.length; i++) {
+        const currentMsg = chatHistory[i];
+        if (i === 0 || currentMsg.role !== chatHistory[i - 1].role) {
+          processedHistory.push({
+            role: currentMsg.role as 'user' | 'assistant',
+            content: currentMsg.content
+          });
         }
       }
-      
-      // Add the new user message if it doesn't break alternation
-      if (lastRole !== 'user') {
-        apiMessages.push({ role: 'user' as const, content: userMessage });
+
+      // Add processed history to API messages
+      apiMessages.push(...processedHistory);
+
+      // Add new user message only if it maintains alternation
+      const lastMessage = processedHistory[processedHistory.length - 1];
+      if (!lastMessage || lastMessage.role === 'assistant') {
+        apiMessages.push({ role: 'user', content: userMessage });
       }
 
       const response = await fetch('https://api.perplexity.ai/chat/completions', {
