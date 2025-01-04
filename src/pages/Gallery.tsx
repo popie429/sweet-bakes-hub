@@ -7,7 +7,7 @@ const cakes = [
     id: 1,
     name: "Classic Vanilla Birthday",
     price: 45,
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+    image: "https://images.unsplash.com/photo-1464349095431-e9a21285b5f3",
     description: "Light and fluffy vanilla cake with buttercream frosting",
     presets: {
       flourType: "vanilla",
@@ -21,7 +21,7 @@ const cakes = [
     id: 2,
     name: "Chocolate Dream",
     price: 50,
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+    image: "https://images.unsplash.com/photo-1578985545062-69928b1d9587",
     description: "Rich chocolate cake with ganache filling",
     presets: {
       flourType: "chocolate",
@@ -35,7 +35,7 @@ const cakes = [
     id: 3,
     name: "Red Velvet Celebration",
     price: 55,
-    image: "https://images.unsplash.com/photo-1618160702438-9b02ab6515c9",
+    image: "https://images.unsplash.com/photo-1586788680434-30d324b2d46f",
     description: "Classic red velvet with cream cheese frosting",
     presets: {
       flourType: "redVelvet",
