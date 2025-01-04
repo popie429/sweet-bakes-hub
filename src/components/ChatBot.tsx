@@ -53,15 +53,25 @@ export const ChatBot = () => {
           Please provide accurate information based on these details.`
       };
 
-      // Filter out any system messages from the conversation history
-      const conversationMessages = messages.filter(msg => msg.role !== 'system');
-
-      // Construct the API messages array with system message first
-      const apiMessages = [
-        systemMessage,
-        ...conversationMessages,
-        { role: 'user' as const, content: userMessage }
-      ];
+      // Get conversation history, ensuring alternating user/assistant messages
+      const conversationHistory = messages.filter(msg => msg.role !== 'system');
+      
+      // Ensure the last message pairs with the new user message
+      const apiMessages = [systemMessage];
+      
+      // Add conversation history maintaining alternation
+      for (let i = 0; i < conversationHistory.length; i++) {
+        const currentMsg = conversationHistory[i];
+        if (
+          (i === 0 && currentMsg.role === 'assistant') || // First message can be assistant
+          (i > 0 && currentMsg.role !== conversationHistory[i-1].role) // Subsequent messages must alternate
+        ) {
+          apiMessages.push(currentMsg);
+        }
+      }
+      
+      // Add the new user message
+      apiMessages.push({ role: 'user' as const, content: userMessage });
 
       const response = await fetch('https://api.perplexity.ai/chat/completions', {
         method: 'POST',
