@@ -6,8 +6,9 @@ const cakes = [
   {
     id: 1,
     name: "Piglet Cake",
-    price: 65,
-    image: "https://i.imgur.com/KzqESzH.jpg",
+    price: 160,
+    servings: "20-30",
+    image: "https://i.imgur.com/tsM6cYx.jpeg",
     description: "Adorable Piglet themed cake with fondant details",
     presets: {
       flourType: "vanilla",
@@ -20,8 +21,9 @@ const cakes = [
   {
     id: 2,
     name: "Don Julio Cake",
-    price: 75,
-    image: "https://i.imgur.com/vhGv5tS.jpg",
+    price: 140,
+    servings: "12-25",
+    image: "https://i.imgur.com/1IlLFO1.jpeg",
     description: "Elegant Don Julio themed celebration cake",
     presets: {
       flourType: "chocolate",
@@ -34,8 +36,9 @@ const cakes = [
   {
     id: 3,
     name: "Macaroon Cake",
-    price: 85,
-    image: "https://i.imgur.com/QEp7PFw.jpg",
+    price: 80,
+    servings: "7-12",
+    image: "https://i.imgur.com/Ve6bqSL.jpeg",
     description: "Delicate cake decorated with fresh macaroons",
     presets: {
       flourType: "vanilla",
@@ -48,8 +51,9 @@ const cakes = [
   {
     id: 4,
     name: "Vintage Two-Tier Cake",
-    price: 95,
-    image: "https://i.imgur.com/QXBtWd3.jpg",
+    price: 210,
+    servings: "30-40",
+    image: "https://i.imgur.com/xjzX5Ep.jpeg",
     description: "Elegant two-tiered vintage style cake",
     presets: {
       flourType: "vanilla",
@@ -62,8 +66,9 @@ const cakes = [
   {
     id: 5,
     name: "Sun & Moon Cake",
-    price: 70,
-    image: "https://i.imgur.com/UBp4tDG.jpg",
+    price: 120,
+    servings: "7-13",
+    image: "https://i.imgur.com/anLj4Uc.jpeg",
     description: "Celestial themed cake with sun and moon details",
     presets: {
       flourType: "chocolate",
@@ -100,7 +105,8 @@ const Gallery = () => {
                 className="w-full h-48 object-cover rounded-md mb-4"
               />
               <p className="text-gray-600 mb-2">{cake.description}</p>
-              <p className="text-cake-burgundy font-semibold">Starting at ${cake.price}</p>
+              <p className="text-cake-burgundy font-semibold mb-1">${cake.price}</p>
+              <p className="text-gray-600 text-sm">Serves {cake.servings} guests</p>
             </CardContent>
             <CardFooter>
               <Button
