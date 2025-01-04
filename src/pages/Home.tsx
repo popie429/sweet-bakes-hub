@@ -65,7 +65,7 @@ const Home = () => {
               <Facebook size={24} />
             </a>
             <a
-              href="https://wa.me/1234567890"
+              href="https://wa.me/19296986795"
               target="_blank"
               rel="noopener noreferrer"
               className="text-cake-burgundy hover:text-cake-rose transition-colors"
