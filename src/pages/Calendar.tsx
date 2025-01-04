@@ -1,9 +1,18 @@
 import { Calendar as CalendarIcon } from "lucide-react";
 import { Calendar as CalendarComponent } from "@/components/ui/calendar";
 import { useState } from "react";
+import { TimeSelectionDialog } from "@/components/calendar/TimeSelectionDialog";
 
 const Calendar = () => {
   const [date, setDate] = useState<Date | undefined>(new Date());
+  const [showTimeDialog, setShowTimeDialog] = useState(false);
+
+  const handleDateSelect = (selectedDate: Date | undefined) => {
+    setDate(selectedDate);
+    if (selectedDate) {
+      setShowTimeDialog(true);
+    }
+  };
 
   return (
     <div className="container mx-auto px-4 py-8">
@@ -18,13 +27,19 @@ const Calendar = () => {
         <CalendarComponent
           mode="single"
           selected={date}
-          onSelect={setDate}
+          onSelect={handleDateSelect}
           className="rounded-md border"
         />
         <p className="mt-4 text-sm text-gray-600">
           * Please note that orders require at least 48 hours notice
         </p>
       </div>
+
+      <TimeSelectionDialog 
+        open={showTimeDialog} 
+        onOpenChange={setShowTimeDialog}
+        selectedDate={date}
+      />
     </div>
   );
 };
