@@ -11,6 +11,16 @@ interface Message {
   content: string;
 }
 
+interface SystemMessage {
+  role: 'system';
+  content: string;
+}
+
+interface ChatMessage {
+  role: 'user' | 'assistant';
+  content: string;
+}
+
 export const ChatBot = () => {
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
@@ -36,9 +46,8 @@ export const ChatBot = () => {
     setIsLoading(true);
 
     try {
-      // Create the system message
-      const systemMessage = {
-        role: 'system' as const,
+      const systemMessage: SystemMessage = {
+        role: 'system',
         content: `You are a helpful assistant for Sydney's Cakes bakery. Here's what you know:
           - We offer custom cakes with various prices:
             * Piglet Cake ($160, serves 20-30 guests)
@@ -53,25 +62,26 @@ export const ChatBot = () => {
           Please provide accurate information based on these details.`
       };
 
-      // Get conversation history, ensuring alternating user/assistant messages
+      // Get conversation history without system messages
       const conversationHistory = messages.filter(msg => msg.role !== 'system');
       
-      // Ensure the last message pairs with the new user message
-      const apiMessages = [systemMessage];
+      // Initialize API messages array with system message
+      const apiMessages: (SystemMessage | ChatMessage)[] = [systemMessage];
       
       // Add conversation history maintaining alternation
-      for (let i = 0; i < conversationHistory.length; i++) {
-        const currentMsg = conversationHistory[i];
-        if (
-          (i === 0 && currentMsg.role === 'assistant') || // First message can be assistant
-          (i > 0 && currentMsg.role !== conversationHistory[i-1].role) // Subsequent messages must alternate
-        ) {
-          apiMessages.push(currentMsg);
+      let lastRole: 'user' | 'assistant' | null = null;
+      
+      for (const msg of conversationHistory) {
+        if (msg.role !== 'system' && (!lastRole || msg.role !== lastRole)) {
+          apiMessages.push({ role: msg.role, content: msg.content });
+          lastRole = msg.role;
         }
       }
       
-      // Add the new user message
-      apiMessages.push({ role: 'user' as const, content: userMessage });
+      // Add the new user message if it doesn't break alternation
+      if (lastRole !== 'user') {
+        apiMessages.push({ role: 'user' as const, content: userMessage });
+      }
 
       const response = await fetch('https://api.perplexity.ai/chat/completions', {
         method: 'POST',
