@@ -1,5 +1,6 @@
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
+import { useNavigate } from "react-router-dom";
 
 const cakes = [
   {
@@ -26,6 +27,8 @@ const cakes = [
 ];
 
 const Gallery = () => {
+  const navigate = useNavigate();
+
   return (
     <div className="container mx-auto px-4 py-8">
       <h1 className="text-4xl font-playfair font-bold text-cake-burgundy mb-8 text-center">
@@ -49,7 +52,7 @@ const Gallery = () => {
             <CardFooter>
               <Button
                 className="w-full bg-cake-burgundy hover:bg-cake-rose text-white"
-                onClick={() => window.location.href = '/calendar'}
+                onClick={() => navigate('/customization')}
               >
                 Place Order
               </Button>
