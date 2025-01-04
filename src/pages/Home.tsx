@@ -18,7 +18,7 @@ const Home = () => {
               <Button
                 size="lg"
                 className="bg-cake-burgundy hover:bg-cake-rose text-white"
-                onClick={() => window.location.href = 'tel:+1234567890'}
+                onClick={() => window.location.href = 'tel:+19296986795'}
               >
                 <PhoneCall className="mr-2 h-4 w-4" /> Call Now
               </Button>
