@@ -1,6 +1,7 @@
 import { Facebook, Instagram, PhoneCall, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
+import { ChatBot } from "@/components/ChatBot";
 
 const Home = () => {
   return (
@@ -75,6 +76,8 @@ const Home = () => {
           </div>
         </div>
       </footer>
+
+      <ChatBot />
     </div>
   );
 };
