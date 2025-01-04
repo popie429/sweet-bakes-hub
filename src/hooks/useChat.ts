@@ -85,26 +85,32 @@ const sendChatMessage = async (userMessage: string, messages: Message[]): Promis
       Please provide accurate information based on these details.`
   };
 
-  // Prepare messages array ensuring proper alternation
+  // Create a properly alternating message array
   const apiMessages: (SystemMessage | ChatMessage)[] = [systemMessage];
   
-  // Filter out system messages and ensure alternating user/assistant messages
+  // Filter out system messages and get chat messages
   const chatMessages = messages.filter(msg => msg.role !== 'system');
   
-  for (let i = 0; i < chatMessages.length; i++) {
+  // Skip the initial greeting message if it exists
+  const startIndex = chatMessages[0]?.role === 'assistant' ? 1 : 0;
+  
+  // Add messages ensuring alternation
+  for (let i = startIndex; i < chatMessages.length; i++) {
     const currentMsg = chatMessages[i];
-    if (i === 0 && currentMsg.role === 'assistant') {
-      // Skip the initial assistant message if it exists
-      continue;
+    // Only add the message if it maintains the alternation pattern
+    if (i === startIndex || 
+        (apiMessages[apiMessages.length - 1].role === 'system' && currentMsg.role === 'user') ||
+        (apiMessages[apiMessages.length - 1].role === 'user' && currentMsg.role === 'assistant') ||
+        (apiMessages[apiMessages.length - 1].role === 'assistant' && currentMsg.role === 'user')) {
+      apiMessages.push({
+        role: currentMsg.role as 'user' | 'assistant',
+        content: currentMsg.content
+      });
     }
-    apiMessages.push({
-      role: currentMsg.role as 'user' | 'assistant',
-      content: currentMsg.content
-    });
   }
 
-  // Add the new user message if the last message wasn't from the user
-  if (apiMessages[apiMessages.length - 1]?.role !== 'user') {
+  // Ensure the last message is from the user
+  if (apiMessages[apiMessages.length - 1].role !== 'user') {
     apiMessages.push({ role: 'user', content: userMessage });
   }
 
