@@ -11,6 +11,8 @@ import { ClearSelectionsButton } from "@/components/cake-customization/ClearSele
 import { CakeWeightSection } from "@/components/cake-customization/CakeWeightSection";
 import { useState, useEffect } from "react";
 import { calculateTotal } from "@/utils/priceCalculations";
+import { Collapsible, CollapsibleContent, CollapsibleTrigger } from "@/components/ui/collapsible";
+import { ChevronDown } from "lucide-react";
 
 const Customization = () => {
   const location = useLocation();
@@ -20,12 +22,12 @@ const Customization = () => {
 
   const form = useForm({
     defaultValues: {
-      cakeSize: ["6"], // Random preset: 6 inch cake
-      flourType: "vanilla", // Random preset: vanilla flavor
-      filling: ["strawberry"], // Random preset: strawberry filling
-      frosting: "buttercream", // Random preset: buttercream frosting
-      decorations: ["sprinkles", "roses"], // Random preset: sprinkles and roses
-      cakeTopper: "happybirthday", // Random preset: Happy Birthday topper
+      cakeSize: ["6"],
+      flourType: "vanilla",
+      filling: ["strawberry"],
+      frosting: "buttercream",
+      decorations: ["sprinkles", "roses"],
+      cakeTopper: "happybirthday",
     },
   });
 
@@ -49,34 +51,76 @@ const Customization = () => {
 
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-2xl mx-auto">
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Cake Size</h2>
-            <CakeWeightSection />
+          <div className="bg-white rounded-lg shadow-lg">
+            <Collapsible defaultOpen>
+              <CollapsibleTrigger className="flex w-full items-center justify-between p-6">
+                <h2 className="text-xl font-cormorant text-cake-burgundy">Cake Size</h2>
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-6 pb-6">
+                <CakeWeightSection />
+              </CollapsibleContent>
+            </Collapsible>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Base Cake</h2>
-            <CakeFlavorSection />
+          <div className="bg-white rounded-lg shadow-lg">
+            <Collapsible defaultOpen>
+              <CollapsibleTrigger className="flex w-full items-center justify-between p-6">
+                <h2 className="text-xl font-cormorant text-cake-burgundy">Base Cake</h2>
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-6 pb-6">
+                <CakeFlavorSection />
+              </CollapsibleContent>
+            </Collapsible>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Filling</h2>
-            <FillingSection />
+          <div className="bg-white rounded-lg shadow-lg">
+            <Collapsible defaultOpen>
+              <CollapsibleTrigger className="flex w-full items-center justify-between p-6">
+                <h2 className="text-xl font-cormorant text-cake-burgundy">Filling</h2>
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-6 pb-6">
+                <FillingSection />
+              </CollapsibleContent>
+            </Collapsible>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Frosting</h2>
-            <FrostingSection />
+          <div className="bg-white rounded-lg shadow-lg">
+            <Collapsible defaultOpen>
+              <CollapsibleTrigger className="flex w-full items-center justify-between p-6">
+                <h2 className="text-xl font-cormorant text-cake-burgundy">Frosting</h2>
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-6 pb-6">
+                <FrostingSection />
+              </CollapsibleContent>
+            </Collapsible>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Decorations</h2>
-            <DecorationsSection />
+          <div className="bg-white rounded-lg shadow-lg">
+            <Collapsible defaultOpen>
+              <CollapsibleTrigger className="flex w-full items-center justify-between p-6">
+                <h2 className="text-xl font-cormorant text-cake-burgundy">Decorations</h2>
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-6 pb-6">
+                <DecorationsSection />
+              </CollapsibleContent>
+            </Collapsible>
           </div>
 
-          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
-            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Cake Topper</h2>
-            <CakeTopperSection />
+          <div className="bg-white rounded-lg shadow-lg">
+            <Collapsible defaultOpen>
+              <CollapsibleTrigger className="flex w-full items-center justify-between p-6">
+                <h2 className="text-xl font-cormorant text-cake-burgundy">Cake Topper</h2>
+                <ChevronDown className="h-4 w-4" />
+              </CollapsibleTrigger>
+              <CollapsibleContent className="px-6 pb-6">
+                <CakeTopperSection />
+              </CollapsibleContent>
+            </Collapsible>
           </div>
 
           <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
