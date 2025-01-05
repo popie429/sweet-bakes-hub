@@ -8,46 +8,9 @@ import { FrostingSection } from "@/components/cake-customization/FrostingSection
 import { DecorationsSection } from "@/components/cake-customization/DecorationsSection";
 import { CakeTopperSection } from "@/components/cake-customization/CakeTopperSection";
 import { ClearSelectionsButton } from "@/components/cake-customization/ClearSelectionsButton";
-import { HelpCircle } from "lucide-react";
+import { CakeWeightSection } from "@/components/cake-customization/CakeWeightSection";
 import { useState, useEffect } from "react";
 import { calculateTotal } from "@/utils/priceCalculations";
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@/components/ui/tooltip";
-
-interface CakeCustomizationForm {
-  flourType: string;
-  filling: string[];
-  frosting: string;
-  decorations: string[];
-  cakeTopper: string;
-}
-
-const CustomizationSection = ({ children, title, tooltip }: { 
-  children: React.ReactNode; 
-  title: string; 
-  tooltip: string;
-}) => (
-  <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-    <div className="flex items-center gap-2 mb-4">
-      <h2 className="text-xl font-playfair text-cake-burgundy">{title}</h2>
-      <TooltipProvider>
-        <Tooltip>
-          <TooltipTrigger>
-            <HelpCircle className="h-5 w-5 text-gray-400" />
-          </TooltipTrigger>
-          <TooltipContent>
-            <p className="max-w-xs">{tooltip}</p>
-          </TooltipContent>
-        </Tooltip>
-      </TooltipProvider>
-    </div>
-    {children}
-  </div>
-);
 
 const Customization = () => {
   const location = useLocation();
@@ -55,13 +18,14 @@ const Customization = () => {
   const selectedCake = location.state?.selectedCake;
   const [total, setTotal] = useState(0);
 
-  const form = useForm<CakeCustomizationForm>({
-    defaultValues: selectedCake?.presets || {
-      flourType: "",
-      filling: [],
-      frosting: "",
-      decorations: [],
-      cakeTopper: "",
+  const form = useForm({
+    defaultValues: {
+      cakeSize: ["6"], // Random preset: 6 inch cake
+      flourType: "vanilla", // Random preset: vanilla flavor
+      filling: ["strawberry"], // Random preset: strawberry filling
+      frosting: "buttercream", // Random preset: buttercream frosting
+      decorations: ["sprinkles", "roses"], // Random preset: sprinkles and roses
+      cakeTopper: "happybirthday", // Random preset: Happy Birthday topper
     },
   });
 
@@ -72,7 +36,7 @@ const Customization = () => {
     setTotal(newTotal);
   }, [watchAll]);
 
-  const onSubmit = (data: CakeCustomizationForm) => {
+  const onSubmit = (data: any) => {
     console.log("Cake customization:", data);
     navigate("/calendar", { state: { customization: data, total } });
   };
@@ -83,51 +47,42 @@ const Customization = () => {
         Customize Your Cake
       </h1>
 
-      <div className="mb-6">
-        <ClearSelectionsButton form={form} />
-      </div>
-
       <Form {...form}>
         <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-2xl mx-auto">
-          <CustomizationSection 
-            title="Cake Flavor" 
-            tooltip="Select your preferred cake flavor. Additional charges may apply for premium flavors."
-          >
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Cake Size</h2>
+            <CakeWeightSection />
+          </div>
+
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Base Cake</h2>
             <CakeFlavorSection />
-          </CustomizationSection>
+          </div>
 
-          <CustomizationSection 
-            title="Filling" 
-            tooltip="Choose your cake filling. Some premium fillings may incur additional charges."
-          >
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Filling</h2>
             <FillingSection />
-          </CustomizationSection>
+          </div>
 
-          <CustomizationSection 
-            title="Frosting" 
-            tooltip="Select your frosting type. Special frosting techniques may have additional costs."
-          >
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Frosting</h2>
             <FrostingSection />
-          </CustomizationSection>
+          </div>
 
-          <CustomizationSection 
-            title="Decorations" 
-            tooltip="Choose your cake decorations. Complex designs and additional elements will affect the final price."
-          >
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Decorations</h2>
             <DecorationsSection />
-          </CustomizationSection>
+          </div>
 
-          <CustomizationSection 
-            title="Cake Topper" 
-            tooltip="Select a cake topper. Custom messages or designs may require additional fees."
-          >
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+            <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Cake Topper</h2>
             <CakeTopperSection />
-          </CustomizationSection>
+          </div>
 
-          <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+          <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
             <div className="flex justify-between items-center">
-              <h2 className="text-2xl font-playfair text-cake-burgundy">Total</h2>
-              <span className="text-2xl font-bold">${total}</span>
+              <h2 className="text-2xl font-cormorant text-cake-burgundy">Total</h2>
+              <span className="text-2xl font-bold text-cake-burgundy">${total}</span>
             </div>
           </div>
 
