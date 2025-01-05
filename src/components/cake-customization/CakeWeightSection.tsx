@@ -37,11 +37,10 @@ export const CakeWeightSection = () => {
                         }
                       }}
                     />
-                    <div className="space-y-1 leading-none">
+                    <div className="leading-none">
                       <Label className="text-sm font-medium leading-none">
-                        {option.label} ({option.guests} guests)
+                        {option.label} ({option.guests} guests) +${option.price}
                       </Label>
-                      <p className="text-sm text-muted-foreground">+${option.price}</p>
                     </div>
                   </div>
                 ))}
@@ -60,11 +59,10 @@ export const CakeWeightSection = () => {
                         }
                       }}
                     />
-                    <div className="space-y-1 leading-none">
+                    <div className="leading-none">
                       <Label className="text-sm font-medium leading-none">
-                        {option.label} ({option.guests} guests)
+                        {option.label} ({option.guests} guests) +${option.price}
                       </Label>
-                      <p className="text-sm text-muted-foreground">+${option.price}</p>
                     </div>
                   </div>
                 ))}
