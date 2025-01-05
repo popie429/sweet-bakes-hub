@@ -19,40 +19,40 @@ export const CustomizationForm = ({ form, onSubmit, total }: CustomizationFormPr
   return (
     <Form {...form}>
       <form onSubmit={form.handleSubmit(onSubmit)} className="space-y-8 max-w-2xl mx-auto">
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Cake Weight</h2>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Cake Size</h2>
           <CakeWeightSection />
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Base Cake</h2>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Base Cake</h2>
           <CakeFlavorSection />
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Filling</h2>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Filling</h2>
           <FillingSection />
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Frosting</h2>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Frosting</h2>
           <FrostingSection />
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Decorations</h2>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Decorations</h2>
           <DecorationsSection />
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
-          <h2 className="text-xl font-playfair text-cake-burgundy mb-4">Cake Topper</h2>
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
+          <h2 className="text-xl font-cormorant text-cake-burgundy mb-4">Cake Topper</h2>
           <CakeTopperSection />
         </div>
 
-        <div className="bg-white rounded-lg shadow-md p-6 mb-6">
+        <div className="bg-white rounded-lg shadow-lg p-6 mb-6">
           <div className="flex justify-between items-center">
-            <h2 className="text-2xl font-playfair text-cake-burgundy">Total</h2>
-            <span className="text-2xl font-bold">${total}</span>
+            <h2 className="text-2xl font-cormorant text-cake-burgundy">Total</h2>
+            <span className="text-2xl font-bold text-cake-burgundy">${total}</span>
           </div>
         </div>
 
