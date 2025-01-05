@@ -2,13 +2,13 @@ import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/for
 import { Checkbox } from "@/components/ui/checkbox";
 
 const frostingOptions = [
-  { id: "buttercream", label: "Buttercream", price: 15 },
-  { id: "cream-cheese", label: "Cream Cheese", price: 18 },
-  { id: "fondant", label: "Fondant", price: 25 },
-  { id: "whipped", label: "Whipped Cream", price: 12 },
-  { id: "chocolateGanache", label: "Chocolate Ganache", price: 15 },
-  { id: "vanillaFondant", label: "Vanilla Fondant", price: 25 },
-  { id: "marbleFondant", label: "Marble Fondant", price: 25 },
+  { id: "buttercream", label: "Buttercream", price: 0 },
+  { id: "cream-cheese", label: "Cream Cheese", price: 0 },
+  { id: "fondant", label: "Fondant", price: 0 },
+  { id: "whipped", label: "Whipped Cream", price: 0 },
+  { id: "chocolateGanache", label: "Chocolate Ganache", price: 0 },
+  { id: "vanillaFondant", label: "Vanilla Fondant", price: 0 },
+  { id: "marbleFondant", label: "Marble Fondant", price: 0 },
 ];
 
 export const FrostingSection = () => {
@@ -38,7 +38,7 @@ export const FrostingSection = () => {
                         />
                       </FormControl>
                       <FormLabel className="font-normal">
-                        {frosting.label} (${frosting.price})
+                        {frosting.label}
                       </FormLabel>
                     </FormItem>
                   );
