@@ -28,6 +28,10 @@ export default {
           pink: "#FFE4E6",
           rose: "#FF69B4",
           burgundy: "#FF69B4",
+          cream: "#FEF9D7",
+          peach: "#FDE1D3",
+          lavender: "#E5DEFF",
+          sage: "#F2FCE2",
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
@@ -64,8 +68,11 @@ export default {
         sm: "calc(var(--radius) - 4px)",
       },
       fontFamily: {
-        playfair: ["Playfair Display", "serif"],
-        inter: ["Inter", "sans-serif"],
+        cormorant: ["Cormorant Garamond", "serif"],
+        montserrat: ["Montserrat", "sans-serif"],
+      },
+      backgroundImage: {
+        'gradient-elegant': 'linear-gradient(to top, #accbee 0%, #e7f0fd 100%)',
       },
     },
   },

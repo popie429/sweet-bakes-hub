@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;500;600;700&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Montserrat:wght@300;400;500;600&display=swap');
 
 @tailwind base;
 @tailwind components;
@@ -35,9 +34,25 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-cake-rose font-inter;
+    @apply bg-background text-cake-rose font-montserrat;
   }
   h1, h2, h3, h4, h5, h6 {
-    @apply font-playfair text-cake-rose;
+    @apply font-cormorant text-cake-rose;
   }
+}
+
+.elegant-shadow {
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -1px rgba(0, 0, 0, 0.06);
+}
+
+.elegant-card {
+  @apply bg-white rounded-lg p-6 elegant-shadow;
+}
+
+.elegant-input {
+  @apply border-2 border-cake-pink focus:border-cake-rose focus:ring-1 focus:ring-cake-rose rounded-md;
+}
+
+.elegant-button {
+  @apply bg-cake-rose hover:bg-opacity-90 text-white font-montserrat font-medium py-2 px-4 rounded-md transition-all duration-200 elegant-shadow;
 }
