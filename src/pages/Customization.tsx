@@ -78,8 +78,8 @@ const Customization = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
-      <h1 className="text-4xl font-playfair font-bold text-cake-burgundy mb-8 text-center">
+    <div className="min-h-screen bg-cake-pink px-4 py-8">
+      <h1 className="text-4xl font-cormorant font-bold text-cake-rose mb-8 text-center">
         Customize Your Cake
       </h1>
 
