@@ -1,42 +1,50 @@
 import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
-import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
+import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
 
-const CAKE_WEIGHTS = [
-  { weight: "0.5", label: "½ a pound", guests: "7-9", price: 60 },
-  { weight: "1", label: "1 lb", guests: "12-15", price: 75 },
-  { weight: "1.5", label: "1 ½ lb", guests: "18-22", price: 90 },
-  { weight: "2", label: "2 lbs", guests: "25-30", price: 105 },
-  { weight: "2.5", label: "2 ½ lbs", guests: "32-38", price: 120 },
-  { weight: "3", label: "3 lbs", guests: "40-45", price: 135 },
-  { weight: "3.5", label: "3 ½ lbs", guests: "47-53", price: 150 },
-  { weight: "4", label: "4 lbs", guests: "55-60", price: 165 },
-  { weight: "4.5", label: "4 ½ lbs", guests: "62-68", price: 180 },
-  { weight: "5", label: "5 lbs", guests: "70-75", price: 195 },
+const CAKE_SIZES = [
+  { size: "5", label: "5 inch", guests: "4-6", price: 60 },
+  { size: "6", label: "6 inch", guests: "8-10", price: 75 },
+  { size: "7", label: "7 inch", guests: "12-15", price: 90 },
+  { size: "8", label: "8 inch", guests: "16-20", price: 105 },
+  { size: "9", label: "9 inch", guests: "25-30", price: 120 },
+  { size: "10", label: "10 inch", guests: "35-40", price: 135 },
+  { size: "12", label: "12 inch", guests: "45-50", price: 150 },
+  { size: "14", label: "14 inch", guests: "60-65", price: 165 },
+  { size: "16", label: "16 inch", guests: "75-80", price: 180 },
 ];
 
 export const CakeWeightSection = () => {
   return (
     <FormField
-      name="cakeWeight"
+      name="cakeSize"
       render={({ field }) => (
         <FormItem className="space-y-3">
-          <FormLabel>Cake Weight</FormLabel>
+          <FormLabel>Cake Size</FormLabel>
           <FormControl>
-            <RadioGroup
-              onValueChange={field.onChange}
-              defaultValue={field.value}
-              className="flex flex-col space-y-1"
-            >
-              {CAKE_WEIGHTS.map((option) => (
-                <div key={option.weight} className="flex items-center space-x-2">
-                  <RadioGroupItem value={option.weight} id={`weight-${option.weight}`} />
-                  <Label htmlFor={`weight-${option.weight}`}>
-                    {option.label} ({option.guests} guests) +${option.price}
-                  </Label>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
+              {CAKE_SIZES.map((option) => (
+                <div key={option.size} className="flex items-start space-x-3 space-y-0">
+                  <Checkbox
+                    checked={field.value?.includes(option.size)}
+                    onCheckedChange={(checked) => {
+                      const currentValue = field.value || [];
+                      if (checked) {
+                        field.onChange([...currentValue, option.size]);
+                      } else {
+                        field.onChange(currentValue.filter((value: string) => value !== option.size));
+                      }
+                    }}
+                  />
+                  <div className="space-y-1 leading-none">
+                    <Label className="text-sm font-medium leading-none">
+                      {option.label} ({option.guests} guests)
+                    </Label>
+                    <p className="text-sm text-muted-foreground">+${option.price}</p>
+                  </div>
                 </div>
               ))}
-            </RadioGroup>
+            </div>
           </FormControl>
           <p className="text-sm text-gray-500 mt-2">
             Note: These are approximate figures. The actual number of servings may vary depending on how the cake is cut.

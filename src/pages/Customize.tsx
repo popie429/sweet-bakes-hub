@@ -5,9 +5,9 @@ import { CustomizationForm } from "@/components/cake-customization/Customization
 import { calculateTotal } from "@/utils/priceCalculations";
 
 interface CustomizationForm {
-  cakeWeight: string;
+  cakeSize: string[];
   flourType: string;
-  filling: string[];  // Changed from string to string[]
+  filling: string[];
   frosting: string;
   decorations: string[];
   cakeTopper: string;
@@ -19,9 +19,9 @@ const Customize = () => {
   
   const form = useForm<CustomizationForm>({
     defaultValues: {
-      cakeWeight: "",
+      cakeSize: [],
       flourType: "",
-      filling: [],  // Changed from "" to []
+      filling: [],
       frosting: "",
       decorations: [],
       cakeTopper: "",

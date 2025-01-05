@@ -1,5 +1,5 @@
 interface PriceOptions {
-  cakeWeight?: string;
+  cakeSize?: string[];
   flourType?: string;
   filling?: string[];
   frosting?: string;
@@ -7,17 +7,16 @@ interface PriceOptions {
   cakeTopper?: string;
 }
 
-const WEIGHT_PRICES: Record<string, number> = {
-  "0.5": 60,
-  "1": 75,
-  "1.5": 90,
-  "2": 105,
-  "2.5": 120,
-  "3": 135,
-  "3.5": 150,
-  "4": 165,
-  "4.5": 180,
-  "5": 195,
+const SIZE_PRICES: Record<string, number> = {
+  "5": 60,
+  "6": 75,
+  "7": 90,
+  "8": 105,
+  "9": 120,
+  "10": 135,
+  "12": 150,
+  "14": 165,
+  "16": 180,
 };
 
 const FLAVOR_PRICES: Record<string, number> = {
@@ -63,9 +62,11 @@ const DECORATION_PRICES: Record<string, number> = {
 export const calculateTotal = (options: PriceOptions): number => {
   let total = 0;
 
-  // Add cake weight price
-  if (options.cakeWeight) {
-    total += WEIGHT_PRICES[options.cakeWeight] || 0;
+  // Add cake size price
+  if (Array.isArray(options.cakeSize)) {
+    options.cakeSize.forEach((size) => {
+      total += SIZE_PRICES[size] || 0;
+    });
   }
 
   // Add base cake price based on flavor
