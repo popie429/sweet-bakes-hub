@@ -22,28 +22,53 @@ export const CakeWeightSection = () => {
         <FormItem className="space-y-3">
           <FormLabel>Cake Size</FormLabel>
           <FormControl>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              {CAKE_SIZES.map((option) => (
-                <div key={option.size} className="flex items-start space-x-3 space-y-0">
-                  <Checkbox
-                    checked={field.value?.includes(option.size)}
-                    onCheckedChange={(checked) => {
-                      const currentValue = field.value || [];
-                      if (checked) {
-                        field.onChange([...currentValue, option.size]);
-                      } else {
-                        field.onChange(currentValue.filter((value: string) => value !== option.size));
-                      }
-                    }}
-                  />
-                  <div className="space-y-1 leading-none">
-                    <Label className="text-sm font-medium leading-none">
-                      {option.label} ({option.guests} guests)
-                    </Label>
-                    <p className="text-sm text-muted-foreground">+${option.price}</p>
+            <div className="grid grid-cols-2 gap-4">
+              <div className="space-y-4">
+                {CAKE_SIZES.slice(0, 4).map((option) => (
+                  <div key={option.size} className="flex items-start space-x-3 space-y-0">
+                    <Checkbox
+                      checked={field.value?.includes(option.size)}
+                      onCheckedChange={(checked) => {
+                        const currentValue = field.value || [];
+                        if (checked) {
+                          field.onChange([...currentValue, option.size]);
+                        } else {
+                          field.onChange(currentValue.filter((value: string) => value !== option.size));
+                        }
+                      }}
+                    />
+                    <div className="space-y-1 leading-none">
+                      <Label className="text-sm font-medium leading-none">
+                        {option.label} ({option.guests} guests)
+                      </Label>
+                      <p className="text-sm text-muted-foreground">+${option.price}</p>
+                    </div>
                   </div>
-                </div>
-              ))}
+                ))}
+              </div>
+              <div className="space-y-4">
+                {CAKE_SIZES.slice(4).map((option) => (
+                  <div key={option.size} className="flex items-start space-x-3 space-y-0">
+                    <Checkbox
+                      checked={field.value?.includes(option.size)}
+                      onCheckedChange={(checked) => {
+                        const currentValue = field.value || [];
+                        if (checked) {
+                          field.onChange([...currentValue, option.size]);
+                        } else {
+                          field.onChange(currentValue.filter((value: string) => value !== option.size));
+                        }
+                      }}
+                    />
+                    <div className="space-y-1 leading-none">
+                      <Label className="text-sm font-medium leading-none">
+                        {option.label} ({option.guests} guests)
+                      </Label>
+                      <p className="text-sm text-muted-foreground">+${option.price}</p>
+                    </div>
+                  </div>
+                ))}
+              </div>
             </div>
           </FormControl>
           <p className="text-sm text-gray-500 mt-2">
