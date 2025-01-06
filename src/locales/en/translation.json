@@ -55,35 +55,7 @@
     "cakeTopper": "Cake Topper",
     "total": "Total",
     "continue": "Continue to Scheduling",
-    "guestNote": "Number of servings is approximate and depends on portion size",
-    "options": {
-      "cakeSizes": {
-        "5-2": {
-          "label": "5\" Two layered",
-          "servings": "4-6 guests"
-        },
-        "5-3": {
-          "label": "5\" Three Layered",
-          "servings": "5-7 guests"
-        },
-        "6-2": {
-          "label": "6\" Two Layered",
-          "servings": "6-8 guests"
-        },
-        "6-3": {
-          "label": "6\" Three Layered",
-          "servings": "10-12 guests"
-        },
-        "8-2": {
-          "label": "8\" Two Layered",
-          "servings": "10-12 guests"
-        },
-        "8-3": {
-          "label": "8\" Three Layers Cake",
-          "servings": "20-24 guests"
-        }
-      }
-    }
+    "guestNote": "Number of servings is approximate and depends on portion size"
   },
   "options": {
     "sizes": {
@@ -134,9 +106,11 @@
     },
     "toppers": {
       "happyBirthday": "Happy Birthday",
-      "congratulations": "Congratulations",
-      "justMarried": "Just Married",
-      "custom": "Custom Text"
+      "mrAndMrs": "Mr and Mrs",
+      "ohBaby": "Oh Baby",
+      "happyFathersDay": "Happy Father's Day",
+      "happyMothersDay": "Happy Mother's Day",
+      "happyValentinesDay": "Happy Valentine's Day"
     }
   },
   "faq": {

@@ -3,10 +3,10 @@ import { Checkbox } from "@/components/ui/checkbox";
 import { useTranslation } from 'react-i18next';
 
 const flavorOptions = [
-  { id: "vanilla", label: "Vanilla", price: 30 },
-  { id: "chocolate", label: "Chocolate", price: 35 },
-  { id: "redVelvet", label: "Red Velvet", price: 40 },
-  { id: "marble", label: "Marble", price: 45 },
+  { id: "vanilla", label: "options.flavors.vanilla", price: 30 },
+  { id: "chocolate", label: "options.flavors.chocolate", price: 35 },
+  { id: "redVelvet", label: "options.flavors.redVelvet", price: 40 },
+  { id: "marble", label: "options.flavors.marble", price: 45 },
 ];
 
 export const CakeFlavorSection = () => {
@@ -38,7 +38,7 @@ export const CakeFlavorSection = () => {
                         />
                       </FormControl>
                       <FormLabel className="font-normal">
-                        {flavor.label} (${flavor.price})
+                        {t(flavor.label)} (${flavor.price})
                       </FormLabel>
                     </FormItem>
                   );

@@ -54,7 +54,8 @@
     "decorations": "Decoraciones",
     "cakeTopper": "Decoración Superior",
     "total": "Total",
-    "continue": "Continuar a Programación"
+    "continue": "Continuar a Programación",
+    "guestNote": "El número de porciones es aproximado y depende del tamaño de la porción"
   },
   "options": {
     "sizes": {
@@ -105,9 +106,11 @@
     },
     "toppers": {
       "happyBirthday": "Feliz Cumpleaños",
-      "congratulations": "Felicitaciones",
-      "justMarried": "Recién Casados",
-      "custom": "Texto Personalizado"
+      "mrAndMrs": "Sr. y Sra.",
+      "ohBaby": "Oh Bebé",
+      "happyFathersDay": "Feliz Día del Padre",
+      "happyMothersDay": "Feliz Día de la Madre",
+      "happyValentinesDay": "Feliz Día de San Valentín"
     }
   },
   "faq": {
