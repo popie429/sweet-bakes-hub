@@ -26,7 +26,7 @@ export const useChat = () => {
     setMessages([
       {
         role: 'assistant',
-        content: "Hi! I'm Sydney's Cakes AI assistant. I can help you with cake prices, availability, and any other questions you might have. How can I assist you today?"
+        content: "Hi! I'm Sydney's Cakes AI assistant. How can I help you today?"
       }
     ]);
   }, []);
@@ -71,33 +71,23 @@ export const useChat = () => {
 const sendChatMessage = async (userMessage: string, messages: Message[]): Promise<string> => {
   const systemMessage: SystemMessage = {
     role: 'system',
-    content: `You are a helpful assistant for Sydney's Cakes bakery. Here's what you know:
-      - We offer custom cakes with various prices:
-        * Piglet Cake ($160, serves 20-30 guests)
-        * Don Julio Cake ($140, serves 12-25 guests)
-        * Macaroon Cake ($80, serves 7-12 guests)
-        * Vintage Two-Tier Cake ($210, serves 30-40 guests)
-        * Sun & Moon Cake ($120, serves 7-13 guests)
-      - We require at least 48 hours notice for all orders
-      - We are located in Albany, NY
-      - We operate by appointment only
-      - We require a 50% deposit to secure orders
-      Please provide accurate information based on these details.`
+    content: `You are a concise assistant for Sydney's Cakes bakery. Provide direct, brief answers to questions without additional context unless specifically asked. Here's what you know:
+      - Piglet Cake ($160)
+      - Don Julio Cake ($140)
+      - Macaroon Cake ($80)
+      - Vintage Two-Tier Cake ($210)
+      - Sun & Moon Cake ($120)
+      Only provide information that directly answers the user's question.`
   };
 
-  // Create a properly alternating message array
   const apiMessages: (SystemMessage | ChatMessage)[] = [systemMessage];
   
-  // Filter out system messages and get chat messages
   const chatMessages = messages.filter(msg => msg.role !== 'system');
   
-  // Skip the initial greeting message if it exists
   const startIndex = chatMessages[0]?.role === 'assistant' ? 1 : 0;
   
-  // Add messages ensuring alternation
   for (let i = startIndex; i < chatMessages.length; i++) {
     const currentMsg = chatMessages[i];
-    // Only add the message if it maintains the alternation pattern
     if (i === startIndex || 
         (apiMessages[apiMessages.length - 1].role === 'system' && currentMsg.role === 'user') ||
         (apiMessages[apiMessages.length - 1].role === 'user' && currentMsg.role === 'assistant') ||
@@ -109,7 +99,6 @@ const sendChatMessage = async (userMessage: string, messages: Message[]): Promis
     }
   }
 
-  // Ensure the last message is from the user
   if (apiMessages[apiMessages.length - 1].role !== 'user') {
     apiMessages.push({ role: 'user', content: userMessage });
   }
