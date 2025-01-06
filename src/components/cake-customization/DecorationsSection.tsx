@@ -1,29 +1,32 @@
 import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useTranslation } from 'react-i18next';
 
 const decorationOptions = [
-  { id: "stars", label: "Mini Stars", price: 3 },
-  { id: "hearts", label: "Hearts", price: 3 },
-  { id: "sprinkles", label: "Sprinkles", price: 2 },
-  { id: "fondantPiglet", label: "Fondant Piglet", price: 10 },
-  { id: "fondantFlowers", label: "Fondant Flowers", price: 5 },
-  { id: "donJulioBottle", label: "Don Julio Bottle", price: 5 },
-  { id: "goldDetails", label: "Gold Details", price: 8 },
-  { id: "macaroons", label: "Macaroons (3 pieces)", price: 9 },
-  { id: "freshFlowers", label: "Fresh Flowers", price: 12 },
-  { id: "roses", label: "Buttercream Roses", price: 4 },
-  { id: "pearls", label: "Sugar Pearls", price: 3 },
-  { id: "sunMoon", label: "Sun & Moon Design", price: 15 },
-  { id: "chocolateStrawberries", label: "Chocolate Covered Strawberries", price: 3 },
+  { id: "stars", label: "options.decorations.stars", price: 3 },
+  { id: "hearts", label: "options.decorations.hearts", price: 3 },
+  { id: "sprinkles", label: "options.decorations.sprinkles", price: 2 },
+  { id: "fondantPiglet", label: "options.decorations.fondantPiglet", price: 10 },
+  { id: "fondantFlowers", label: "options.decorations.fondantFlowers", price: 5 },
+  { id: "donJulioBottle", label: "options.decorations.donJulioBottle", price: 5 },
+  { id: "goldDetails", label: "options.decorations.goldDetails", price: 8 },
+  { id: "macaroons", label: "options.decorations.macaroons", price: 9 },
+  { id: "freshFlowers", label: "options.decorations.freshFlowers", price: 12 },
+  { id: "roses", label: "options.decorations.roses", price: 4 },
+  { id: "pearls", label: "options.decorations.pearls", price: 3 },
+  { id: "sunMoon", label: "options.decorations.sunMoon", price: 15 },
+  { id: "chocolateStrawberries", label: "options.decorations.chocolateStrawberries", price: 3 },
 ];
 
 export const DecorationsSection = () => {
+  const { t } = useTranslation();
+
   return (
     <FormField
       name="decorations"
       render={({ field }) => (
         <FormItem>
-          <FormLabel className="text-lg font-semibold">Decorations</FormLabel>
+          <FormLabel className="text-lg font-semibold">{t('customize.decorations')}</FormLabel>
           <div className="grid grid-cols-2 gap-4">
             {decorationOptions.map((decoration) => (
               <FormField
@@ -48,7 +51,7 @@ export const DecorationsSection = () => {
                         />
                       </FormControl>
                       <FormLabel className="font-normal">
-                        {decoration.label} (${decoration.price})
+                        {t(decoration.label)} (${decoration.price})
                       </FormLabel>
                     </FormItem>
                   );

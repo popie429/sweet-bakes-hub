@@ -1,22 +1,25 @@
 import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useTranslation } from 'react-i18next';
 
 const topperOptions = [
-  { id: "happybirthday", label: "Happy Birthday", price: 5 },
-  { id: "mrandmrs", label: "Mr & Mrs", price: 5 },
-  { id: "ohbaby", label: "Oh, Baby!", price: 5 },
-  { id: "happyfathersday", label: "Happy Father's Day", price: 5 },
-  { id: "happymothersday", label: "Happy Mother's Day", price: 5 },
-  { id: "happyvalentinesday", label: "Happy Valentine's Day", price: 5 },
+  { id: "happybirthday", label: "options.toppers.happyBirthday", price: 5 },
+  { id: "mrandmrs", label: "options.toppers.mrAndMrs", price: 5 },
+  { id: "ohbaby", label: "options.toppers.ohBaby", price: 5 },
+  { id: "happyfathersday", label: "options.toppers.happyFathersDay", price: 5 },
+  { id: "happymothersday", label: "options.toppers.happyMothersDay", price: 5 },
+  { id: "happyvalentinesday", label: "options.toppers.happyValentinesDay", price: 5 },
 ];
 
 export const CakeTopperSection = () => {
+  const { t } = useTranslation();
+
   return (
     <FormField
       name="cakeTopper"
       render={({ field }) => (
         <FormItem>
-          <FormLabel className="text-lg font-semibold">Cake Topper</FormLabel>
+          <FormLabel className="text-lg font-semibold">{t('customize.cakeTopper')}</FormLabel>
           <div className="grid grid-cols-2 gap-4">
             {topperOptions.map((topper) => (
               <FormField
@@ -37,7 +40,7 @@ export const CakeTopperSection = () => {
                         />
                       </FormControl>
                       <FormLabel className="font-normal">
-                        {topper.label} (${topper.price})
+                        {t(topper.label)} (${topper.price})
                       </FormLabel>
                     </FormItem>
                   );

@@ -1,23 +1,26 @@
 import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
+import { useTranslation } from 'react-i18next';
 
 const frostingOptions = [
-  { id: "buttercream", label: "Buttercream", price: 0 },
-  { id: "cream-cheese", label: "Cream Cheese", price: 0 },
-  { id: "fondant", label: "Fondant", price: 0 },
-  { id: "whipped", label: "Whipped Cream", price: 0 },
-  { id: "chocolateGanache", label: "Chocolate Ganache", price: 0 },
-  { id: "vanillaFondant", label: "Vanilla Fondant", price: 0 },
-  { id: "marbleFondant", label: "Marble Fondant", price: 0 },
+  { id: "buttercream", label: "options.frostings.buttercream", price: 0 },
+  { id: "cream-cheese", label: "options.frostings.creamCheese", price: 0 },
+  { id: "fondant", label: "options.frostings.fondant", price: 0 },
+  { id: "whipped", label: "options.frostings.whippedCream", price: 0 },
+  { id: "chocolateGanache", label: "options.frostings.chocolateGanache", price: 0 },
+  { id: "vanillaFondant", label: "options.frostings.vanillaFondant", price: 0 },
+  { id: "marbleFondant", label: "options.frostings.marbleFondant", price: 0 },
 ];
 
 export const FrostingSection = () => {
+  const { t } = useTranslation();
+
   return (
     <FormField
       name="frosting"
       render={({ field }) => (
         <FormItem>
-          <FormLabel className="text-lg font-semibold">Frosting</FormLabel>
+          <FormLabel className="text-lg font-semibold">{t('customize.frosting')}</FormLabel>
           <div className="grid grid-cols-2 gap-4">
             {frostingOptions.map((frosting) => (
               <FormField
@@ -38,7 +41,7 @@ export const FrostingSection = () => {
                         />
                       </FormControl>
                       <FormLabel className="font-normal">
-                        {frosting.label}
+                        {t(frosting.label)}
                       </FormLabel>
                     </FormItem>
                   );
