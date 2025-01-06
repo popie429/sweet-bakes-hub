@@ -3,15 +3,7 @@
     "home": "Inicio",
     "gallery": "Galería",
     "customize": "Personalizar",
-    "calendar": "Calendario",
     "faq": "Preguntas Frecuentes"
-  },
-  "home": {
-    "title": "Deliciosos Pasteles Personalizados para tus Momentos Especiales",
-    "subtitle": "Hechos a mano con amor, nuestros pasteles son perfectos para cualquier celebración.",
-    "callNow": "Llamar Ahora",
-    "makeReservation": "Hacer una Reservación",
-    "customOrder": "Ordenar Pastel Personalizado"
   },
   "customize": {
     "title": "Diseña tu Pastel Personalizado",
@@ -22,11 +14,8 @@
     "decorations": "Decoraciones",
     "cakeTopper": "Adorno Superior",
     "total": "Total",
-    "continue": "Continuar a Programación",
-    "clearSelections": "Limpiar Selecciones",
-    "guestNote": "Nota: Estas son cifras aproximadas. El número real de porciones puede variar según cómo se corte el pastel.",
-    "serves": "sirve",
-    "guests": "personas",
+    "continue": "Continuar",
+    "guestNote": "Nota: Las porciones son aproximadas y se basan en piezas de pastel de boda de 1x2 pulgadas.",
     "options": {
       "cakeSizes": {
         "5-2": {
@@ -53,101 +42,53 @@
           "label": "8\" Tres capas",
           "servings": "20-24 porciones"
         }
+      },
+      "cakeFlavors": {
+        "vanilla": "Vainilla",
+        "chocolate": "Chocolate",
+        "redVelvet": "Red Velvet",
+        "marble": "Mármol"
+      },
+      "fillings": {
+        "vanillaCustard": "Crema de Vainilla",
+        "chocolateGanache": "Ganache de Chocolate",
+        "strawberry": "Fresa",
+        "lemonCurd": "Crema de Limón",
+        "pineapple": "Piña",
+        "peach": "Durazno"
+      },
+      "frostings": {
+        "buttercream": "Crema de Mantequilla",
+        "creamCheese": "Queso Crema",
+        "fondant": "Fondant",
+        "whippedCream": "Crema Batida",
+        "chocolateGanache": "Ganache de Chocolate",
+        "vanillaFondant": "Fondant de Vainilla",
+        "marbleFondant": "Fondant Marmoleado"
+      },
+      "decorations": {
+        "stars": "Estrellas",
+        "hearts": "Corazones",
+        "sprinkles": "Chispas",
+        "fondantPiglet": "Cerdito de Fondant",
+        "fondantFlowers": "Flores de Fondant",
+        "donJulioBottle": "Botella Don Julio",
+        "goldDetails": "Detalles Dorados",
+        "macaroons": "Macarrones",
+        "freshFlowers": "Flores Frescas",
+        "roses": "Rosas",
+        "pearls": "Perlas",
+        "sunMoon": "Sol y Luna",
+        "chocolateStrawberries": "Fresas con Chocolate"
+      },
+      "toppers": {
+        "happyBirthday": "Feliz Cumpleaños",
+        "mrAndMrs": "Sr y Sra",
+        "ohBaby": "Oh Bebé",
+        "happyFathersDay": "Feliz Día del Padre",
+        "happyMothersDay": "Feliz Día de la Madre",
+        "happyValentinesDay": "Feliz Día de San Valentín"
       }
     }
-  },
-  "gallery": {
-    "title": "Nuestra Galería de Pasteles",
-    "serves": "Sirve",
-    "placeOrder": "Hacer Pedido",
-    "cakes": {
-      "piglet": {
-        "name": "Pastel de Cerdito",
-        "servings": "20-30",
-        "description": "Adorable pastel temático de Cerdito con detalles de fondant"
-      },
-      "donJulio": {
-        "name": "Pastel Don Julio",
-        "servings": "12-25",
-        "description": "Elegante pastel de celebración temático de Don Julio"
-      },
-      "macaroon": {
-        "name": "Pastel de Macarrones",
-        "servings": "7-12",
-        "description": "Delicado pastel decorado con macarrones frescos"
-      },
-      "vintage": {
-        "name": "Pastel Vintage de Dos Pisos",
-        "servings": "30-40",
-        "description": "Elegante pastel de dos pisos estilo vintage"
-      },
-      "sunMoon": {
-        "name": "Pastel Sol y Luna",
-        "servings": "7-13",
-        "description": "Pastel temático celestial con detalles de sol y luna"
-      }
-    }
-  },
-  "faq": {
-    "title": "Preguntas Frecuentes",
-    "location": {
-      "question": "¿Dónde están ubicados?",
-      "answer": "Estamos ubicados en Albany, NY, sirviendo con orgullo a toda la región Capital."
-    },
-    "hours": {
-      "question": "¿Cuál es su horario de atención?",
-      "answer": "Lunes a Viernes: 8:00 AM - 8:00 PM\nSábado y Domingo: 9:00 AM - 6:00 PM"
-    },
-    "cakeTypes": {
-      "question": "¿Qué tipos de pasteles hacen?",
-      "answer": "Ofrecemos una amplia variedad de sabores incluyendo vainilla, chocolate, red velvet, zanahoria, limón, mármol y más. Siempre estamos dispuestos a discutir sabores personalizados para satisfacer tus preferencias."
-    },
-    "fillings": {
-      "question": "¿Qué rellenos de pastel ofrecen?",
-      "answer": "Nuestra extensa selección incluye:\n• Ganache de chocolate\n• Vainilla\n• Dulce de Leche\n• Crema pastelera\n• Guayaba\n• Fresa\n• Durazno\n• Chocolate fudge\n• Piña\n• Nutella\n• Coctel de frutas\n• Crema de Almendra"
-    },
-    "frosting": {
-      "question": "¿Qué tipos de cobertura usan?",
-      "answer": "Nos especializamos en:\n• Crema americana\n• Merengue dulce\n• Cobertura italiana\n• Crema Chantilly"
-    },
-    "appointment": {
-      "question": "¿Trabajan solo con cita previa?",
-      "answer": "Sí, operamos solo con cita previa. Se requiere un mínimo de tres días de anticipación para todos los pedidos."
-    },
-    "readyToGo": {
-      "question": "¿Venden productos listos para llevar?",
-      "answer": "Actualmente, no ofrecemos productos listos para llevar. Todos nuestros pasteles son hechos por encargo."
-    },
-    "storefront": {
-      "question": "¿Operan desde una tienda física?",
-      "answer": "Operamos como una panadería casera, creando todos nuestros pasteles personalizados desde nuestra cocina casera con licencia."
-    },
-    "contact": {
-      "question": "¿Cómo puedo contactarlos?",
-      "answer": "Teléfono: 1 (929) 698-6795\nEmail: Realsydneyescakes@gmail.com"
-    },
-    "payment": {
-      "question": "¿Qué métodos de pago aceptan?",
-      "answer": "Aceptamos:\n• Zelle\n• Cash App\n• Efectivo\n• Tarjetas de Crédito/Débito\nPor favor nota que algunos métodos de pago pueden incurrir en cargos adicionales de procesamiento."
-    },
-    "deposit": {
-      "question": "¿Se requiere un depósito?",
-      "answer": "Sí, se requiere un depósito del 50% para asegurar tu pedido. El saldo restante se debe pagar al recibir tu pedido."
-    },
-    "delivery": {
-      "question": "¿Ofrecen entrega a domicilio?",
-      "answer": "La entrega está disponible a través de conductores independientes. La tarifa de entrega se calcula a $1 por minuto de tiempo de viaje (por ejemplo, 5 minutos = $5, 20 minutos = $20). Recomendamos a los clientes recoger sus pedidos, ya que no podemos ser responsables por pérdidas o daños que ocurran durante la entrega."
-    }
-  },
-  "calendar": {
-    "title": "Reserva tu Pastel",
-    "selectDate": "Selecciona una Fecha",
-    "notice": "* Ten en cuenta que los pedidos requieren al menos 48 horas de anticipación",
-    "pickupTime": "Selecciona Hora de Recogida para",
-    "deliveryTime": "Selecciona Hora de Entrega para",
-    "deliveryNote": "Nota: Nuestra tarifa de entrega se calcula a $1 por minuto de tiempo de conducción. Por ejemplo, si estás a 15 minutos, la tarifa de entrega será de $15.",
-    "pickup": "Recoger",
-    "delivery": "Entrega",
-    "book": "RESERVAR"
   }
 }
