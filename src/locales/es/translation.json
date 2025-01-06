@@ -76,6 +76,38 @@
       }
     }
   },
+  "gallery": {
+    "title": "Nuestra Galería de Pasteles",
+    "serves": "Sirve",
+    "placeOrder": "Hacer Pedido",
+    "cakes": {
+      "piglet": {
+        "name": "Pastel de Cerdito",
+        "servings": "20-30",
+        "description": "Adorable pastel temático de Cerdito con detalles de fondant"
+      },
+      "donJulio": {
+        "name": "Pastel Don Julio",
+        "servings": "12-25",
+        "description": "Elegante pastel de celebración temático de Don Julio"
+      },
+      "macaroon": {
+        "name": "Pastel de Macarrones",
+        "servings": "7-12",
+        "description": "Delicado pastel decorado con macarrones frescos"
+      },
+      "vintage": {
+        "name": "Pastel Vintage de Dos Pisos",
+        "servings": "30-40",
+        "description": "Elegante pastel de dos pisos estilo vintage"
+      },
+      "sunMoon": {
+        "name": "Pastel Sol y Luna",
+        "servings": "7-13",
+        "description": "Pastel temático celestial con detalles de sol y luna"
+      }
+    }
+  },
   "faq": {
     "title": "Preguntas Frecuentes",
     "location": {
@@ -85,6 +117,46 @@
     "hours": {
       "question": "¿Cuál es su horario de atención?",
       "answer": "Lunes a Viernes: 8:00 AM - 8:00 PM\nSábado y Domingo: 9:00 AM - 6:00 PM"
+    },
+    "cakeTypes": {
+      "question": "¿Qué tipos de pasteles hacen?",
+      "answer": "Ofrecemos una amplia variedad de sabores incluyendo vainilla, chocolate, red velvet, zanahoria, limón, mármol y más. Siempre estamos dispuestos a discutir sabores personalizados para satisfacer tus preferencias."
+    },
+    "fillings": {
+      "question": "¿Qué rellenos de pastel ofrecen?",
+      "answer": "Nuestra extensa selección incluye:\n• Ganache de chocolate\n• Vainilla\n• Dulce de Leche\n• Crema pastelera\n• Guayaba\n• Fresa\n• Durazno\n• Chocolate fudge\n• Piña\n• Nutella\n• Coctel de frutas\n• Crema de Almendra"
+    },
+    "frosting": {
+      "question": "¿Qué tipos de cobertura usan?",
+      "answer": "Nos especializamos en:\n• Crema americana\n• Merengue dulce\n• Cobertura italiana\n• Crema Chantilly"
+    },
+    "appointment": {
+      "question": "¿Trabajan solo con cita previa?",
+      "answer": "Sí, operamos solo con cita previa. Se requiere un mínimo de tres días de anticipación para todos los pedidos."
+    },
+    "readyToGo": {
+      "question": "¿Venden productos listos para llevar?",
+      "answer": "Actualmente, no ofrecemos productos listos para llevar. Todos nuestros pasteles son hechos por encargo."
+    },
+    "storefront": {
+      "question": "¿Operan desde una tienda física?",
+      "answer": "Operamos como una panadería casera, creando todos nuestros pasteles personalizados desde nuestra cocina casera con licencia."
+    },
+    "contact": {
+      "question": "¿Cómo puedo contactarlos?",
+      "answer": "Teléfono: 1 (929) 698-6795\nEmail: Realsydneyescakes@gmail.com"
+    },
+    "payment": {
+      "question": "¿Qué métodos de pago aceptan?",
+      "answer": "Aceptamos:\n• Zelle\n• Cash App\n• Efectivo\n• Tarjetas de Crédito/Débito\nPor favor nota que algunos métodos de pago pueden incurrir en cargos adicionales de procesamiento."
+    },
+    "deposit": {
+      "question": "¿Se requiere un depósito?",
+      "answer": "Sí, se requiere un depósito del 50% para asegurar tu pedido. El saldo restante se debe pagar al recibir tu pedido."
+    },
+    "delivery": {
+      "question": "¿Ofrecen entrega a domicilio?",
+      "answer": "La entrega está disponible a través de conductores independientes. La tarifa de entrega se calcula a $1 por minuto de tiempo de viaje (por ejemplo, 5 minutos = $5, 20 minutos = $20). Recomendamos a los clientes recoger sus pedidos, ya que no podemos ser responsables por pérdidas o daños que ocurran durante la entrega."
     }
   },
   "calendar": {
