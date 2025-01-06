@@ -1,94 +1,61 @@
 {
-  "nav": {
-    "home": "होम",
-    "gallery": "गैलरी",
-    "customize": "कस्टमाइज़",
-    "faq": "सामान्य प्रश्न"
-  },
   "customize": {
-    "title": "अपनी केक डिज़ाइन करें",
+    "title": "अपनी केक को कस्टमाइज़ करें",
     "cakeSize": "केक का आकार",
     "baseCake": "बेस केक",
-    "filling": "फिलिंग",
+    "filling": "भरावन",
     "frosting": "फ्रॉस्टिंग",
     "decorations": "सजावट",
     "cakeTopper": "केक टॉपर",
     "total": "कुल",
-    "continue": "जारी रखें",
-    "guestNote": "नोट: सर्विंग साइज़ अनुमानित हैं और 1x2 इंच वेडिंग केक पीस पर आधारित हैं।",
-    "options": {
-      "cakeSizes": {
-        "5-2": {
-          "label": "5\" दो परत",
-          "servings": "4-6 सर्विंग्स"
-        },
-        "5-3": {
-          "label": "5\" तीन परत",
-          "servings": "5-7 सर्विंग्स"
-        },
-        "6-2": {
-          "label": "6\" दो परत",
-          "servings": "6-8 सर्विंग्स"
-        },
-        "6-3": {
-          "label": "6\" तीन परत",
-          "servings": "10-12 सर्विंग्स"
-        },
-        "8-2": {
-          "label": "8\" दो परत",
-          "servings": "10-12 सर्विंग्स"
-        },
-        "8-3": {
-          "label": "8\" तीन परत",
-          "servings": "20-24 सर्विंग्स"
-        }
-      },
-      "cakeFlavors": {
-        "vanilla": "वनीला",
-        "chocolate": "चॉकलेट",
-        "redVelvet": "रेड वेलवेट",
-        "marble": "मार्बल"
-      },
-      "fillings": {
-        "vanillaCustard": "वनीला कस्टर्ड",
-        "chocolateGanache": "चॉकलेट गनाश",
-        "strawberry": "स्ट्रॉबेरी",
-        "lemonCurd": "नींबू कर्ड",
-        "pineapple": "अनानास",
-        "peach": "आड़ू"
-      },
-      "frostings": {
-        "buttercream": "बटरक्रीम",
-        "creamCheese": "क्रीम चीज़",
-        "fondant": "फोंडेंट",
-        "whippedCream": "व्हिप्ड क्रीम",
-        "chocolateGanache": "चॉकलेट गनाश",
-        "vanillaFondant": "वनीला फोंडेंट",
-        "marbleFondant": "मार्बल फोंडेंट"
-      },
-      "decorations": {
-        "stars": "तारे",
-        "hearts": "दिल",
-        "sprinkles": "स्प्रिंकल्स",
-        "fondantPiglet": "फोंडेंट पिगलेट",
-        "fondantFlowers": "फोंडेंट फूल",
-        "donJulioBottle": "डॉन जूलियो बोतल",
-        "goldDetails": "गोल्ड डिटेल्स",
-        "macaroons": "मैकरून्स",
-        "freshFlowers": "ताज़े फूल",
-        "roses": "गुलाब",
-        "pearls": "मोती",
-        "sunMoon": "सूर्य और चंद्रमा",
-        "chocolateStrawberries": "चॉकलेट स्ट्रॉबेरी"
-      },
-      "toppers": {
-        "happyBirthday": "जन्मदिन मुबारक",
-        "mrAndMrs": "श्री और श्रीमती",
-        "ohBaby": "ओह बेबी",
-        "happyFathersDay": "पिता दिवस की शुभकामनाएं",
-        "happyMothersDay": "मातृ दिवस की शुभकामनाएं",
-        "happyValentinesDay": "वैलेंटाइन डे की शुभकामनाएं"
-      }
+    "continue": "जारी रखें"
+  },
+  "options": {
+    "cakeFlavors": {
+      "vanilla": "वनीला",
+      "chocolate": "चॉकलेट",
+      "redVelvet": "रेड वेलवेट",
+      "marble": "मार्बल"
+    },
+    "fillings": {
+      "vanillaCustard": "वनीला कस्टर्ड",
+      "chocolateGanache": "चॉकलेट गनाश",
+      "strawberry": "स्ट्रॉबेरी",
+      "lemonCurd": "नींबू कर्ड",
+      "pineapple": "अनानास",
+      "peach": "आड़ू"
+    },
+    "frostings": {
+      "buttercream": "बटरक्रीम",
+      "creamCheese": "क्रीम चीज़",
+      "fondant": "फोंडेंट",
+      "whippedCream": "व्हिप्ड क्रीम",
+      "chocolateGanache": "चॉकलेट गनाश",
+      "vanillaFondant": "वनीला फोंडेंट",
+      "marbleFondant": "मार्बल फोंडेंट"
+    },
+    "decorations": {
+      "stars": "तारे",
+      "hearts": "दिल",
+      "sprinkles": "स्प्रिंकल्स",
+      "fondantPiglet": "फोंडेंट पिगलेट",
+      "fondantFlowers": "फोंडेंट फूल",
+      "donJulioBottle": "डॉन जूलियो बोतल",
+      "goldDetails": "सोने के विवरण",
+      "macaroons": "मैकरून",
+      "freshFlowers": "ताज़े फूल",
+      "roses": "गुलाब",
+      "pearls": "मोती",
+      "sunMoon": "सूर्य और चंद्रमा",
+      "chocolateStrawberries": "चॉकलेट स्ट्रॉबेरी"
+    },
+    "toppers": {
+      "happyBirthday": "जन्मदिन मुबारक",
+      "mrAndMrs": "श्री और श्रीमती",
+      "ohBaby": "ओह बेबी",
+      "happyFathersDay": "पिता दिवस की शुभकामनाएं",
+      "happyMothersDay": "मातृ दिवस की शुभकामनाएं",
+      "happyValentinesDay": "वैलेंटाइन डे की शुभकामनाएं"
     }
   }
 }

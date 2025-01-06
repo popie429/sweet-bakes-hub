@@ -1,12 +1,6 @@
 {
-  "nav": {
-    "home": "Home",
-    "gallery": "Gallery",
-    "customize": "Customize",
-    "faq": "FAQ"
-  },
   "customize": {
-    "title": "Design Your Custom Cake",
+    "title": "Customize Your Cake",
     "cakeSize": "Cake Size",
     "baseCake": "Base Cake",
     "filling": "Filling",
@@ -14,81 +8,54 @@
     "decorations": "Decorations",
     "cakeTopper": "Cake Topper",
     "total": "Total",
-    "continue": "Continue",
-    "guestNote": "Note: Serving sizes are approximate and based on 1x2 inch wedding cake pieces.",
-    "options": {
-      "cakeSizes": {
-        "5-2": {
-          "label": "5\" Two layered",
-          "servings": "4-6 servings"
-        },
-        "5-3": {
-          "label": "5\" Three Layered",
-          "servings": "5-7 servings"
-        },
-        "6-2": {
-          "label": "6\" Two Layered",
-          "servings": "6-8 servings"
-        },
-        "6-3": {
-          "label": "6\" Three Layered",
-          "servings": "10-12 servings"
-        },
-        "8-2": {
-          "label": "8\" Two Layered",
-          "servings": "10-12 servings"
-        },
-        "8-3": {
-          "label": "8\" Three Layers Cake",
-          "servings": "20-24 servings"
-        }
-      },
-      "cakeFlavors": {
-        "vanilla": "Vanilla",
-        "chocolate": "Chocolate",
-        "redVelvet": "Red Velvet",
-        "marble": "Marble"
-      },
-      "fillings": {
-        "vanillaCustard": "Vanilla Custard",
-        "chocolateGanache": "Chocolate Ganache",
-        "strawberry": "Strawberry",
-        "lemonCurd": "Lemon Curd",
-        "pineapple": "Pineapple",
-        "peach": "Peach"
-      },
-      "frostings": {
-        "buttercream": "Buttercream",
-        "creamCheese": "Cream Cheese",
-        "fondant": "Fondant",
-        "whippedCream": "Whipped Cream",
-        "chocolateGanache": "Chocolate Ganache",
-        "vanillaFondant": "Vanilla Fondant",
-        "marbleFondant": "Marble Fondant"
-      },
-      "decorations": {
-        "stars": "Stars",
-        "hearts": "Hearts",
-        "sprinkles": "Sprinkles",
-        "fondantPiglet": "Fondant Piglet",
-        "fondantFlowers": "Fondant Flowers",
-        "donJulioBottle": "Don Julio Bottle",
-        "goldDetails": "Gold Details",
-        "macaroons": "Macaroons",
-        "freshFlowers": "Fresh Flowers",
-        "roses": "Roses",
-        "pearls": "Pearls",
-        "sunMoon": "Sun & Moon",
-        "chocolateStrawberries": "Chocolate Strawberries"
-      },
-      "toppers": {
-        "happyBirthday": "Happy Birthday",
-        "mrAndMrs": "Mr & Mrs",
-        "ohBaby": "Oh Baby",
-        "happyFathersDay": "Happy Father's Day",
-        "happyMothersDay": "Happy Mother's Day",
-        "happyValentinesDay": "Happy Valentine's Day"
-      }
+    "continue": "Continue"
+  },
+  "options": {
+    "cakeFlavors": {
+      "vanilla": "Vanilla",
+      "chocolate": "Chocolate",
+      "redVelvet": "Red Velvet",
+      "marble": "Marble"
+    },
+    "fillings": {
+      "vanillaCustard": "Vanilla Custard",
+      "chocolateGanache": "Chocolate Ganache",
+      "strawberry": "Strawberry",
+      "lemonCurd": "Lemon Curd",
+      "pineapple": "Pineapple",
+      "peach": "Peach"
+    },
+    "frostings": {
+      "buttercream": "Buttercream",
+      "creamCheese": "Cream Cheese",
+      "fondant": "Fondant",
+      "whippedCream": "Whipped Cream",
+      "chocolateGanache": "Chocolate Ganache",
+      "vanillaFondant": "Vanilla Fondant",
+      "marbleFondant": "Marble Fondant"
+    },
+    "decorations": {
+      "stars": "Stars",
+      "hearts": "Hearts",
+      "sprinkles": "Sprinkles",
+      "fondantPiglet": "Fondant Piglet",
+      "fondantFlowers": "Fondant Flowers",
+      "donJulioBottle": "Don Julio Bottle",
+      "goldDetails": "Gold Details",
+      "macaroons": "Macaroons",
+      "freshFlowers": "Fresh Flowers",
+      "roses": "Roses",
+      "pearls": "Pearls",
+      "sunMoon": "Sun & Moon",
+      "chocolateStrawberries": "Chocolate Strawberries"
+    },
+    "toppers": {
+      "happyBirthday": "Happy Birthday",
+      "mrAndMrs": "Mr & Mrs",
+      "ohBaby": "Oh Baby",
+      "happyFathersDay": "Happy Father's Day",
+      "happyMothersDay": "Happy Mother's Day",
+      "happyValentinesDay": "Happy Valentine's Day"
     }
   }
 }

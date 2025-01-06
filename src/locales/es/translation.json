@@ -1,94 +1,61 @@
 {
-  "nav": {
-    "home": "Inicio",
-    "gallery": "Galería",
-    "customize": "Personalizar",
-    "faq": "Preguntas Frecuentes"
-  },
   "customize": {
-    "title": "Diseña tu Pastel Personalizado",
+    "title": "Personaliza tu Pastel",
     "cakeSize": "Tamaño del Pastel",
-    "baseCake": "Pastel Base",
+    "baseCake": "Base del Pastel",
     "filling": "Relleno",
     "frosting": "Cobertura",
     "decorations": "Decoraciones",
     "cakeTopper": "Adorno Superior",
     "total": "Total",
-    "continue": "Continuar",
-    "guestNote": "Nota: Las porciones son aproximadas y se basan en piezas de pastel de boda de 1x2 pulgadas.",
-    "options": {
-      "cakeSizes": {
-        "5-2": {
-          "label": "5\" Dos capas",
-          "servings": "4-6 porciones"
-        },
-        "5-3": {
-          "label": "5\" Tres capas",
-          "servings": "5-7 porciones"
-        },
-        "6-2": {
-          "label": "6\" Dos capas",
-          "servings": "6-8 porciones"
-        },
-        "6-3": {
-          "label": "6\" Tres capas",
-          "servings": "10-12 porciones"
-        },
-        "8-2": {
-          "label": "8\" Dos capas",
-          "servings": "10-12 porciones"
-        },
-        "8-3": {
-          "label": "8\" Tres capas",
-          "servings": "20-24 porciones"
-        }
-      },
-      "cakeFlavors": {
-        "vanilla": "Vainilla",
-        "chocolate": "Chocolate",
-        "redVelvet": "Red Velvet",
-        "marble": "Mármol"
-      },
-      "fillings": {
-        "vanillaCustard": "Crema de Vainilla",
-        "chocolateGanache": "Ganache de Chocolate",
-        "strawberry": "Fresa",
-        "lemonCurd": "Crema de Limón",
-        "pineapple": "Piña",
-        "peach": "Durazno"
-      },
-      "frostings": {
-        "buttercream": "Crema de Mantequilla",
-        "creamCheese": "Queso Crema",
-        "fondant": "Fondant",
-        "whippedCream": "Crema Batida",
-        "chocolateGanache": "Ganache de Chocolate",
-        "vanillaFondant": "Fondant de Vainilla",
-        "marbleFondant": "Fondant Marmoleado"
-      },
-      "decorations": {
-        "stars": "Estrellas",
-        "hearts": "Corazones",
-        "sprinkles": "Chispas",
-        "fondantPiglet": "Cerdito de Fondant",
-        "fondantFlowers": "Flores de Fondant",
-        "donJulioBottle": "Botella Don Julio",
-        "goldDetails": "Detalles Dorados",
-        "macaroons": "Macarrones",
-        "freshFlowers": "Flores Frescas",
-        "roses": "Rosas",
-        "pearls": "Perlas",
-        "sunMoon": "Sol y Luna",
-        "chocolateStrawberries": "Fresas con Chocolate"
-      },
-      "toppers": {
-        "happyBirthday": "Feliz Cumpleaños",
-        "mrAndMrs": "Sr y Sra",
-        "ohBaby": "Oh Bebé",
-        "happyFathersDay": "Feliz Día del Padre",
-        "happyMothersDay": "Feliz Día de la Madre",
-        "happyValentinesDay": "Feliz Día de San Valentín"
-      }
+    "continue": "Continuar"
+  },
+  "options": {
+    "cakeFlavors": {
+      "vanilla": "Vainilla",
+      "chocolate": "Chocolate",
+      "redVelvet": "Red Velvet",
+      "marble": "Mármol"
+    },
+    "fillings": {
+      "vanillaCustard": "Crema de Vainilla",
+      "chocolateGanache": "Ganache de Chocolate",
+      "strawberry": "Fresa",
+      "lemonCurd": "Crema de Limón",
+      "pineapple": "Piña",
+      "peach": "Durazno"
+    },
+    "frostings": {
+      "buttercream": "Crema de Mantequilla",
+      "creamCheese": "Queso Crema",
+      "fondant": "Fondant",
+      "whippedCream": "Crema Batida",
+      "chocolateGanache": "Ganache de Chocolate",
+      "vanillaFondant": "Fondant de Vainilla",
+      "marbleFondant": "Fondant Marmoleado"
+    },
+    "decorations": {
+      "stars": "Estrellas",
+      "hearts": "Corazones",
+      "sprinkles": "Chispas",
+      "fondantPiglet": "Cerdito de Fondant",
+      "fondantFlowers": "Flores de Fondant",
+      "donJulioBottle": "Botella Don Julio",
+      "goldDetails": "Detalles Dorados",
+      "macaroons": "Macarrones",
+      "freshFlowers": "Flores Frescas",
+      "roses": "Rosas",
+      "pearls": "Perlas",
+      "sunMoon": "Sol y Luna",
+      "chocolateStrawberries": "Fresas con Chocolate"
+    },
+    "toppers": {
+      "happyBirthday": "Feliz Cumpleaños",
+      "mrAndMrs": "Sr y Sra",
+      "ohBaby": "Oh Bebé",
+      "happyFathersDay": "Feliz Día del Padre",
+      "happyMothersDay": "Feliz Día de la Madre",
+      "happyValentinesDay": "Feliz Día de San Valentín"
     }
   }
 }
