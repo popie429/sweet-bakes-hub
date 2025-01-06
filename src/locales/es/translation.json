@@ -1,20 +1,74 @@
 {
+  "nav": {
+    "home": "Inicio",
+    "gallery": "Galería",
+    "customize": "Personalizar",
+    "calendar": "Calendario",
+    "faq": "Preguntas Frecuentes"
+  },
+  "home": {
+    "title": "Pasteles de Sydney",
+    "subtitle": "Pasteles personalizados hechos con amor",
+    "callNow": "Llamar Ahora",
+    "makeReservation": "Hacer una Reserva",
+    "customOrder": "Pedido Personalizado"
+  },
+  "gallery": {
+    "title": "Nuestra Galería de Pasteles",
+    "serves": "Sirve a",
+    "placeOrder": "Hacer Pedido",
+    "cakes": {
+      "piglet": {
+        "name": "Pastel de Cerdito",
+        "description": "Adorable pastel temático de cerdito con decoraciones de fondant",
+        "servings": "12-15 personas"
+      },
+      "donJulio": {
+        "name": "Pastel Don Julio",
+        "description": "Elegante pastel temático de Don Julio con decoraciones de botella",
+        "servings": "10-12 personas"
+      },
+      "macaroon": {
+        "name": "Pastel de Macarrones",
+        "description": "Delicado pastel decorado con macarrones y acentos florales",
+        "servings": "8-10 personas"
+      },
+      "vintage": {
+        "name": "Pastel Vintage de Rosas",
+        "description": "Diseño clásico vintage con detalles de perlas",
+        "servings": "15-20 personas"
+      },
+      "sunMoon": {
+        "name": "Pastel Sol y Luna",
+        "description": "Pastel temático celestial con acentos dorados",
+        "servings": "10-12 personas"
+      }
+    }
+  },
   "customize": {
     "title": "Personaliza tu Pastel",
     "cakeSize": "Tamaño del Pastel",
-    "baseCake": "Base del Pastel",
+    "baseCake": "Pastel Base",
     "filling": "Relleno",
     "frosting": "Cobertura",
     "decorations": "Decoraciones",
-    "cakeTopper": "Adorno Superior",
+    "cakeTopper": "Decoración Superior",
     "total": "Total",
-    "continue": "Continuar"
+    "continue": "Continuar a Programación"
   },
   "options": {
-    "cakeFlavors": {
+    "sizes": {
+      "6": "6 pulgadas (sirve 8-10)",
+      "8": "8 pulgadas (sirve 12-15)",
+      "10": "10 pulgadas (sirve 18-20)",
+      "12": "12 pulgadas (sirve 25-30)"
+    },
+    "flavors": {
       "vanilla": "Vainilla",
       "chocolate": "Chocolate",
       "redVelvet": "Red Velvet",
+      "carrot": "Zanahoria",
+      "lemon": "Limón",
       "marble": "Mármol"
     },
     "fillings": {
@@ -51,11 +105,60 @@
     },
     "toppers": {
       "happyBirthday": "Feliz Cumpleaños",
-      "mrAndMrs": "Sr y Sra",
-      "ohBaby": "Oh Bebé",
-      "happyFathersDay": "Feliz Día del Padre",
-      "happyMothersDay": "Feliz Día de la Madre",
-      "happyValentinesDay": "Feliz Día de San Valentín"
+      "congratulations": "Felicitaciones",
+      "justMarried": "Recién Casados",
+      "custom": "Texto Personalizado"
+    }
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "location": {
+      "question": "¿Dónde están ubicados?",
+      "answer": "Estamos ubicados en Brooklyn, Nueva York. Todos los pedidos son solo para recoger."
+    },
+    "hours": {
+      "question": "¿Cuál es su horario?",
+      "answer": "Estamos abiertos de martes a domingo de 9 AM a 6 PM. Cerrados los lunes."
+    },
+    "cakeTypes": {
+      "question": "¿Qué tipos de pasteles ofrecen?",
+      "answer": "Ofrecemos una variedad de sabores incluyendo vainilla, chocolate, red velvet, zanahoria, limón y mármol."
+    },
+    "fillings": {
+      "question": "¿Qué opciones de relleno están disponibles?",
+      "answer": "Ofrecemos varios rellenos incluyendo crema de vainilla, ganache de chocolate, fresa, crema de limón, piña y durazno."
+    },
+    "frosting": {
+      "question": "¿Qué tipos de cobertura usan?",
+      "answer": "Ofrecemos coberturas de crema de mantequilla, queso crema, fondant, crema batida y ganache de chocolate."
+    },
+    "appointment": {
+      "question": "¿Necesito una cita?",
+      "answer": "Sí, se requieren citas para degustaciones y consultas. Por favor use nuestro calendario para programar."
+    },
+    "readyToGo": {
+      "question": "¿Tienen pasteles listos para llevar?",
+      "answer": "No, todos nuestros pasteles son hechos por encargo para asegurar la mejor calidad y frescura."
+    },
+    "storefront": {
+      "question": "¿Tienen una tienda física?",
+      "answer": "No, operamos solo como pastelería por encargo. Todos los pedidos deben hacerse con anticipación."
+    },
+    "contact": {
+      "question": "¿Cómo puedo contactarlos?",
+      "answer": "Puede contactarnos por teléfono al (929) 698-6795 o a través del formulario de contacto en nuestro sitio web."
+    },
+    "payment": {
+      "question": "¿Qué métodos de pago aceptan?",
+      "answer": "Aceptamos todas las tarjetas de crédito principales, efectivo y pagos digitales incluyendo Venmo y CashApp."
+    },
+    "deposit": {
+      "question": "¿Se requiere un depósito?",
+      "answer": "Sí, se requiere un depósito del 50% para asegurar su pedido. El saldo restante se paga al recoger."
+    },
+    "delivery": {
+      "question": "¿Ofrecen entrega a domicilio?",
+      "answer": "Actualmente solo ofrecemos recoger en nuestra ubicación en Brooklyn."
     }
   }
 }

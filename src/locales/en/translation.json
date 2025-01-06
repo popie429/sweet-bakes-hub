@@ -1,4 +1,50 @@
 {
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "customize": "Customize",
+    "calendar": "Calendar",
+    "faq": "FAQ"
+  },
+  "home": {
+    "title": "Sydney's Cakes",
+    "subtitle": "Custom cakes made with love",
+    "callNow": "Call Now",
+    "makeReservation": "Make a Reservation",
+    "customOrder": "Custom Order"
+  },
+  "gallery": {
+    "title": "Our Cake Gallery",
+    "serves": "Serves",
+    "placeOrder": "Place Order",
+    "cakes": {
+      "piglet": {
+        "name": "Piglet Cake",
+        "description": "Adorable piglet-themed cake with fondant decorations",
+        "servings": "12-15 people"
+      },
+      "donJulio": {
+        "name": "Don Julio Cake",
+        "description": "Elegant Don Julio themed cake with bottle decorations",
+        "servings": "10-12 people"
+      },
+      "macaroon": {
+        "name": "Macaroon Cake",
+        "description": "Delicate macaroon-decorated cake with floral accents",
+        "servings": "8-10 people"
+      },
+      "vintage": {
+        "name": "Vintage Rose Cake",
+        "description": "Classic vintage design with pearl details",
+        "servings": "15-20 people"
+      },
+      "sunMoon": {
+        "name": "Sun and Moon Cake",
+        "description": "Celestial themed cake with gold accents",
+        "servings": "10-12 people"
+      }
+    }
+  },
   "customize": {
     "title": "Customize Your Cake",
     "cakeSize": "Cake Size",
@@ -8,13 +54,21 @@
     "decorations": "Decorations",
     "cakeTopper": "Cake Topper",
     "total": "Total",
-    "continue": "Continue"
+    "continue": "Continue to Scheduling"
   },
   "options": {
-    "cakeFlavors": {
+    "sizes": {
+      "6": "6 inch (serves 8-10)",
+      "8": "8 inch (serves 12-15)",
+      "10": "10 inch (serves 18-20)",
+      "12": "12 inch (serves 25-30)"
+    },
+    "flavors": {
       "vanilla": "Vanilla",
       "chocolate": "Chocolate",
       "redVelvet": "Red Velvet",
+      "carrot": "Carrot",
+      "lemon": "Lemon",
       "marble": "Marble"
     },
     "fillings": {
@@ -46,16 +100,65 @@
       "freshFlowers": "Fresh Flowers",
       "roses": "Roses",
       "pearls": "Pearls",
-      "sunMoon": "Sun & Moon",
+      "sunMoon": "Sun and Moon",
       "chocolateStrawberries": "Chocolate Strawberries"
     },
     "toppers": {
       "happyBirthday": "Happy Birthday",
-      "mrAndMrs": "Mr & Mrs",
-      "ohBaby": "Oh Baby",
-      "happyFathersDay": "Happy Father's Day",
-      "happyMothersDay": "Happy Mother's Day",
-      "happyValentinesDay": "Happy Valentine's Day"
+      "congratulations": "Congratulations",
+      "justMarried": "Just Married",
+      "custom": "Custom Text"
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "location": {
+      "question": "Where are you located?",
+      "answer": "We are located in Brooklyn, New York. All orders are for pickup only."
+    },
+    "hours": {
+      "question": "What are your business hours?",
+      "answer": "We are open Tuesday through Sunday from 9 AM to 6 PM. Closed on Mondays."
+    },
+    "cakeTypes": {
+      "question": "What types of cakes do you offer?",
+      "answer": "We offer a variety of cake flavors including vanilla, chocolate, red velvet, carrot, lemon, and marble."
+    },
+    "fillings": {
+      "question": "What filling options are available?",
+      "answer": "We offer various fillings including vanilla custard, chocolate ganache, strawberry, lemon curd, pineapple, and peach."
+    },
+    "frosting": {
+      "question": "What types of frosting do you use?",
+      "answer": "We offer buttercream, cream cheese, fondant, whipped cream, and chocolate ganache frostings."
+    },
+    "appointment": {
+      "question": "Do I need an appointment?",
+      "answer": "Yes, appointments are required for cake tastings and consultations. Please use our calendar to schedule."
+    },
+    "readyToGo": {
+      "question": "Do you have ready-to-go cakes?",
+      "answer": "No, all our cakes are made to order to ensure the highest quality and freshness."
+    },
+    "storefront": {
+      "question": "Do you have a storefront?",
+      "answer": "No, we operate as a custom order bakery only. All orders must be placed in advance."
+    },
+    "contact": {
+      "question": "How can I contact you?",
+      "answer": "You can reach us by phone at (929) 698-6795 or through our website's contact form."
+    },
+    "payment": {
+      "question": "What payment methods do you accept?",
+      "answer": "We accept all major credit cards, cash, and digital payments including Venmo and CashApp."
+    },
+    "deposit": {
+      "question": "Is a deposit required?",
+      "answer": "Yes, a 50% deposit is required to secure your order. The remaining balance is due at pickup."
+    },
+    "delivery": {
+      "question": "Do you offer delivery?",
+      "answer": "We currently offer pickup only from our Brooklyn location."
     }
   }
 }
