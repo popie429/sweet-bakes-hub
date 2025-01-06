@@ -12,5 +12,21 @@
     "callNow": "Llamar Ahora",
     "makeReservation": "Hacer una Reservación",
     "customOrder": "Ordenar Pastel Personalizado"
+  },
+  "faq": {
+    "title": "Preguntas Frecuentes",
+    "location": {
+      "question": "¿Dónde están ubicados?",
+      "answer": "Estamos ubicados en Albany, NY, sirviendo con orgullo a toda la región Capital."
+    },
+    "hours": {
+      "question": "¿Cuál es su horario de atención?",
+      "answer": "Lunes a Viernes: 8:00 AM - 8:00 PM\nSábado y Domingo: 9:00 AM - 6:00 PM"
+    }
+  },
+  "calendar": {
+    "title": "Reserva tu Pastel",
+    "selectDate": "Selecciona una Fecha",
+    "notice": "* Ten en cuenta que los pedidos requieren al menos 48 horas de anticipación"
   }
 }

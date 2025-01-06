@@ -12,5 +12,21 @@
     "callNow": "Call Now",
     "makeReservation": "Make a Reservation",
     "customOrder": "Custom Cake Order"
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "location": {
+      "question": "Where are you located?",
+      "answer": "We are based in Albany, NY, proudly serving the entire Capital Region."
+    },
+    "hours": {
+      "question": "What are your business hours?",
+      "answer": "Monday to Friday: 8:00 AM - 8:00 PM\nSaturday and Sunday: 9:00 AM - 6:00 PM"
+    }
+  },
+  "calendar": {
+    "title": "Book Your Cake",
+    "selectDate": "Select a Date",
+    "notice": "* Please note that orders require at least 48 hours notice"
   }
 }

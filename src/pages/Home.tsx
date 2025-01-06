@@ -2,8 +2,11 @@ import { Facebook, Instagram, PhoneCall, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChatBot } from "@/components/ChatBot";
+import { useTranslation } from 'react-i18next';
 
 const Home = () => {
+  const { t } = useTranslation();
+
   return (
     <div className="flex-1">
       <section className="relative h-[70vh] bg-cake-pink">
@@ -15,10 +18,10 @@ const Home = () => {
               className="w-32 h-32 object-contain mb-6 mx-auto"
             />
             <h1 className="text-5xl md:text-6xl font-playfair font-bold text-cake-burgundy mb-6">
-              Delicious Custom Cakes for Your Special Moments
+              {t('home.title')}
             </h1>
             <p className="text-lg text-gray-700 mb-8">
-              Handcrafted with love, our cakes are perfect for any celebration.
+              {t('home.subtitle')}
             </p>
             <div className="space-x-4">
               <Button
@@ -26,7 +29,7 @@ const Home = () => {
                 className="bg-cake-burgundy hover:bg-cake-rose text-white"
                 onClick={() => window.location.href = 'tel:+19296986795'}
               >
-                <PhoneCall className="mr-2 h-4 w-4" /> Call Now
+                <PhoneCall className="mr-2 h-4 w-4" /> {t('home.callNow')}
               </Button>
               <Link to="/calendar">
                 <Button
@@ -34,7 +37,7 @@ const Home = () => {
                   variant="outline"
                   className="border-cake-burgundy text-cake-burgundy hover:bg-cake-burgundy hover:text-white"
                 >
-                  Make a Reservation
+                  {t('home.makeReservation')}
                 </Button>
               </Link>
               <Link to="/gallery">
@@ -43,7 +46,7 @@ const Home = () => {
                   variant="outline"
                   className="border-cake-burgundy text-cake-burgundy hover:bg-cake-burgundy hover:text-white"
                 >
-                  Custom Cake Order
+                  {t('home.customOrder')}
                 </Button>
               </Link>
             </div>
