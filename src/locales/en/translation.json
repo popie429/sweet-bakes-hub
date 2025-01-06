@@ -13,6 +13,21 @@
     "makeReservation": "Make a Reservation",
     "customOrder": "Custom Cake Order"
   },
+  "customize": {
+    "title": "Design Your Custom Cake",
+    "cakeSize": "Cake Size",
+    "baseCake": "Base Cake",
+    "filling": "Filling",
+    "frosting": "Frosting",
+    "decorations": "Decorations",
+    "cakeTopper": "Cake Topper",
+    "total": "Total",
+    "continue": "Continue to Scheduling",
+    "clearSelections": "Clear Selections",
+    "guestNote": "Note: These are approximate figures. The actual number of servings may vary depending on how the cake is cut.",
+    "serves": "serves",
+    "guests": "guests"
+  },
   "faq": {
     "title": "Frequently Asked Questions",
     "location": {

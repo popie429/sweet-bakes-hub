@@ -13,6 +13,21 @@
     "makeReservation": "Hacer una Reservación",
     "customOrder": "Ordenar Pastel Personalizado"
   },
+  "customize": {
+    "title": "Diseña tu Pastel Personalizado",
+    "cakeSize": "Tamaño del Pastel",
+    "baseCake": "Pastel Base",
+    "filling": "Relleno",
+    "frosting": "Cobertura",
+    "decorations": "Decoraciones",
+    "cakeTopper": "Adorno Superior",
+    "total": "Total",
+    "continue": "Continuar a Programación",
+    "clearSelections": "Limpiar Selecciones",
+    "guestNote": "Nota: Estas son cifras aproximadas. El número real de porciones puede variar según cómo se corte el pastel.",
+    "serves": "sirve",
+    "guests": "personas"
+  },
   "faq": {
     "title": "Preguntas Frecuentes",
     "location": {
