@@ -1,5 +1,5 @@
 import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
-import { Checkbox } from "@/components/ui/checkbox";
+import { RadioGroup, RadioGroupItem } from "@/components/ui/radio-group";
 import { Label } from "@/components/ui/label";
 import { useTranslation } from 'react-i18next';
 
@@ -22,23 +22,17 @@ export const CakeWeightSection = () => {
         <FormItem className="space-y-3">
           <FormLabel>{t('customize.cakeSize')}</FormLabel>
           <FormControl>
-            <div className="grid grid-cols-2 gap-4">
+            <RadioGroup
+              onValueChange={field.onChange}
+              value={field.value}
+              className="grid grid-cols-2 gap-4"
+            >
               <div className="space-y-4">
                 {CAKE_SIZES.slice(0, 3).map((option) => (
                   <div key={option.size} className="flex items-start space-x-3 space-y-0">
-                    <Checkbox
-                      checked={field.value?.includes(option.size)}
-                      onCheckedChange={(checked) => {
-                        const currentValue = field.value || [];
-                        if (checked) {
-                          field.onChange([...currentValue, option.size]);
-                        } else {
-                          field.onChange(currentValue.filter((value: string) => value !== option.size));
-                        }
-                      }}
-                    />
+                    <RadioGroupItem value={option.size} id={option.size} />
                     <div className="leading-none">
-                      <Label className="text-sm font-medium leading-none">
+                      <Label className="text-sm font-medium leading-none" htmlFor={option.size}>
                         {t(`customize.options.cakeSizes.${option.size}.label`)} +${option.price} ({t(`customize.options.cakeSizes.${option.size}.servings`)})
                       </Label>
                     </div>
@@ -48,26 +42,16 @@ export const CakeWeightSection = () => {
               <div className="space-y-4">
                 {CAKE_SIZES.slice(3).map((option) => (
                   <div key={option.size} className="flex items-start space-x-3 space-y-0">
-                    <Checkbox
-                      checked={field.value?.includes(option.size)}
-                      onCheckedChange={(checked) => {
-                        const currentValue = field.value || [];
-                        if (checked) {
-                          field.onChange([...currentValue, option.size]);
-                        } else {
-                          field.onChange(currentValue.filter((value: string) => value !== option.size));
-                        }
-                      }}
-                    />
+                    <RadioGroupItem value={option.size} id={option.size} />
                     <div className="leading-none">
-                      <Label className="text-sm font-medium leading-none">
+                      <Label className="text-sm font-medium leading-none" htmlFor={option.size}>
                         {t(`customize.options.cakeSizes.${option.size}.label`)} +${option.price} ({t(`customize.options.cakeSizes.${option.size}.servings`)})
                       </Label>
                     </div>
                   </div>
                 ))}
               </div>
-            </div>
+            </RadioGroup>
           </FormControl>
           <p className="text-sm text-gray-500 mt-2">
             {t('customize.guestNote')}
