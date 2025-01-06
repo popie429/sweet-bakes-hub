@@ -26,7 +26,44 @@
     "clearSelections": "Clear Selections",
     "guestNote": "Note: These are approximate figures. The actual number of servings may vary depending on how the cake is cut.",
     "serves": "serves",
-    "guests": "guests"
+    "guests": "guests",
+    "options": {
+      "vanilla": "Vanilla",
+      "chocolate": "Chocolate",
+      "redVelvet": "Red Velvet",
+      "marble": "Marble",
+      "vanillaCustard": "Vanilla Custard",
+      "chocolateGanache": "Chocolate Ganache",
+      "strawberry": "Strawberry",
+      "lemonCurd": "Lemon Curd",
+      "pineapple": "Pineapple",
+      "peach": "Peach",
+      "buttercream": "Buttercream",
+      "creamCheese": "Cream Cheese",
+      "fondant": "Fondant",
+      "whippedCream": "Whipped Cream",
+      "vanillaFondant": "Vanilla Fondant",
+      "marbleFondant": "Marble Fondant",
+      "stars": "Mini Stars",
+      "hearts": "Hearts",
+      "sprinkles": "Sprinkles",
+      "fondantPiglet": "Fondant Piglet",
+      "fondantFlowers": "Fondant Flowers",
+      "donJulioBottle": "Don Julio Bottle",
+      "goldDetails": "Gold Details",
+      "macaroons": "Macaroons (3 pieces)",
+      "freshFlowers": "Fresh Flowers",
+      "roses": "Buttercream Roses",
+      "pearls": "Sugar Pearls",
+      "sunMoon": "Sun & Moon Design",
+      "chocolateStrawberries": "Chocolate Covered Strawberries",
+      "happyBirthday": "Happy Birthday",
+      "mrAndMrs": "Mr & Mrs",
+      "ohBaby": "Oh, Baby!",
+      "happyFathersDay": "Happy Father's Day",
+      "happyMothersDay": "Happy Mother's Day",
+      "happyValentinesDay": "Happy Valentine's Day"
+    }
   },
   "faq": {
     "title": "Frequently Asked Questions",
@@ -42,6 +79,12 @@
   "calendar": {
     "title": "Book Your Cake",
     "selectDate": "Select a Date",
-    "notice": "* Please note that orders require at least 48 hours notice"
+    "notice": "* Please note that orders require at least 48 hours notice",
+    "pickupTime": "Select Pick Up Time for",
+    "deliveryTime": "Select Delivery Time for",
+    "deliveryNote": "Please note: Our delivery fee is calculated at $1 per minute of driving time. For example, if you are 15 minutes away, the delivery fee will be $15.",
+    "pickup": "Pick Up",
+    "delivery": "Delivery",
+    "book": "BOOK"
   }
 }
