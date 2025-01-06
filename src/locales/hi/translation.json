@@ -28,51 +28,31 @@
     "serves": "परोसता है",
     "guests": "मेहमान",
     "options": {
-      "cakeFlavors": {
-        "vanilla": "वनीला",
-        "chocolate": "चॉकलेट",
-        "redVelvet": "रेड वेलवेट",
-        "marble": "मार्बल"
-      },
-      "fillings": {
-        "vanillaCustard": "वनीला कस्टर्ड",
-        "chocolateGanache": "चॉकलेट गनाश",
-        "strawberry": "स्ट्रॉबेरी",
-        "lemonCurd": "नींबू कर्ड",
-        "pineapple": "अनानास",
-        "peach": "आड़ू"
-      },
-      "frostings": {
-        "buttercream": "बटरक्रीम",
-        "creamCheese": "क्रीम चीज़",
-        "fondant": "फोंडेंट",
-        "whippedCream": "व्हिप्ड क्रीम",
-        "chocolateGanache": "चॉकलेट गनाश",
-        "vanillaFondant": "वनीला फोंडेंट",
-        "marbleFondant": "मार्बल फोंडेंट"
-      },
-      "decorations": {
-        "stars": "मिनी स्टार्स",
-        "hearts": "दिल",
-        "sprinkles": "स्प्रिंकल्स",
-        "fondantPiglet": "फोंडेंट पिगलेट",
-        "fondantFlowers": "फोंडेंट फूल",
-        "donJulioBottle": "डॉन जूलियो बोतल",
-        "goldDetails": "गोल्ड डिटेल्स",
-        "macaroons": "मैकरून (3 पीस)",
-        "freshFlowers": "ताज़े फूल",
-        "roses": "बटरक्रीम गुलाब",
-        "pearls": "शुगर पर्ल्स",
-        "sunMoon": "सूर्य और चंद्रमा डिज़ाइन",
-        "chocolateStrawberries": "चॉकलेट कवर्ड स्ट्रॉबेरी"
-      },
-      "toppers": {
-        "happyBirthday": "जन्मदिन मुबारक",
-        "mrAndMrs": "श्री और श्रीमती",
-        "ohBaby": "ओह, बेबी!",
-        "happyFathersDay": "पिता दिवस की शुभकामनाएं",
-        "happyMothersDay": "मातृ दिवस की शुभकामनाएं",
-        "happyValentinesDay": "वैलेंटाइन डे की शुभकामनाएं"
+      "cakeSizes": {
+        "5-2": {
+          "label": "5\" दो परत",
+          "servings": "4-6 परोसने"
+        },
+        "5-3": {
+          "label": "5\" तीन परत",
+          "servings": "5-7 परोसने"
+        },
+        "6-2": {
+          "label": "6\" दो परत",
+          "servings": "6-8 परोसने"
+        },
+        "6-3": {
+          "label": "6\" तीन परत",
+          "servings": "10-12 परोसने"
+        },
+        "8-2": {
+          "label": "8\" दो परत",
+          "servings": "10-12 परोसने"
+        },
+        "8-3": {
+          "label": "8\" तीन परत",
+          "servings": "20-24 परोसने"
+        }
       }
     }
   },

@@ -1,30 +1,30 @@
 import { FormControl, FormField, FormItem, FormLabel } from "@/components/ui/form";
 import { Checkbox } from "@/components/ui/checkbox";
 import { Label } from "@/components/ui/label";
+import { useTranslation } from 'react-i18next';
 
 const CAKE_SIZES = [
-  { size: "5", label: "5 inch", guests: "4-6", price: 60 },
-  { size: "6", label: "6 inch", guests: "8-10", price: 75 },
-  { size: "7", label: "7 inch", guests: "12-15", price: 90 },
-  { size: "8", label: "8 inch", guests: "16-20", price: 105 },
-  { size: "9", label: "9 inch", guests: "25-30", price: 120 },
-  { size: "10", label: "10 inch", guests: "35-40", price: 135 },
-  { size: "12", label: "12 inch", guests: "45-50", price: 150 },
-  { size: "14", label: "14 inch", guests: "60-65", price: 165 },
-  { size: "16", label: "16 inch", guests: "75-80", price: 180 },
+  { size: "5-2", label: "5\" Two layered", guests: "4-6", price: 35 },
+  { size: "5-3", label: "5\" Three Layered", guests: "5-7", price: 45 },
+  { size: "6-2", label: "6\" Two Layered", guests: "6-8", price: 45 },
+  { size: "6-3", label: "6\" Three Layered", guests: "10-12", price: 75 },
+  { size: "8-2", label: "8\" Two Layered", guests: "10-12", price: 60 },
+  { size: "8-3", label: "8\" Three Layers Cake", guests: "20-24", price: 90 },
 ];
 
 export const CakeWeightSection = () => {
+  const { t } = useTranslation();
+
   return (
     <FormField
       name="cakeSize"
       render={({ field }) => (
         <FormItem className="space-y-3">
-          <FormLabel>Cake Size</FormLabel>
+          <FormLabel>{t('customize.cakeSize')}</FormLabel>
           <FormControl>
             <div className="grid grid-cols-2 gap-4">
               <div className="space-y-4">
-                {CAKE_SIZES.slice(0, 4).map((option) => (
+                {CAKE_SIZES.slice(0, 3).map((option) => (
                   <div key={option.size} className="flex items-start space-x-3 space-y-0">
                     <Checkbox
                       checked={field.value?.includes(option.size)}
@@ -39,14 +39,14 @@ export const CakeWeightSection = () => {
                     />
                     <div className="leading-none">
                       <Label className="text-sm font-medium leading-none">
-                        {option.label} ({option.guests} guests) +${option.price}
+                        {t(`customize.options.cakeSizes.${option.size}.label`)} +${option.price} ({t(`customize.options.cakeSizes.${option.size}.servings`)})
                       </Label>
                     </div>
                   </div>
                 ))}
               </div>
               <div className="space-y-4">
-                {CAKE_SIZES.slice(4).map((option) => (
+                {CAKE_SIZES.slice(3).map((option) => (
                   <div key={option.size} className="flex items-start space-x-3 space-y-0">
                     <Checkbox
                       checked={field.value?.includes(option.size)}
@@ -61,7 +61,7 @@ export const CakeWeightSection = () => {
                     />
                     <div className="leading-none">
                       <Label className="text-sm font-medium leading-none">
-                        {option.label} ({option.guests} guests) +${option.price}
+                        {t(`customize.options.cakeSizes.${option.size}.label`)} +${option.price} ({t(`customize.options.cakeSizes.${option.size}.servings`)})
                       </Label>
                     </div>
                   </div>
@@ -70,7 +70,7 @@ export const CakeWeightSection = () => {
             </div>
           </FormControl>
           <p className="text-sm text-gray-500 mt-2">
-            Note: These are approximate figures. The actual number of servings may vary depending on how the cake is cut.
+            {t('customize.guestNote')}
           </p>
         </FormItem>
       )}

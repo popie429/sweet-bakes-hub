@@ -8,15 +8,12 @@ interface PriceOptions {
 }
 
 const SIZE_PRICES: Record<string, number> = {
-  "5": 60,
-  "6": 75,
-  "7": 90,
-  "8": 105,
-  "9": 120,
-  "10": 135,
-  "12": 150,
-  "14": 165,
-  "16": 180,
+  "5-2": 35,
+  "5-3": 45,
+  "6-2": 45,
+  "6-3": 75,
+  "8-2": 60,
+  "8-3": 90,
 };
 
 const FLAVOR_PRICES: Record<string, number> = {
