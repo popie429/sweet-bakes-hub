@@ -1,6 +1,10 @@
 import { Link } from "react-router-dom";
+import { useTranslation } from 'react-i18next';
+import { LanguageSelector } from "./LanguageSelector";
 
 export const Navbar = () => {
+  const { t } = useTranslation();
+
   return (
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
@@ -14,20 +18,21 @@ export const Navbar = () => {
           </Link>
           <div className="flex items-center space-x-6">
             <Link to="/" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
-              Home
+              {t('nav.home')}
             </Link>
             <Link to="/gallery" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
-              Gallery
+              {t('nav.gallery')}
             </Link>
             <Link to="/customize" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
-              Customize
+              {t('nav.customize')}
             </Link>
             <Link to="/calendar" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
-              Calendar
+              {t('nav.calendar')}
             </Link>
             <Link to="/faq" className="font-inter text-gray-600 hover:text-cake-rose transition-colors">
-              FAQ
+              {t('nav.faq')}
             </Link>
+            <LanguageSelector />
           </div>
         </div>
       </div>

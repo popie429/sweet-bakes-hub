@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Inicio",
+    "gallery": "Galería",
+    "customize": "Personalizar",
+    "calendar": "Calendario",
+    "faq": "Preguntas Frecuentes"
+  },
+  "home": {
+    "title": "Deliciosos Pasteles Personalizados para tus Momentos Especiales",
+    "subtitle": "Hechos a mano con amor, nuestros pasteles son perfectos para cualquier celebración.",
+    "callNow": "Llamar Ahora",
+    "makeReservation": "Hacer una Reservación",
+    "customOrder": "Ordenar Pastel Personalizado"
+  }
+}

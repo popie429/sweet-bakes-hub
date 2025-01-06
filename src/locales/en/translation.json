@@ -1,0 +1,16 @@
+{
+  "nav": {
+    "home": "Home",
+    "gallery": "Gallery",
+    "customize": "Customize",
+    "calendar": "Calendar",
+    "faq": "FAQ"
+  },
+  "home": {
+    "title": "Delicious Custom Cakes for Your Special Moments",
+    "subtitle": "Handcrafted with love, our cakes are perfect for any celebration.",
+    "callNow": "Call Now",
+    "makeReservation": "Make a Reservation",
+    "customOrder": "Custom Cake Order"
+  }
+}
