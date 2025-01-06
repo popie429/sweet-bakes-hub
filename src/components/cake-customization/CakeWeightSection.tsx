@@ -33,7 +33,7 @@ export const CakeWeightSection = () => {
                     <RadioGroupItem value={option.size} id={option.size} />
                     <div className="leading-none">
                       <Label className="text-sm font-medium leading-none" htmlFor={option.size}>
-                        {t(`customize.options.cakeSizes.${option.size}.label`)} +${option.price} ({t(`customize.options.cakeSizes.${option.size}.servings`)})
+                        {option.label} +${option.price} ({option.guests} guests)
                       </Label>
                     </div>
                   </div>
@@ -45,7 +45,7 @@ export const CakeWeightSection = () => {
                     <RadioGroupItem value={option.size} id={option.size} />
                     <div className="leading-none">
                       <Label className="text-sm font-medium leading-none" htmlFor={option.size}>
-                        {t(`customize.options.cakeSizes.${option.size}.label`)} +${option.price} ({t(`customize.options.cakeSizes.${option.size}.servings`)})
+                        {option.label} +${option.price} ({option.guests} guests)
                       </Label>
                     </div>
                   </div>
