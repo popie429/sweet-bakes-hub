@@ -118,51 +118,51 @@
     "title": "Frequently Asked Questions",
     "location": {
       "question": "Where are you located?",
-      "answer": "We are located in Brooklyn, New York. All orders are for pickup only."
+      "answer": "We're in the heart of Albany, NY. Proudly serving the Capital Region!"
     },
     "hours": {
       "question": "What are your business hours?",
-      "answer": "We are open Tuesday through Sunday from 9 AM to 6 PM. Closed on Mondays."
+      "answer": "We're open Monday through Friday from 8am to 8pm and Saturday through Sunday from 9am to 6pm."
     },
     "cakeTypes": {
-      "question": "What types of cakes do you offer?",
-      "answer": "We offer a variety of cake flavors including vanilla, chocolate, red velvet, carrot, lemon, and marble."
+      "question": "What types of cake do you offer?",
+      "answer": "We offer a variety of flavored cakes, depending on what you've got in mind! From strawberry to coffee and everything in between."
     },
     "fillings": {
-      "question": "What filling options are available?",
-      "answer": "We offer various fillings including vanilla custard, chocolate ganache, strawberry, lemon curd, pineapple, and peach."
+      "question": "What filling do you use?",
+      "answer": "We have flavors that suit any taste bud! Our current offerings are: Chocolate ganache, Vanilla, Dulce de Leche, Crema Pastelera, Guava, Strawberry, Peach, chocolate fudge, Pineapple, Nutella, Fruit cocktail, and Crema de Almendra."
     },
     "frosting": {
-      "question": "What types of frosting do you use?",
-      "answer": "We offer buttercream, cream cheese, fondant, whipped cream, and chocolate ganache frostings."
+      "question": "What frosting do you use?",
+      "answer": "We primarily work with American Butter Cream, Sweet Meringue, Italian Frosting, Cream Cheese and Chantilly."
     },
     "appointment": {
-      "question": "Do I need an appointment?",
-      "answer": "Yes, appointments are required for cake tastings and consultations. Please use our calendar to schedule."
+      "question": "Do you work by appointment only?",
+      "answer": "Yes. At least a three days notice is required."
     },
     "readyToGo": {
-      "question": "Do you have ready-to-go cakes?",
-      "answer": "No, all our cakes are made to order to ensure the highest quality and freshness."
+      "question": "Do you sell to go items I can pick up?",
+      "answer": "Not at the moment."
     },
     "storefront": {
-      "question": "Do you have a storefront?",
-      "answer": "No, we operate as a custom order bakery only. All orders must be placed in advance."
+      "question": "Do you work from home or do you own a shop?",
+      "answer": "I am a home baker."
     },
     "contact": {
-      "question": "How can I contact you?",
-      "answer": "You can reach us by phone at (929) 698-6795 or through our website's contact form."
+      "question": "What is your phone number?",
+      "answer": "You can reach us at (929)698-6795."
+    },
+    "email": {
+      "question": "What's your email?",
+      "answer": "Realsydneyescakes@gmail.com"
     },
     "payment": {
-      "question": "What payment methods do you accept?",
-      "answer": "We accept all major credit cards, cash, and digital payments including Venmo and CashApp."
-    },
-    "deposit": {
-      "question": "Is a deposit required?",
-      "answer": "Yes, a 50% deposit is required to secure your order. The remaining balance is due at pickup."
+      "question": "What forms of payment do you take?",
+      "answer": "I take Zelle, Cash app, Cash and card payments. Please note that some payment methods might incur additional fees."
     },
     "delivery": {
-      "question": "Do you offer delivery?",
-      "answer": "We currently offer pickup only from our Brooklyn location."
+      "question": "Do you do deliveries?",
+      "answer": "We prefer customers do their own pickup but delivery may be scheduled with advanced notice."
     }
   }
 }

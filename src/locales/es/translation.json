@@ -118,51 +118,51 @@
     "title": "Preguntas Frecuentes",
     "location": {
       "question": "¿Dónde están ubicados?",
-      "answer": "Estamos ubicados en Brooklyn, Nueva York. Todos los pedidos son solo para recoger."
+      "answer": "¡Estamos en el corazón de Albany, NY. Sirviendo con orgullo a la Región Capital!"
     },
     "hours": {
       "question": "¿Cuál es su horario?",
-      "answer": "Estamos abiertos de martes a domingo de 9 AM a 6 PM. Cerrados los lunes."
+      "answer": "Estamos abiertos de lunes a viernes de 8am a 8pm y sábado y domingo de 9am a 6pm."
     },
     "cakeTypes": {
       "question": "¿Qué tipos de pasteles ofrecen?",
-      "answer": "Ofrecemos una variedad de sabores incluyendo vainilla, chocolate, red velvet, zanahoria, limón y mármol."
+      "answer": "¡Ofrecemos una variedad de pasteles con sabores, dependiendo de lo que tengas en mente! Desde fresa hasta café y todo lo demás."
     },
     "fillings": {
-      "question": "¿Qué opciones de relleno están disponibles?",
-      "answer": "Ofrecemos varios rellenos incluyendo crema de vainilla, ganache de chocolate, fresa, crema de limón, piña y durazno."
+      "question": "¿Qué rellenos utilizan?",
+      "answer": "¡Tenemos sabores que se adaptan a cualquier paladar! Nuestras opciones actuales son: Ganache de chocolate, Vainilla, Dulce de Leche, Crema Pastelera, Guayaba, Fresa, Durazno, Chocolate fudge, Piña, Nutella, Coctel de frutas y Crema de Almendra."
     },
     "frosting": {
-      "question": "¿Qué tipos de cobertura usan?",
-      "answer": "Ofrecemos coberturas de crema de mantequilla, queso crema, fondant, crema batida y ganache de chocolate."
+      "question": "¿Qué tipo de cobertura usan?",
+      "answer": "Principalmente trabajamos con Crema de Mantequilla Americana, Merengue Dulce, Frosting Italiano, Queso Crema y Chantilly."
     },
     "appointment": {
-      "question": "¿Necesito una cita?",
-      "answer": "Sí, se requieren citas para degustaciones y consultas. Por favor use nuestro calendario para programar."
+      "question": "¿Trabajan solo con cita?",
+      "answer": "Sí. Se requiere un aviso de al menos tres días."
     },
     "readyToGo": {
-      "question": "¿Tienen pasteles listos para llevar?",
-      "answer": "No, todos nuestros pasteles son hechos por encargo para asegurar la mejor calidad y frescura."
+      "question": "¿Venden productos para llevar?",
+      "answer": "No por el momento."
     },
     "storefront": {
-      "question": "¿Tienen una tienda física?",
-      "answer": "No, operamos solo como pastelería por encargo. Todos los pedidos deben hacerse con anticipación."
+      "question": "¿Trabajan desde casa o tienen una tienda?",
+      "answer": "Soy una panadera que trabaja desde casa."
     },
     "contact": {
-      "question": "¿Cómo puedo contactarlos?",
-      "answer": "Puede contactarnos por teléfono al (929) 698-6795 o a través del formulario de contacto en nuestro sitio web."
+      "question": "¿Cuál es su número de teléfono?",
+      "answer": "Pueden contactarnos al (929)698-6795."
+    },
+    "email": {
+      "question": "¿Cuál es su correo electrónico?",
+      "answer": "Realsydneyescakes@gmail.com"
     },
     "payment": {
-      "question": "¿Qué métodos de pago aceptan?",
-      "answer": "Aceptamos todas las tarjetas de crédito principales, efectivo y pagos digitales incluyendo Venmo y CashApp."
-    },
-    "deposit": {
-      "question": "¿Se requiere un depósito?",
-      "answer": "Sí, se requiere un depósito del 50% para asegurar su pedido. El saldo restante se paga al recoger."
+      "question": "¿Qué formas de pago aceptan?",
+      "answer": "Acepto Zelle, Cash app, efectivo y pagos con tarjeta. Tenga en cuenta que algunos métodos de pago pueden incurrir en cargos adicionales."
     },
     "delivery": {
-      "question": "¿Ofrecen entrega a domicilio?",
-      "answer": "Actualmente solo ofrecemos recoger en nuestra ubicación en Brooklyn."
+      "question": "¿Hacen entregas?",
+      "answer": "Preferimos que los clientes recojan sus pedidos, pero la entrega se puede programar con aviso anticipado."
     }
   }
 }
