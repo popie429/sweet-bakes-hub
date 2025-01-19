@@ -70,6 +70,7 @@ export default {
       fontFamily: {
         cormorant: ["Cormorant Garamond", "serif"],
         montserrat: ["Montserrat", "sans-serif"],
+        seasons: ["the-seasons", "serif"]  // Added the new font family
       },
       backgroundImage: {
         'gradient-elegant': 'linear-gradient(to top, #accbee 0%, #e7f0fd 100%)',
