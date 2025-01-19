@@ -104,20 +104,20 @@ const FAQ = () => {
         <Card>
           <CardContent className="p-6">
             <h2 className="text-xl font-playfair text-cake-burgundy mb-2">
-              {t('faq.payment.question')}
+              {t('faq.email.question')}
             </h2>
             <p className="text-gray-700 whitespace-pre-line">
-              {t('faq.payment.answer')}
+              {t('faq.email.answer')}
             </p>
           </CardContent>
         </Card>
         <Card>
           <CardContent className="p-6">
             <h2 className="text-xl font-playfair text-cake-burgundy mb-2">
-              {t('faq.deposit.question')}
+              {t('faq.payment.question')}
             </h2>
             <p className="text-gray-700 whitespace-pre-line">
-              {t('faq.deposit.answer')}
+              {t('faq.payment.answer')}
             </p>
           </CardContent>
         </Card>
