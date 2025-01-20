@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   return (
-    <div className="container mx-auto px-4 pt-8 pb-16 bg-white overflow-hidden">
+    <div className="relative h-screen mx-auto px-4 pt-8 pb-16 bg-white">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="w-full md:w-1/2 flex flex-col items-center text-center">
+        <div className="w-full md:w-1/2 flex flex-col items-center text-center z-10">
           <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto">
             <div className="relative w-full flex justify-center translate-y-12">
               <img
@@ -47,17 +47,17 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center justify-center md:absolute md:right-[-20%] md:h-screen overflow-hidden">
+        <div className="absolute right-0 top-0 w-full md:w-[70%] h-screen overflow-hidden">
           <img
             src="https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png"
             alt="Grid of Sydney's Cakes"
-            className="w-[160%] md:w-[180%] h-[130vh] object-cover max-w-none transform translate-x-[25%]"
+            className="w-[160%] md:w-[180%] h-[130vh] object-cover max-w-none"
             style={{ 
               backgroundColor: 'transparent',
               WebkitBackfaceVisibility: 'hidden',
               backfaceVisibility: 'hidden',
-              transform: 'translateZ(0) translateX(25%)',
-              WebkitTransform: 'translateZ(0) translateX(25%)',
+              transform: 'translateX(15%)',
+              WebkitTransform: 'translateX(15%)',
               objectPosition: 'center right'
             }}
           />

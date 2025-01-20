@@ -4,7 +4,7 @@ import { SocialLinks } from "@/components/home/SocialLinks";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="h-screen overflow-hidden bg-white">
       <HeroSection />
       <SocialLinks />
       <ChatBot />
