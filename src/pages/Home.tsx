@@ -15,17 +15,10 @@ const Home = () => {
   useEffect(() => {
     const processImage = async () => {
       try {
-        // Fetch the image
-        const response = await fetch("https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png");
+        const response = await fetch("/lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png");
         const blob = await response.blob();
-        
-        // Load the image
         const img = await loadImage(blob);
-        
-        // Remove the background
         const processedBlob = await removeBackground(img);
-        
-        // Create URL for the processed image
         const processedUrl = URL.createObjectURL(processedBlob);
         setProcessedImageUrl(processedUrl);
       } catch (error) {
@@ -40,7 +33,6 @@ const Home = () => {
 
     processImage();
 
-    // Cleanup
     return () => {
       if (processedImageUrl) {
         URL.revokeObjectURL(processedImageUrl);
@@ -49,7 +41,7 @@ const Home = () => {
   }, []);
 
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-gradient-elegant">
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-8 pb-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
@@ -82,9 +74,9 @@ const Home = () => {
           <div className="w-full md:w-1/2">
             <div className="transform rotate-7 hover:rotate-0 transition-transform duration-300">
               <img
-                src={processedImageUrl || "https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png"}
+                src={processedImageUrl || "/lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"}
                 alt="Grid of Sydney's Cakes"
-                className="rounded-lg shadow-xl w-full"
+                className="w-full h-auto object-contain mix-blend-multiply"
               />
             </div>
           </div>
