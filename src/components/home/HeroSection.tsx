@@ -22,29 +22,23 @@ export const HeroSection = () => {
               />
             </div>
             <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose">
-              Custom
+              The Best
             </h1>
-            <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose -mt-2">
-              Birthday
-            </h1>
-            <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose -mt-2 mb-4">
-              Cake
-            </h1>
-            <h2 className="font-seasons text-2xl text-cake-rose mb-8">
-              the best on your special day
+            <h2 className="font-seasons text-3xl md:text-4xl text-cake-rose mb-3">
+              for your big day
             </h2>
-            <div className="mb-8">
+            <div className="my-3">
               <Link to="/customize">
                 <Button
                   size="lg"
-                  className="bg-[#B25B3E] hover:bg-[#B25B3E]/90 text-white font-seasons px-8 py-6 text-xl rounded-full"
+                  className="bg-cake-rose hover:bg-cake-rose/90 text-white font-seasons px-8 py-6 text-xl rounded-full"
                 >
                   order now!
                 </Button>
               </Link>
             </div>
             
-            <div className="text-[#B25B3E]">
+            <div className="mt-3 text-cake-rose">
               <p className="font-seasons text-xl">
                 <a href="tel:+19296986795" className="hover:underline">(929) 698 6795</a>
               </p>
