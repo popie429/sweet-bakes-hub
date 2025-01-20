@@ -22,19 +22,21 @@ export const HeroSection = () => {
             <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose">
               The Best
             </h1>
-            <h2 className="font-seasons text-3xl md:text-4xl text-cake-rose mb-4">
+            <h2 className="font-seasons text-3xl md:text-4xl text-cake-rose mb-6">
               for your big day
             </h2>
-            <Link to="/customize" className="mb-4">
-              <Button
-                size="lg"
-                className="bg-cake-rose hover:bg-cake-rose/90 text-white font-seasons px-8 py-6 text-xl rounded-full"
-              >
-                order now!
-              </Button>
-            </Link>
+            <div className="my-6">
+              <Link to="/customize">
+                <Button
+                  size="lg"
+                  className="bg-cake-rose hover:bg-cake-rose/90 text-white font-seasons px-8 py-6 text-xl rounded-full"
+                >
+                  order now!
+                </Button>
+              </Link>
+            </div>
             
-            <div className="mt-4 text-cake-rose">
+            <div className="mt-6 text-cake-rose">
               <p className="font-seasons text-xl">
                 <a href="tel:+19296986795" className="hover:underline">(929) 698 6795</a>
               </p>
