@@ -3,7 +3,7 @@ import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   return (
-    <div className="container mx-auto px-4 pt-8 pb-16 bg-white">
+    <div className="container mx-auto px-4 pt-8 pb-16 bg-white overflow-hidden">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="w-full md:w-1/2 flex flex-col items-center text-center">
           <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto">
@@ -47,17 +47,18 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center justify-center">
+        <div className="w-full md:w-1/2 flex items-center justify-center md:absolute md:right-0 md:h-full overflow-hidden">
           <img
             src="lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"
             alt="Grid of Sydney's Cakes"
-            className="w-[120%] md:w-[110%] h-auto object-contain max-w-none"
+            className="w-[140%] md:w-[150%] h-[120vh] object-cover max-w-none transform translate-x-[10%]"
             style={{ 
               backgroundColor: 'transparent',
               WebkitBackfaceVisibility: 'hidden',
               backfaceVisibility: 'hidden',
-              transform: 'translateZ(0)',
-              WebkitTransform: 'translateZ(0)'
+              transform: 'translateZ(0) translateX(10%)',
+              WebkitTransform: 'translateZ(0) translateX(10%)',
+              objectPosition: 'center right'
             }}
           />
         </div>
