@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   return (
-    <div className="container mx-auto px-4 pt-8 pb-16 bg-white overflow-hidden">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-        <div className="w-full md:w-1/2 flex flex-col items-center text-center">
+    <div className="relative w-full h-screen overflow-hidden bg-white">
+      <div className="container h-full mx-auto px-4 flex items-center">
+        <div className="w-full md:w-1/2 flex flex-col items-center text-center relative z-10">
           <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto">
             <div className="relative w-full flex justify-center translate-y-12">
               <img
@@ -47,18 +47,16 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center justify-center md:absolute md:right-0 md:h-full overflow-hidden">
+        <div className="absolute right-0 top-1/2 -translate-y-1/2 w-[65%] h-[140vh] overflow-hidden">
           <img
-            src="lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"
+            src="https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png"
             alt="Grid of Sydney's Cakes"
-            className="w-[140%] md:w-[150%] h-[120vh] object-cover max-w-none transform translate-x-[10%]"
+            className="w-full h-full object-cover"
             style={{ 
-              backgroundColor: 'transparent',
+              objectPosition: 'center right',
+              transform: 'scale(1.4) translateX(10%)',
               WebkitBackfaceVisibility: 'hidden',
-              backfaceVisibility: 'hidden',
-              transform: 'translateZ(0) translateX(10%)',
-              WebkitTransform: 'translateZ(0) translateX(10%)',
-              objectPosition: 'center right'
+              backfaceVisibility: 'hidden'
             }}
           />
         </div>
