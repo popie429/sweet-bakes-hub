@@ -47,17 +47,17 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center justify-center md:absolute md:right-[-10%] md:h-screen overflow-hidden">
+        <div className="w-full md:w-1/2 flex items-center justify-center md:absolute md:right-[-20%] md:h-screen overflow-hidden">
           <img
             src="https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png"
             alt="Grid of Sydney's Cakes"
-            className="w-[140%] md:w-[160%] h-[120vh] object-cover max-w-none transform translate-x-[15%]"
+            className="w-[160%] md:w-[180%] h-[130vh] object-cover max-w-none transform translate-x-[25%]"
             style={{ 
               backgroundColor: 'transparent',
               WebkitBackfaceVisibility: 'hidden',
               backfaceVisibility: 'hidden',
-              transform: 'translateZ(0) translateX(15%)',
-              WebkitTransform: 'translateZ(0) translateX(15%)',
+              transform: 'translateZ(0) translateX(25%)',
+              WebkitTransform: 'translateZ(0) translateX(25%)',
               objectPosition: 'center right'
             }}
           />
