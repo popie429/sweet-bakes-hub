@@ -37,7 +37,7 @@ export const HeroSection = () => {
   }, []);
 
   return (
-    <div className="container mx-auto px-4 pt-8 pb-16">
+    <div className="container mx-auto px-4 pt-8 pb-16 bg-white">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="w-full md:w-1/2 flex flex-col items-center text-center">
           <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose mb-4">
@@ -69,6 +69,7 @@ export const HeroSection = () => {
               src={processedImageUrl || "/lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"}
               alt="Grid of Sydney's Cakes"
               className="w-full h-auto object-contain mix-blend-multiply"
+              style={{ backgroundColor: 'transparent' }}
             />
           </div>
         </div>
