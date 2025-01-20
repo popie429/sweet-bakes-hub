@@ -30,16 +30,18 @@ export const HeroSection = () => {
         </div>
 
         <div className="w-full md:w-1/2">
-          <div>
-            <img
-              src="/lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"
-              alt="Grid of Sydney's Cakes"
-              className="w-full h-auto object-contain max-w-full"
-              style={{ 
-                backgroundColor: 'transparent'
-              }}
-            />
-          </div>
+          <img
+            src="/lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"
+            alt="Grid of Sydney's Cakes"
+            className="w-full h-auto object-contain"
+            style={{ 
+              backgroundColor: 'transparent',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
+              transform: 'translateZ(0)',
+              WebkitTransform: 'translateZ(0)'
+            }}
+          />
         </div>
       </div>
     </div>
