@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
-        <div className="flex items-center space-x-6">
+        <div className="flex justify-between items-center ml-8">
           <Link to="/" className="flex items-center">
             <img 
               src="https://i.imgur.com/9ICEHj0.jpeg" 

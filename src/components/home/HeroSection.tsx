@@ -1,10 +1,9 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
-import { SocialLinks } from './SocialLinks';
 
 export const HeroSection = () => {
   return (
-    <div className="container mx-auto px-4 pt-8 pb-16 bg-white overflow-hidden">
+    <div className="container mx-auto px-4 pt-8 pb-16 bg-white">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="w-full md:w-1/2 flex flex-col items-center text-center">
           <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto">
@@ -45,24 +44,20 @@ export const HeroSection = () => {
               </p>
               <p className="font-seasons text-xl">Albany, NY</p>
             </div>
-
-            <SocialLinks />
           </div>
         </div>
 
-        <div className="absolute right-0 top-0 w-[50vw] h-[120vh] overflow-hidden">
-          <div 
-            className="w-full h-full"
-            style={{
-              position: 'absolute',
-              right: 0,
-              top: '-10vh',
-              width: '100%',
-              height: '140vh',
-              backgroundImage: 'url("https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png")',
-              backgroundSize: 'cover',
-              backgroundPosition: 'center right',
-              backgroundRepeat: 'no-repeat'
+        <div className="w-full md:w-1/2 flex items-center justify-center">
+          <img
+            src="lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"
+            alt="Grid of Sydney's Cakes"
+            className="w-[120%] md:w-[110%] h-auto object-contain max-w-none"
+            style={{ 
+              backgroundColor: 'transparent',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
+              transform: 'translateZ(0)',
+              WebkitTransform: 'translateZ(0)'
             }}
           />
         </div>
