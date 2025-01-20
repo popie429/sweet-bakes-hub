@@ -19,7 +19,7 @@ export const HeroSection = () => {
                 WebkitTransform: 'translateZ(0)'
               }}
             />
-            <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose mb-2">
+            <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose">
               The Best
             </h1>
             <h2 className="font-seasons text-3xl md:text-4xl text-cake-rose mb-4">
