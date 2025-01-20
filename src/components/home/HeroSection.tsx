@@ -22,10 +22,10 @@ export const HeroSection = () => {
             <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose">
               The Best
             </h1>
-            <h2 className="font-seasons text-3xl md:text-4xl text-cake-rose mb-5">
+            <h2 className="font-seasons text-3xl md:text-4xl text-cake-rose mb-4">
               for your big day
             </h2>
-            <div className="my-5">
+            <div className="my-4">
               <Link to="/customize">
                 <Button
                   size="lg"
@@ -36,7 +36,7 @@ export const HeroSection = () => {
               </Link>
             </div>
             
-            <div className="mt-5 text-cake-rose">
+            <div className="mt-4 text-cake-rose">
               <p className="font-seasons text-xl">
                 <a href="tel:+19296986795" className="hover:underline">(929) 698 6795</a>
               </p>
