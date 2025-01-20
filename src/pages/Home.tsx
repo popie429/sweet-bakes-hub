@@ -1,4 +1,4 @@
-import { Facebook, Instagram, PhoneCall, MessageCircle } from "lucide-react";
+import { Facebook, Instagram, MessageCircle, PhoneCall } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChatBot } from "@/components/ChatBot";
@@ -7,83 +7,92 @@ import { useTranslation } from 'react-i18next';
 const Home = () => {
   const { t } = useTranslation();
 
-  return (
-    <div className="flex-1">
-      <section className="relative h-[70vh] bg-cake-pink">
-        <div className="container mx-auto px-4 h-full flex items-center justify-center">
-          <div className="max-w-2xl text-center">
-            <img 
-              src="https://i.imgur.com/9ICEHj0.jpeg" 
-              alt="Sydney's Cakes Logo" 
-              className="w-32 h-32 object-contain mb-6 mx-auto"
-            />
-            <h1 className="text-5xl md:text-6xl font-playfair font-bold text-cake-burgundy mb-6">
-              {t('home.title')}
-            </h1>
-            <p className="text-lg text-gray-700 mb-8">
-              {t('home.subtitle')}
-            </p>
-            <div className="space-x-4">
-              <Button
-                size="lg"
-                className="bg-cake-burgundy hover:bg-cake-rose text-white"
-                onClick={() => window.location.href = 'tel:+19296986795'}
-              >
-                <PhoneCall className="mr-2 h-4 w-4" /> {t('home.callNow')}
-              </Button>
-              <Link to="/calendar">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-cake-burgundy text-cake-burgundy hover:bg-cake-burgundy hover:text-white"
-                >
-                  {t('home.makeReservation')}
-                </Button>
-              </Link>
-              <Link to="/gallery">
-                <Button
-                  size="lg"
-                  variant="outline"
-                  className="border-cake-burgundy text-cake-burgundy hover:bg-cake-burgundy hover:text-white"
-                >
-                  {t('home.customOrder')}
-                </Button>
-              </Link>
-            </div>
-          </div>
-        </div>
-      </section>
+  const cakeImages = [
+    "https://i.imgur.com/tsM6cYx.jpeg",
+    "https://i.imgur.com/1IlLFO1.jpeg",
+    "https://i.imgur.com/Ve6bqSL.jpeg",
+    "https://i.imgur.com/xjzX5Ep.jpeg",
+    "https://i.imgur.com/anLj4Uc.jpeg",
+    "https://i.imgur.com/9ICEHj0.jpeg",
+    "https://i.imgur.com/tsM6cYx.jpeg",
+    "https://i.imgur.com/1IlLFO1.jpeg"
+  ];
 
-      <footer className="bg-white py-8">
-        <div className="container mx-auto px-4">
-          <div className="flex justify-center space-x-6">
-            <a
-              href="https://instagram.com/_sydneyscakes"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cake-burgundy hover:text-cake-rose transition-colors"
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <div className="container mx-auto px-4 pt-8 pb-16">
+        <div className="flex flex-col items-center text-center mb-12">
+          <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose mb-4">
+            The Best
+          </h1>
+          <h2 className="font-seasons text-3xl md:text-4xl text-cake-rose mb-8">
+            for your big day
+          </h2>
+          <Link to="/customize">
+            <Button
+              size="lg"
+              className="bg-cake-rose hover:bg-cake-rose/90 text-white font-montserrat px-8 py-6 text-xl rounded-full"
             >
-              <Instagram size={24} />
-            </a>
-            <a
-              href="https://m.facebook.com/sydneylovestoparty/"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cake-burgundy hover:text-cake-rose transition-colors"
-            >
-              <Facebook size={24} />
-            </a>
-            <a
-              href="https://wa.me/19296986795"
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-cake-burgundy hover:text-cake-rose transition-colors"
-            >
-              <MessageCircle size={24} />
-            </a>
+              order now!
+            </Button>
+          </Link>
+          
+          <div className="mt-8 text-cake-rose">
+            <p className="font-montserrat">
+              <a href="tel:+19296986795" className="hover:underline">(929) 698 6795</a>
+            </p>
+            <p className="font-montserrat">Albany, NY</p>
           </div>
         </div>
-      </footer>
+
+        {/* Cake Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mb-12">
+          {cakeImages.map((image, index) => (
+            <div key={index} className="aspect-square rounded-lg overflow-hidden">
+              <img
+                src={image}
+                alt={`Cake ${index + 1}`}
+                className="w-full h-full object-cover hover:scale-105 transition-transform duration-300"
+              />
+            </div>
+          ))}
+        </div>
+
+        {/* Social Links */}
+        <div className="flex justify-center space-x-8">
+          <a
+            href="https://instagram.com/_sydneyscakes"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cake-rose hover:text-cake-rose/80 transition-colors"
+          >
+            <Instagram size={32} />
+          </a>
+          <a
+            href="https://m.facebook.com/sydneylovestoparty/"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cake-rose hover:text-cake-rose/80 transition-colors"
+          >
+            <Facebook size={32} />
+          </a>
+          <a
+            href="https://wa.me/19296986795"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="text-cake-rose hover:text-cake-rose/80 transition-colors"
+          >
+            <MessageCircle size={32} />
+          </a>
+          <a
+            href="tel:+19296986795"
+            className="text-cake-rose hover:text-cake-rose/80 transition-colors"
+          >
+            <PhoneCall size={32} />
+          </a>
+        </div>
+      </div>
 
       <ChatBot />
     </div>
