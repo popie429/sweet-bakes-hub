@@ -3,9 +3,50 @@ import { Button } from "@/components/ui/button";
 import { Link } from "react-router-dom";
 import { ChatBot } from "@/components/ChatBot";
 import { useTranslation } from 'react-i18next';
+import { useEffect, useState } from "react";
+import { removeBackground, loadImage } from "@/utils/imageUtils";
+import { useToast } from "@/components/ui/use-toast";
 
 const Home = () => {
   const { t } = useTranslation();
+  const [processedImageUrl, setProcessedImageUrl] = useState<string>("");
+  const { toast } = useToast();
+
+  useEffect(() => {
+    const processImage = async () => {
+      try {
+        // Fetch the image
+        const response = await fetch("https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png");
+        const blob = await response.blob();
+        
+        // Load the image
+        const img = await loadImage(blob);
+        
+        // Remove the background
+        const processedBlob = await removeBackground(img);
+        
+        // Create URL for the processed image
+        const processedUrl = URL.createObjectURL(processedBlob);
+        setProcessedImageUrl(processedUrl);
+      } catch (error) {
+        console.error("Error processing image:", error);
+        toast({
+          title: "Error",
+          description: "Failed to process image. Using original image instead.",
+          variant: "destructive",
+        });
+      }
+    };
+
+    processImage();
+
+    // Cleanup
+    return () => {
+      if (processedImageUrl) {
+        URL.revokeObjectURL(processedImageUrl);
+      }
+    };
+  }, []);
 
   return (
     <div className="min-h-screen bg-white">
@@ -41,7 +82,7 @@ const Home = () => {
           <div className="w-full md:w-1/2">
             <div className="transform rotate-7 hover:rotate-0 transition-transform duration-300">
               <img
-                src="https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png"
+                src={processedImageUrl || "https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png"}
                 alt="Grid of Sydney's Cakes"
                 className="rounded-lg shadow-xl w-full"
               />
