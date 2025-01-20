@@ -6,6 +6,18 @@ export const HeroSection = () => {
     <div className="container mx-auto px-4 pt-8 pb-16 bg-white">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="w-full md:w-1/2 flex flex-col items-center text-center">
+          <img
+            src="https://i.imgur.com/kzn29W4.png"
+            alt="Decorative cake logo"
+            className="w-48 h-auto mb-6"
+            style={{ 
+              backgroundColor: 'transparent',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
+              transform: 'translateZ(0)',
+              WebkitTransform: 'translateZ(0)'
+            }}
+          />
           <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose mb-4">
             The Best
           </h1>
