@@ -12,18 +12,7 @@ const Home = () => {
       {/* Hero Section */}
       <div className="container mx-auto px-4 pt-8 pb-16">
         <div className="flex flex-col md:flex-row items-center justify-between gap-8">
-          {/* Left side - Image */}
-          <div className="w-full md:w-1/2">
-            <div className="transform rotate-7 hover:rotate-0 transition-transform duration-300">
-              <img
-                src="https://i.imgur.com/XdvKopJ.jpeg"
-                alt="Grid of Sydney's Cakes"
-                className="rounded-lg shadow-xl w-full"
-              />
-            </div>
-          </div>
-
-          {/* Right side - Text and Button */}
+          {/* Left side - Text and Button */}
           <div className="w-full md:w-1/2 flex flex-col items-center text-center">
             <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose mb-4">
               The Best
@@ -45,6 +34,17 @@ const Home = () => {
                 <a href="tel:+19296986795" className="hover:underline">(929) 698 6795</a>
               </p>
               <p className="font-montserrat">Albany, NY</p>
+            </div>
+          </div>
+
+          {/* Right side - Image */}
+          <div className="w-full md:w-1/2">
+            <div className="transform rotate-7 hover:rotate-0 transition-transform duration-300">
+              <img
+                src="https://i.imgur.com/XdvKopJ.jpeg"
+                alt="Grid of Sydney's Cakes"
+                className="rounded-lg shadow-xl w-full"
+              />
             </div>
           </div>
         </div>
