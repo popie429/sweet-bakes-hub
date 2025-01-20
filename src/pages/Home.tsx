@@ -16,7 +16,7 @@ const Home = () => {
           <div className="w-full md:w-1/2">
             <div className="transform rotate-7 hover:rotate-0 transition-transform duration-300">
               <img
-                src="https://i.imgur.com/x3yfXh1.jpeg"
+                src="https://i.imgur.com/XdvKopJ.jpeg"
                 alt="Grid of Sydney's Cakes"
                 className="rounded-lg shadow-xl w-full"
               />
