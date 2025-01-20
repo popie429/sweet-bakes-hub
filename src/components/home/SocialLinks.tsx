@@ -2,7 +2,7 @@ import { Facebook, Instagram, MessageCircle, PhoneCall } from "lucide-react";
 
 export const SocialLinks = () => {
   return (
-    <div className="flex justify-center items-center space-x-8">
+    <div className="flex justify-center space-x-8 mt-12">
       <a
         href="https://instagram.com/_sydneyscakes"
         target="_blank"
