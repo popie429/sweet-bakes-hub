@@ -6,38 +6,40 @@ export const HeroSection = () => {
     <div className="container mx-auto px-4 pt-8 pb-16 bg-white">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="w-full md:w-1/2 flex flex-col items-center text-center">
-          <img
-            src="https://i.imgur.com/kzn29W4.png"
-            alt="Decorative cake logo"
-            className="w-96 h-auto mb-8"
-            style={{ 
-              backgroundColor: 'transparent',
-              WebkitBackfaceVisibility: 'hidden',
-              backfaceVisibility: 'hidden',
-              transform: 'translateZ(0)',
-              WebkitTransform: 'translateZ(0)'
-            }}
-          />
-          <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose mb-4">
-            The Best
-          </h1>
-          <h2 className="font-seasons text-3xl md:text-4xl text-cake-rose mb-8">
-            for your big day
-          </h2>
-          <Link to="/customize">
-            <Button
-              size="lg"
-              className="bg-cake-rose hover:bg-cake-rose/90 text-white font-seasons px-8 py-6 text-xl rounded-full"
-            >
-              order now!
-            </Button>
-          </Link>
-          
-          <div className="mt-8 text-cake-rose">
-            <p className="font-seasons text-xl">
-              <a href="tel:+19296986795" className="hover:underline">(929) 698 6795</a>
-            </p>
-            <p className="font-seasons text-xl">Albany, NY</p>
+          <div className="flex flex-col items-center justify-center">
+            <img
+              src="https://i.imgur.com/kzn29W4.png"
+              alt="Decorative cake logo"
+              className="w-96 h-auto mb-8"
+              style={{ 
+                backgroundColor: 'transparent',
+                WebkitBackfaceVisibility: 'hidden',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)',
+                WebkitTransform: 'translateZ(0)'
+              }}
+            />
+            <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose mb-4">
+              The Best
+            </h1>
+            <h2 className="font-seasons text-3xl md:text-4xl text-cake-rose mb-8">
+              for your big day
+            </h2>
+            <Link to="/customize">
+              <Button
+                size="lg"
+                className="bg-cake-rose hover:bg-cake-rose/90 text-white font-seasons px-8 py-6 text-xl rounded-full"
+              >
+                order now!
+              </Button>
+            </Link>
+            
+            <div className="mt-8 text-cake-rose">
+              <p className="font-seasons text-xl">
+                <a href="tel:+19296986795" className="hover:underline">(929) 698 6795</a>
+              </p>
+              <p className="font-seasons text-xl">Albany, NY</p>
+            </div>
           </div>
         </div>
 
