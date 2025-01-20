@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { SocialLinks } from './SocialLinks';
 
 export const HeroSection = () => {
   return (
@@ -44,6 +45,8 @@ export const HeroSection = () => {
               </p>
               <p className="font-seasons text-xl">Albany, NY</p>
             </div>
+
+            <SocialLinks />
           </div>
         </div>
 
