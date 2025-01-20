@@ -17,19 +17,19 @@ export const Navbar = () => {
             />
           </Link>
           <div className="flex items-center space-x-6">
-            <Link to="/" className="font-seasons text-lg text-gray-600 hover:text-cake-rose transition-colors">
+            <Link to="/" className="font-seasons text-lg text-gray-600 hover:text-[#D44199] transition-colors">
               {t('nav.home')}
             </Link>
-            <Link to="/gallery" className="font-seasons text-lg text-gray-600 hover:text-cake-rose transition-colors">
+            <Link to="/gallery" className="font-seasons text-lg text-gray-600 hover:text-[#D44199] transition-colors">
               {t('nav.gallery')}
             </Link>
-            <Link to="/customize" className="font-seasons text-lg text-gray-600 hover:text-cake-rose transition-colors">
+            <Link to="/customize" className="font-seasons text-lg text-gray-600 hover:text-[#D44199] transition-colors">
               {t('nav.customize')}
             </Link>
-            <Link to="/calendar" className="font-seasons text-lg text-gray-600 hover:text-cake-rose transition-colors">
+            <Link to="/calendar" className="font-seasons text-lg text-gray-600 hover:text-[#D44199] transition-colors">
               {t('nav.calendar')}
             </Link>
-            <Link to="/faq" className="font-seasons text-lg text-gray-600 hover:text-cake-rose transition-colors">
+            <Link to="/faq" className="font-seasons text-lg text-gray-600 hover:text-[#D44199] transition-colors">
               {t('nav.faq')}
             </Link>
             <LanguageSelector />

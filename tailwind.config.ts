@@ -23,11 +23,11 @@ export default {
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
         background: "hsl(var(--background))",
-        foreground: "#FF69B4",
+        foreground: "#D44199",
         cake: {
           pink: "#FFE4E6",
-          rose: "#FF69B4",
-          burgundy: "#FF69B4",
+          rose: "#D44199",
+          burgundy: "#D44199",
           cream: "#FEF9D7",
           peach: "#FDE1D3",
           lavender: "#E5DEFF",
@@ -35,31 +35,31 @@ export default {
         },
         primary: {
           DEFAULT: "hsl(var(--primary))",
-          foreground: "#FF69B4",
+          foreground: "#D44199",
         },
         secondary: {
           DEFAULT: "hsl(var(--secondary))",
-          foreground: "#FF69B4",
+          foreground: "#D44199",
         },
         destructive: {
-          DEFAULT: "#FF69B4",
+          DEFAULT: "#D44199",
           foreground: "hsl(var(--destructive-foreground))",
         },
         muted: {
           DEFAULT: "hsl(var(--muted))",
-          foreground: "#FF69B4",
+          foreground: "#D44199",
         },
         accent: {
           DEFAULT: "hsl(var(--accent))",
-          foreground: "#FF69B4",
+          foreground: "#D44199",
         },
         popover: {
           DEFAULT: "hsl(var(--popover))",
-          foreground: "#FF69B4",
+          foreground: "#D44199",
         },
         card: {
           DEFAULT: "hsl(var(--card))",
-          foreground: "#FF69B4",
+          foreground: "#D44199",
         },
       },
       borderRadius: {
@@ -70,7 +70,7 @@ export default {
       fontFamily: {
         cormorant: ["Cormorant Garamond", "serif"],
         montserrat: ["Montserrat", "sans-serif"],
-        seasons: ["the-seasons", "serif"]  // Added the new font family
+        seasons: ["the-seasons", "serif"]
       },
       backgroundImage: {
         'gradient-elegant': 'linear-gradient(to top, #accbee 0%, #e7f0fd 100%)',
