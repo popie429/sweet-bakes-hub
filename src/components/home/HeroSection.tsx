@@ -10,7 +10,7 @@ export const HeroSection = () => {
             <img
               src="https://i.imgur.com/kzn29W4.png"
               alt="Decorative cake logo"
-              className="w-72 md:w-96 h-auto mb-3"
+              className="w-72 md:w-96 h-auto mb-8"
               style={{ 
                 backgroundColor: 'transparent',
                 WebkitBackfaceVisibility: 'hidden',
