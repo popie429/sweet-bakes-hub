@@ -7,18 +7,20 @@ export const HeroSection = () => {
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="w-full md:w-1/2 flex flex-col items-center text-center">
           <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto">
-            <img
-              src="https://i.imgur.com/kzn29W4.png"
-              alt="Decorative cake logo"
-              className="w-72 md:w-96 h-auto mt-8 mb-4"
-              style={{ 
-                backgroundColor: 'transparent',
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)',
-                WebkitTransform: 'translateZ(0)'
-              }}
-            />
+            <div className="relative w-full flex justify-center translate-y-12">
+              <img
+                src="https://i.imgur.com/kzn29W4.png"
+                alt="Decorative cake logo"
+                className="w-72 md:w-96 h-auto"
+                style={{ 
+                  backgroundColor: 'transparent',
+                  WebkitBackfaceVisibility: 'hidden',
+                  backfaceVisibility: 'hidden',
+                  transform: 'translateZ(0)',
+                  WebkitTransform: 'translateZ(0)'
+                }}
+              />
+            </div>
             <h1 className="font-seasons text-6xl md:text-7xl text-cake-rose">
               The Best
             </h1>
