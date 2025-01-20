@@ -1,5 +1,6 @@
 import { Link } from 'react-router-dom';
 import { Button } from '@/components/ui/button';
+import { SocialLinks } from './SocialLinks';
 
 export const HeroSection = () => {
   return (
@@ -43,6 +44,9 @@ export const HeroSection = () => {
                 <a href="tel:+19296986795" className="hover:underline">(929) 698 6795</a>
               </p>
               <p className="font-seasons text-xl">Albany, NY</p>
+            </div>
+            <div className="mt-8">
+              <SocialLinks />
             </div>
           </div>
         </div>
