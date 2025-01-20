@@ -6,11 +6,11 @@ export const HeroSection = () => {
     <div className="container mx-auto px-4 pt-8 pb-16 bg-white">
       <div className="flex flex-col md:flex-row items-center justify-between gap-8">
         <div className="w-full md:w-1/2 flex flex-col items-center text-center">
-          <div className="flex flex-col items-center justify-center">
+          <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto">
             <img
               src="https://i.imgur.com/kzn29W4.png"
               alt="Decorative cake logo"
-              className="w-96 h-auto mb-8"
+              className="w-72 md:w-96 h-auto mb-12"
               style={{ 
                 backgroundColor: 'transparent',
                 WebkitBackfaceVisibility: 'hidden',
