@@ -64,16 +64,14 @@ export const HeroSection = () => {
         </div>
 
         <div className="w-full md:w-1/2">
-          <div className="transform rotate-7 hover:rotate-0 transition-transform duration-300">
+          <div className="transition-transform duration-300">
             <img
               src={processedImageUrl || "/lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"}
               alt="Grid of Sydney's Cakes"
-              className="w-full h-auto object-contain"
+              className="w-full h-auto object-contain max-w-full"
               style={{ 
                 backgroundColor: 'transparent',
-                mixBlendMode: 'multiply',
-                WebkitMaskImage: 'none',
-                maskImage: 'none'
+                mixBlendMode: 'multiply'
               }}
             />
           </div>
