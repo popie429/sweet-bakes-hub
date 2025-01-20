@@ -15,17 +15,17 @@ export const HeroSection = () => {
           <Link to="/customize">
             <Button
               size="lg"
-              className="bg-cake-rose hover:bg-cake-rose/90 text-white font-montserrat px-8 py-6 text-xl rounded-full"
+              className="bg-cake-rose hover:bg-cake-rose/90 text-white font-seasons px-8 py-6 text-xl rounded-full"
             >
               order now!
             </Button>
           </Link>
           
           <div className="mt-8 text-cake-rose">
-            <p className="font-montserrat">
+            <p className="font-seasons text-xl">
               <a href="tel:+19296986795" className="hover:underline">(929) 698 6795</a>
             </p>
-            <p className="font-montserrat">Albany, NY</p>
+            <p className="font-seasons text-xl">Albany, NY</p>
           </div>
         </div>
 
