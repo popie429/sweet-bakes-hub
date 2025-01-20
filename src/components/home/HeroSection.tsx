@@ -29,11 +29,11 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2">
+        <div className="w-full md:w-1/2 flex items-center justify-center">
           <img
             src="/lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"
             alt="Grid of Sydney's Cakes"
-            className="w-full h-auto object-contain"
+            className="w-[120%] md:w-[110%] h-auto object-contain max-w-none"
             style={{ 
               backgroundColor: 'transparent',
               WebkitBackfaceVisibility: 'hidden',
