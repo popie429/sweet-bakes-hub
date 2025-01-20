@@ -8,7 +8,7 @@ export const Navbar = () => {
   return (
     <nav className="bg-white shadow-sm">
       <div className="container mx-auto px-4 py-4">
-        <div className="flex justify-between items-center ml-8">
+        <div className="flex items-start ml-8">
           <Link to="/" className="flex items-center">
             <img 
               src="https://i.imgur.com/9ICEHj0.jpeg" 
@@ -16,7 +16,7 @@ export const Navbar = () => {
               className="h-16 object-contain"
             />
           </Link>
-          <div className="flex items-center space-x-6">
+          <div className="flex flex-col space-y-4 ml-8">
             <Link to="/" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
               {t('nav.home')}
             </Link>
