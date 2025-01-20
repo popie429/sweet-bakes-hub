@@ -4,13 +4,10 @@ import { SocialLinks } from "@/components/home/SocialLinks";
 
 const Home = () => {
   return (
-    <div className="min-h-screen bg-white flex flex-col">
+    <div className="min-h-screen bg-white flex flex-col relative">
       <HeroSection />
-      <div className="flex-grow" />
-      <div className="flex justify-center">
-        <div className="max-w-[480px] w-full">
-          <SocialLinks />
-        </div>
+      <div className="absolute bottom-0 left-1/2 -translate-x-1/2 w-full max-w-[480px] mb-16">
+        <SocialLinks />
       </div>
       <ChatBot />
     </div>
