@@ -68,8 +68,13 @@ export const HeroSection = () => {
             <img
               src={processedImageUrl || "/lovable-uploads/4c978480-815d-4d3f-b4dc-9e7d95562427.png"}
               alt="Grid of Sydney's Cakes"
-              className="w-full h-auto object-contain mix-blend-multiply"
-              style={{ backgroundColor: 'transparent' }}
+              className="w-full h-auto object-contain"
+              style={{ 
+                backgroundColor: 'transparent',
+                mixBlendMode: 'multiply',
+                WebkitMaskImage: 'none',
+                maskImage: 'none'
+              }}
             />
           </div>
         </div>
