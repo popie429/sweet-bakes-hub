@@ -6,27 +6,27 @@ export const Navbar = () => {
   const { t } = useTranslation();
 
   return (
-    <nav className="absolute top-0 w-full z-10">
+    <nav className="absolute top-0 w-full z-20">
       <div className="container mx-auto">
-        <div className="flex items-center ml-8 h-24">
+        <div className="flex items-center ml-0 md:ml-8 h-24 px-4 md:px-0">
           <Link to="/" className="flex items-center">
             <img 
               src="https://i.imgur.com/9ICEHj0.jpeg" 
               alt="Sydney's Cakes Logo" 
-              className="h-16 object-contain"
+              className="h-12 md:h-16 object-contain"
             />
           </Link>
-          <div className="flex items-center space-x-6 ml-8">
-            <Link to="/" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
+          <div className="flex items-center space-x-3 md:space-x-6 ml-4 md:ml-8 overflow-x-auto no-scrollbar">
+            <Link to="/" className="font-seasons text-base md:text-lg text-[#D44199] hover:text-[#D44199] transition-colors whitespace-nowrap">
               {t('nav.home')}
             </Link>
-            <Link to="/gallery" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
+            <Link to="/gallery" className="font-seasons text-base md:text-lg text-[#D44199] hover:text-[#D44199] transition-colors whitespace-nowrap">
               {t('nav.gallery')}
             </Link>
-            <Link to="/calendar" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
+            <Link to="/calendar" className="font-seasons text-base md:text-lg text-[#D44199] hover:text-[#D44199] transition-colors whitespace-nowrap">
               {t('nav.calendar')}
             </Link>
-            <Link to="/faq" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
+            <Link to="/faq" className="font-seasons text-base md:text-lg text-[#D44199] hover:text-[#D44199] transition-colors whitespace-nowrap">
               {t('nav.faq')}
             </Link>
             <LanguageSelector />
