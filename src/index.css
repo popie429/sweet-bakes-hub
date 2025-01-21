@@ -34,8 +34,6 @@
   
   body {
     @apply bg-background text-[#D44199] font-montserrat;
-    overflow-x: hidden;
-    width: 100%;
     position: relative;
   }
   
@@ -46,11 +44,11 @@
 
 /* Mobile-first styles */
 .hero-container {
-  @apply fixed inset-0 overflow-hidden;
+  @apply relative min-h-screen w-full overflow-auto md:fixed md:inset-0 md:overflow-hidden;
 }
 
 .hero-content {
-  @apply flex flex-col md:flex-row items-start justify-between h-full;
+  @apply flex flex-col md:flex-row items-start justify-between min-h-screen md:h-full;
 }
 
 .left-section {
@@ -63,6 +61,7 @@
 
 .nav-container {
   @apply fixed top-0 left-0 right-0 z-50 bg-white/95 md:bg-transparent;
+  width: 100vw;
 }
 
 .nav-content {
@@ -76,17 +75,17 @@
 /* Mobile-specific styles */
 @media (max-width: 768px) {
   html, body {
-    overflow-x: hidden;
     width: 100%;
     position: relative;
   }
 
   .right-image {
-    max-width: 100% !important;
-    width: 100% !important;
+    position: relative !important;
+    width: 100vw !important;
     height: 100vh !important;
     object-fit: cover !important;
     opacity: 0.15;
+    right: auto !important;
   }
 
   .nav-container {
@@ -97,9 +96,15 @@
 /* Desktop-specific styles */
 @media (min-width: 769px) {
   .right-image {
+    position: fixed !important;
     max-width: 50vw !important;
     min-width: 45vw !important;
     opacity: 1 !important;
+    right: 0 !important;
+  }
+
+  body {
+    overflow: hidden;
   }
 }
 
