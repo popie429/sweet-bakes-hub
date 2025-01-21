@@ -27,18 +27,50 @@
     --ring: 346 100% 93%;
     --radius: 0.75rem;
   }
-}
 
-@layer base {
   * {
     @apply border-border;
   }
+  
   body {
-    @apply bg-background text-[#D44199] font-montserrat overflow-x-hidden;
+    @apply bg-background text-[#D44199] font-montserrat;
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
+  
   h1, h2, h3, h4, h5, h6 {
     @apply font-seasons text-[#D44199];
   }
+}
+
+/* Mobile-first styles */
+.hero-container {
+  @apply fixed inset-0 overflow-hidden;
+}
+
+.hero-content {
+  @apply flex flex-col md:flex-row items-start justify-between h-full;
+}
+
+.left-section {
+  @apply w-full md:w-1/2 flex flex-col items-center text-center z-10 bg-white/80 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none;
+}
+
+.content-wrapper {
+  @apply flex flex-col items-center justify-center max-w-[480px] mx-auto pt-24 md:pt-0;
+}
+
+.nav-container {
+  @apply fixed top-0 left-0 right-0 z-50 bg-white/95 md:bg-transparent;
+}
+
+.nav-content {
+  @apply flex flex-col md:flex-row items-center justify-center md:justify-between px-4 py-2 md:py-0;
+}
+
+.nav-links {
+  @apply flex flex-col md:flex-row items-center space-y-2 md:space-y-0 md:space-x-6 mt-2 md:mt-0;
 }
 
 /* Mobile-specific styles */
@@ -54,6 +86,11 @@
     width: 100% !important;
     height: 100vh !important;
     object-fit: cover !important;
+    opacity: 0.15;
+  }
+
+  .nav-container {
+    padding: 0.5rem;
   }
 }
 
@@ -62,6 +99,7 @@
   .right-image {
     max-width: 50vw !important;
     min-width: 45vw !important;
+    opacity: 1 !important;
   }
 }
 

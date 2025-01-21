@@ -3,11 +3,11 @@ import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   return (
-    <div className="fixed inset-0 overflow-hidden">
-      <div className="flex flex-col md:flex-row items-start justify-between h-full">
+    <div className="hero-container">
+      <div className="hero-content">
         {/* Left content section */}
-        <div className="w-full md:w-1/2 flex flex-col items-center text-center z-10 bg-white/80 md:bg-transparent backdrop-blur-sm md:backdrop-blur-none">
-          <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto pt-24 md:pt-0">
+        <div className="left-section">
+          <div className="content-wrapper">
             <div className="relative w-full flex justify-center translate-y-12">
               <img
                 src="https://i.imgur.com/kzn29W4.png"
