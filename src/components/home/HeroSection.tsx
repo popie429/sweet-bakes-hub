@@ -3,9 +3,9 @@ import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   return (
-    <div className="container mx-auto px-4 h-full bg-white">
-      <div className="flex flex-col md:flex-row items-start justify-between gap-8 h-full">
-        <div className="w-full md:w-1/2 flex flex-col items-center text-center pt-16">
+    <div className="fixed inset-0 bg-white overflow-hidden">
+      <div className="flex flex-col md:flex-row items-start justify-between h-full">
+        <div className="w-full md:w-1/2 flex flex-col items-center text-center pt-32">
           <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto">
             <div className="relative w-full flex justify-center translate-y-12">
               <img
@@ -47,21 +47,19 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-start justify-end h-full">
-          <div className="relative w-full h-full">
-            <img
-              src="https://i.imgur.com/WOPaaFE.png"
-              alt="Grid of Sydney's Cakes"
-              className="absolute right-0 h-full w-auto max-w-none object-contain"
-              style={{ 
-                objectPosition: 'right center',
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)',
-                WebkitTransform: 'translateZ(0)'
-              }}
-            />
-          </div>
+        <div className="w-full md:w-1/2 h-full">
+          <img
+            src="https://i.imgur.com/WOPaaFE.png"
+            alt="Grid of Sydney's Cakes"
+            className="h-full w-auto max-w-none object-contain absolute right-0 top-0"
+            style={{ 
+              objectPosition: 'right top',
+              WebkitBackfaceVisibility: 'hidden',
+              backfaceVisibility: 'hidden',
+              transform: 'translateZ(0)',
+              WebkitTransform: 'translateZ(0)'
+            }}
+          />
         </div>
       </div>
     </div>

@@ -6,9 +6,9 @@ export const Navbar = () => {
   const { t } = useTranslation();
 
   return (
-    <nav className="bg-white">
-      <div className="container mx-auto px-4">
-        <div className="flex items-center ml-8">
+    <nav className="bg-white absolute top-0 w-full z-10">
+      <div className="container mx-auto">
+        <div className="flex items-center ml-8 h-24">
           <Link to="/" className="flex items-center">
             <img 
               src="https://i.imgur.com/9ICEHj0.jpeg" 
