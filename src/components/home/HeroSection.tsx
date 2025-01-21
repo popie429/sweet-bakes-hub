@@ -48,11 +48,11 @@ export const HeroSection = () => {
         </div>
 
         <div className="w-full md:w-1/2 flex items-center justify-end">
-          <div className="relative w-full h-[800px] overflow-hidden">
+          <div className="relative w-full h-screen overflow-hidden">
             <img
-              src="https://i.postimg.cc/6pM9BkQZ/Untitled-design-3.png"
+              src="https://i.imgur.com/WOPaaFE.png"
               alt="Grid of Sydney's Cakes"
-              className="absolute right-0 h-full w-auto max-w-none object-cover"
+              className="absolute right-0 h-full w-auto max-w-none object-contain"
               style={{ 
                 objectPosition: 'right center',
                 WebkitBackfaceVisibility: 'hidden',
