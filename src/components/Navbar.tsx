@@ -6,8 +6,8 @@ export const Navbar = () => {
   const { t } = useTranslation();
 
   return (
-    <nav className="bg-white shadow-sm">
-      <div className="container mx-auto px-4 py-4">
+    <nav className="bg-white">
+      <div className="container mx-auto px-4">
         <div className="flex items-center ml-8">
           <Link to="/" className="flex items-center">
             <img 
