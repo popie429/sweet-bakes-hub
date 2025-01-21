@@ -48,6 +48,21 @@
     width: 100%;
     position: relative;
   }
+
+  .right-image {
+    max-width: 100% !important;
+    width: 100% !important;
+    height: 100vh !important;
+    object-fit: cover !important;
+  }
+}
+
+/* Desktop-specific styles */
+@media (min-width: 769px) {
+  .right-image {
+    max-width: 50vw !important;
+    min-width: 45vw !important;
+  }
 }
 
 .elegant-shadow {

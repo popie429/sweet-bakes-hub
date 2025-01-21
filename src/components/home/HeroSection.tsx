@@ -53,19 +53,14 @@ export const HeroSection = () => {
           <img
             src="https://i.imgur.com/WOPaaFE.png"
             alt="Grid of Sydney's Cakes"
-            className="h-screen w-auto object-cover absolute right-0 top-0"
+            className="h-screen w-auto object-cover absolute right-0 top-0 right-image"
             style={{ 
               objectPosition: 'right top',
               WebkitBackfaceVisibility: 'hidden',
               backfaceVisibility: 'hidden',
               transform: 'translateZ(0)',
               WebkitTransform: 'translateZ(0)',
-              maxWidth: '100vw',
-              width: '100%',
-              '@media (min-width: 768px)': {
-                maxWidth: '50vw',
-                minWidth: '45vw'
-              }
+              width: '100%'
             }}
           />
         </div>
