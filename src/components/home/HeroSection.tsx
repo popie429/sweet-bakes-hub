@@ -3,8 +3,8 @@ import { Button } from '@/components/ui/button';
 
 export const HeroSection = () => {
   return (
-    <div className="container mx-auto px-4 pt-8 pb-16 bg-white">
-      <div className="flex flex-col md:flex-row items-center justify-between gap-8">
+    <div className="container mx-auto px-4 h-full bg-white">
+      <div className="flex flex-col md:flex-row items-center justify-between gap-8 h-full">
         <div className="w-full md:w-1/2 flex flex-col items-center text-center">
           <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto">
             <div className="relative w-full flex justify-center translate-y-12">
@@ -47,8 +47,8 @@ export const HeroSection = () => {
           </div>
         </div>
 
-        <div className="w-full md:w-1/2 flex items-center justify-end">
-          <div className="relative w-full h-screen overflow-hidden">
+        <div className="w-full md:w-1/2 flex items-center justify-end h-full">
+          <div className="relative w-full h-full">
             <img
               src="https://i.imgur.com/WOPaaFE.png"
               alt="Grid of Sydney's Cakes"
