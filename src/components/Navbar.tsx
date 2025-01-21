@@ -6,34 +6,27 @@ export const Navbar = () => {
   const { t } = useTranslation();
 
   return (
-    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm">
+    <nav className="absolute top-0 w-full z-10">
       <div className="container mx-auto">
-        <div className="flex items-center ml-0 md:ml-8 h-24 px-4 md:px-0">
+        <div className="flex items-center ml-8 h-24">
           <Link to="/" className="flex items-center">
             <img 
               src="https://i.imgur.com/9ICEHj0.jpeg" 
               alt="Sydney's Cakes Logo" 
-              className="h-12 md:h-16 object-contain"
-              style={{
-                WebkitBackfaceVisibility: 'hidden',
-                backfaceVisibility: 'hidden',
-                transform: 'translateZ(0)',
-                WebkitTransform: 'translateZ(0)',
-                WebkitAppearance: 'none'
-              }}
+              className="h-16 object-contain"
             />
           </Link>
-          <div className="flex items-center space-x-3 md:space-x-6 ml-4 md:ml-8 overflow-x-auto no-scrollbar">
-            <Link to="/" className="font-seasons text-base md:text-lg text-[#D44199] hover:text-[#D44199] transition-colors whitespace-nowrap">
+          <div className="flex items-center space-x-6 ml-8">
+            <Link to="/" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
               {t('nav.home')}
             </Link>
-            <Link to="/gallery" className="font-seasons text-base md:text-lg text-[#D44199] hover:text-[#D44199] transition-colors whitespace-nowrap">
+            <Link to="/gallery" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
               {t('nav.gallery')}
             </Link>
-            <Link to="/calendar" className="font-seasons text-base md:text-lg text-[#D44199] hover:text-[#D44199] transition-colors whitespace-nowrap">
+            <Link to="/calendar" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
               {t('nav.calendar')}
             </Link>
-            <Link to="/faq" className="font-seasons text-base md:text-lg text-[#D44199] hover:text-[#D44199] transition-colors whitespace-nowrap">
+            <Link to="/faq" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
               {t('nav.faq')}
             </Link>
             <LanguageSelector />

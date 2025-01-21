@@ -33,34 +33,11 @@
   * {
     @apply border-border;
   }
-  html, body {
-    @apply overflow-x-hidden;
-    -webkit-overflow-scrolling: touch;
-    height: 100%;
-    width: 100%;
-    position: fixed;
-  }
   body {
     @apply bg-background text-[#D44199] font-montserrat;
-    -webkit-font-smoothing: antialiased;
-    -moz-osx-font-smoothing: grayscale;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-seasons text-[#D44199];
-  }
-  img {
-    -webkit-user-select: none;
-    -webkit-touch-callout: none;
-  }
-}
-
-@layer utilities {
-  .no-scrollbar::-webkit-scrollbar {
-    display: none;
-  }
-  .no-scrollbar {
-    -ms-overflow-style: none;
-    scrollbar-width: none;
   }
 }
 
