@@ -23,9 +23,6 @@ export const Navbar = () => {
             <Link to="/gallery" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
               {t('nav.gallery')}
             </Link>
-            <Link to="/customize" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
-              {t('nav.customize')}
-            </Link>
             <Link to="/calendar" className="font-seasons text-lg text-[#D44199] hover:text-[#D44199] transition-colors">
               {t('nav.calendar')}
             </Link>
