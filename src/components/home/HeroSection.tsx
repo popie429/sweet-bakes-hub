@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return (
     <div className="fixed inset-0 bg-white overflow-hidden">
       <div className="flex flex-col md:flex-row items-start justify-between h-full">
-        <div className="w-full md:w-1/2 flex flex-col items-center text-center pt-32">
+        <div className="w-full md:w-1/2 flex flex-col items-center text-center pt-24">
           <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto">
             <div className="relative w-full flex justify-center translate-y-12">
               <img
