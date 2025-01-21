@@ -6,7 +6,7 @@ export const Navbar = () => {
   const { t } = useTranslation();
 
   return (
-    <nav className="bg-white absolute top-0 w-full z-10">
+    <nav className="absolute top-0 w-full z-10">
       <div className="container mx-auto">
         <div className="flex items-center ml-8 h-24">
           <Link to="/" className="flex items-center">
