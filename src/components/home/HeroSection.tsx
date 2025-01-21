@@ -51,13 +51,14 @@ export const HeroSection = () => {
           <img
             src="https://i.imgur.com/WOPaaFE.png"
             alt="Grid of Sydney's Cakes"
-            className="h-full w-auto max-w-none object-contain absolute right-0 top-0"
+            className="h-screen w-auto max-w-none object-cover fixed right-0 top-0 md:min-w-[45vw] md:max-w-[50vw]"
             style={{ 
               objectPosition: 'right top',
               WebkitBackfaceVisibility: 'hidden',
               backfaceVisibility: 'hidden',
               transform: 'translateZ(0)',
-              WebkitTransform: 'translateZ(0)'
+              WebkitTransform: 'translateZ(0)',
+              zIndex: -1
             }}
           />
         </div>
