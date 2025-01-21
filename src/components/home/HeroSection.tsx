@@ -5,7 +5,7 @@ export const HeroSection = () => {
   return (
     <div className="fixed inset-0 overflow-hidden">
       <div className="flex flex-col md:flex-row items-start justify-between h-full">
-        <div className="w-full md:w-1/2 flex flex-col items-center text-center pt-24 md:pt-0">
+        <div className="w-full md:w-1/2 flex flex-col items-center text-center pt-24 md:pt-0 relative z-10">
           <div className="flex flex-col items-center justify-center max-w-[480px] mx-auto px-4 md:px-0">
             <div className="relative w-full flex justify-center translate-y-12">
               <img
@@ -18,7 +18,8 @@ export const HeroSection = () => {
                   backfaceVisibility: 'hidden',
                   transform: 'translateZ(0)',
                   WebkitTransform: 'translateZ(0)',
-                  maxWidth: '100%'
+                  maxWidth: '100%',
+                  WebkitAppearance: 'none'
                 }}
               />
             </div>
@@ -59,7 +60,10 @@ export const HeroSection = () => {
               backfaceVisibility: 'hidden',
               transform: 'translateZ(0)',
               WebkitTransform: 'translateZ(0)',
-              maxHeight: '100vh'
+              maxHeight: '100vh',
+              WebkitAppearance: 'none',
+              minWidth: '50vw',
+              maxWidth: '50vw'
             }}
           />
         </div>

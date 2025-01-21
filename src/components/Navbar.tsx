@@ -6,7 +6,7 @@ export const Navbar = () => {
   const { t } = useTranslation();
 
   return (
-    <nav className="absolute top-0 w-full z-20">
+    <nav className="fixed top-0 w-full z-50 bg-white/80 backdrop-blur-sm">
       <div className="container mx-auto">
         <div className="flex items-center ml-0 md:ml-8 h-24 px-4 md:px-0">
           <Link to="/" className="flex items-center">
@@ -14,6 +14,13 @@ export const Navbar = () => {
               src="https://i.imgur.com/9ICEHj0.jpeg" 
               alt="Sydney's Cakes Logo" 
               className="h-12 md:h-16 object-contain"
+              style={{
+                WebkitBackfaceVisibility: 'hidden',
+                backfaceVisibility: 'hidden',
+                transform: 'translateZ(0)',
+                WebkitTransform: 'translateZ(0)',
+                WebkitAppearance: 'none'
+              }}
             />
           </Link>
           <div className="flex items-center space-x-3 md:space-x-6 ml-4 md:ml-8 overflow-x-auto no-scrollbar">

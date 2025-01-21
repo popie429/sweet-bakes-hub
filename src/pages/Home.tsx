@@ -6,7 +6,7 @@ const Home = () => {
   return (
     <div className="min-h-screen h-screen overflow-hidden bg-white flex flex-col relative">
       <HeroSection />
-      <div className="absolute bottom-0 left-0 right-0 w-full mb-8 z-10">
+      <div className="fixed bottom-8 left-0 right-0 w-full z-50">
         <SocialLinks />
       </div>
       <ChatBot />
