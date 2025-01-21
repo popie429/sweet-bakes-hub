@@ -34,10 +34,19 @@
     @apply border-border;
   }
   body {
-    @apply bg-background text-[#D44199] font-montserrat;
+    @apply bg-background text-[#D44199] font-montserrat overflow-x-hidden;
   }
   h1, h2, h3, h4, h5, h6 {
     @apply font-seasons text-[#D44199];
+  }
+}
+
+/* Mobile-specific styles */
+@media (max-width: 768px) {
+  html, body {
+    overflow-x: hidden;
+    width: 100%;
+    position: relative;
   }
 }
 
