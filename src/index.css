@@ -126,8 +126,14 @@
   }
 
   .nav-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 100;
     padding: 0.5rem;
     width: 100%;
+    background: rgba(255, 255, 255, 0.95);
   }
 
   .content-wrapper {
@@ -135,6 +141,5 @@
     z-index: 10;
     padding: 5rem 1rem;
     width: 100%;
-    background: rgba(255, 255, 255, 0.85);
   }
 }
