@@ -76,7 +76,7 @@
 }
 
 .hero-container {
-  @apply min-h-screen flex flex-col md:flex-row relative;
+  @apply min-h-screen flex flex-col relative overflow-hidden;
 }
 
 .hero-content {
@@ -84,11 +84,11 @@
 }
 
 .left-section {
-  @apply w-full md:w-1/2 flex flex-col items-center text-center z-20 bg-white;
+  @apply w-full md:w-1/2 flex flex-col items-center justify-center text-center z-20 bg-white px-4 md:px-8;
 }
 
 .content-wrapper {
-  @apply flex flex-col items-center justify-center h-full px-4 py-8 md:py-0;
+  @apply flex flex-col items-center justify-center w-full max-w-xl mx-auto py-16 md:py-24 space-y-6;
 }
 
 .nav-container {
@@ -104,7 +104,7 @@
 }
 
 .nav-link {
-  @apply text-gray-600 hover:text-gray-900 transition-colors duration-200;
+  @apply text-gray-600 hover:text-gray-900 transition-colors duration-200 whitespace-nowrap;
 }
 
 .nav-link.active {
@@ -115,16 +115,57 @@
   @apply w-full md:w-1/2 h-screen object-cover object-center;
 }
 
+/* Responsive text sizing */
+.hero-title {
+  @apply font-seasons text-4xl md:text-7xl text-cake-rose whitespace-nowrap;
+}
+
+.hero-subtitle {
+  @apply font-seasons text-xl md:text-4xl text-cake-rose mb-3 whitespace-nowrap;
+}
+
+.hero-contact {
+  @apply font-seasons text-base md:text-xl text-cake-rose whitespace-nowrap;
+}
+
+.hero-button {
+  @apply bg-cake-rose hover:bg-cake-rose/90 text-white font-seasons 
+         px-8 py-3 md:px-10 md:py-4 text-lg md:text-xl rounded-full 
+         transition-all duration-200 whitespace-nowrap;
+}
+
 @media (max-width: 768px) {
   .hero-content {
     @apply flex-col;
   }
 
   .left-section {
-    @apply w-full min-h-screen pt-24;
+    @apply min-h-screen pt-20;
   }
 
   .right-image {
     @apply fixed top-0 left-0 w-full h-full -z-10 opacity-20;
+  }
+
+  .content-wrapper {
+    @apply py-8 space-y-4;
+  }
+}
+
+@media (max-width: 380px) {
+  .hero-title {
+    @apply text-3xl;
+  }
+
+  .hero-subtitle {
+    @apply text-lg;
+  }
+
+  .hero-contact {
+    @apply text-sm;
+  }
+
+  .hero-button {
+    @apply px-6 py-2 text-base;
   }
 }
